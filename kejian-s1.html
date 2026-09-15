@@ -159,6 +159,34 @@ h2 { font-size:var(--h1-size); color:var(--mt-navy-dark); }
     background:var(--mt-light-gray); border-left:4px solid var(--mt-electric-blue); }
 .callout p { font-size:var(--subhead-size); line-height:1.4; color:var(--mt-navy-dark); font-weight:400; margin:0; }
 .callout p em { font-style:normal; color:var(--mt-medium-gray); font-size:var(--body-small-size); display:block; margin-top:8px; }
+.muse-film { margin-top:18px; padding:18px 22px; border-radius:var(--mt-radius-card);
+    background:linear-gradient(110deg,#EEF0FF 0%,#FFFFFF 62%); border:1px solid rgba(44,73,255,0.22);
+    display:grid; grid-template-columns:62px 1fr 340px; gap:18px; align-items:center; }
+.muse-film__play { width:58px; height:58px; border-radius:50%; background:var(--mt-electric-blue);
+    color:#FFFFFF; display:flex; align-items:center; justify-content:center; font-size:24px; line-height:1;
+    box-shadow:0 10px 20px rgba(44,73,255,0.22); }
+.muse-film__eyebrow { font-size:var(--overline-size); font-weight:600; letter-spacing:0.16em;
+    text-transform:uppercase; color:var(--mt-electric-blue); margin-bottom:4px; }
+.muse-film h3 { margin:0 0 4px; font-size:var(--h3-size); font-weight:500; color:var(--mt-navy-dark); }
+.muse-film p { margin:0; font-size:var(--label-size); line-height:1.5; color:var(--mt-dark-gray); }
+.muse-film__cue { font-size:var(--caption-size); line-height:1.5; color:var(--mt-medium-gray); }
+.muse-film__cue b { display:block; color:var(--mt-navy-dark); font-size:var(--label-size); margin-bottom:4px; }
+.muse-film__video-wrap { margin:0; }
+.muse-film__video { width:100%; aspect-ratio:16/9; display:block; border-radius:10px; background:#0C1E3D;
+    box-shadow:0 10px 20px rgba(12,30,61,0.16); }
+.muse-film__source { display:block; margin-top:6px; font-size:10px; color:var(--mt-medium-gray); text-decoration:none; }
+.muse-film__source:hover { color:var(--mt-electric-blue); text-decoration:underline; }
+.astra-demo-grid { display:grid; grid-template-columns:0.9fr 1.1fr; gap:24px; align-items:stretch; margin-top:18px; }
+.astra-demo-card { background:var(--mt-light-gray); border-radius:var(--mt-radius-card); padding:18px;
+    border:1px solid rgba(16,22,70,0.08); display:flex; flex-direction:column; min-height:0; }
+.astra-demo-card h3 { margin:0 0 10px; font-size:var(--h3-size); font-weight:500; color:var(--mt-navy-dark); }
+.astra-demo-card p { margin:10px 0 0; font-size:var(--body-small-size); line-height:1.45; color:var(--mt-medium-gray); }
+.astra-demo-shot { width:100%; border-radius:10px; display:block; background:#FFFFFF;
+    box-shadow:0 10px 24px rgba(12,30,61,0.12); }
+.astra-demo-video { width:100%; aspect-ratio:16/9; border:0; border-radius:10px; background:#0C1E3D;
+    box-shadow:0 10px 24px rgba(12,30,61,0.12); display:block; }
+.astra-demo-source { display:inline-block; margin-top:8px; font-size:10px; color:var(--mt-medium-gray); text-decoration:none; }
+.astra-demo-source:hover { color:var(--mt-electric-blue); text-decoration:underline; }
 
 /* Signal list */
 .sig { display:flex; gap:16px; align-items:flex-start; padding:16px 0;
@@ -313,6 +341,14 @@ h2 { font-size:var(--h1-size); color:var(--mt-navy-dark); }
     .nav-dots,.keyboard-hint,.progress-bar{ display:none !important; }
 }
 </style>
+<style id="s1-source-template-footer">
+.slide{container-type:inline-size}
+.slide .mt-footer.template-footer{position:absolute;inset:0;width:100%;height:100%;padding:0;margin:0;border:0;background:transparent;box-shadow:none;pointer-events:none;font-size:0.868056cqw;font-weight:400;line-height:1.2;color:var(--mt-medium-gray,#6b6f7a)}
+.slide .mt-footer__page,.slide .mt-footer__text{position:absolute;top:93.153333%;height:1.87%;display:flex;align-items:flex-end;white-space:nowrap;overflow:hidden}
+.slide .mt-footer__page{left:4.871875%;width:2.083125%}
+.slide .mt-footer__text{left:7.899375%;width:71.94%}
+.slide--cover .mt-footer.template-footer{color:rgba(255,255,255,.68)}
+</style>
 
 <style id="embedded-site-nav-styles">
 body{padding:0!important}
@@ -323,7 +359,6 @@ body>.nav+.wrap>.head h1{font-size:38px;line-height:1.25;letter-spacing:-.4px}
 body>.nav+.wrap>.head .mt-overline{display:inline-block;font-size:12px;letter-spacing:.12em;color:rgba(255,255,255,.92);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.32);padding:6px 10px;border-radius:var(--mt-radius-pill);margin-bottom:18px}
 body>.nav+.wrap>.head .accent-bar{width:56px;margin:16px 0}
 body>.nav+.wrap>.head p{font-size:17px;max-width:680px}
-body>.nav+.progress-bar+.nav-dots+.slide--cover{min-height:calc(100dvh - 91px)}
 .nav,.nav *{box-sizing:border-box}
 .nav{position:sticky;top:0;z-index:40;background:var(--mt-navy-dark);box-shadow:0 2px 12px rgba(0,0,0,.18);line-height:1.65}
 .nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:60px}
@@ -336,39 +371,310 @@ body>.nav+.progress-bar+.nav-dots+.slide--cover{min-height:calc(100dvh - 91px)}
 @media print{.nav{display:none!important}}
 </style>
 
-</head>
-<body data-page-node-id="KIbFA13siaYLVzMF3NhUaC">
-<nav class="nav" aria-label="课程网站导航"><div class="nav-inner"><a class="brand" href="index.html">AIGC 赋能</a><div class="nav-links"><a href="index.html">首页</a><a href="mulu.html">课程目录</a><a href="yiyetong.html">模型速览</a><a href="kejian.html" class="active">课件</a></div></div></nav>
 
+<style id="embedded-s1-deck-contract">
+html,body.course-deck-page{height:100%;overflow:hidden;background:#111}
+body.course-deck-page{display:flex;flex-direction:column}
+body.course-deck-page>.nav{flex:0 0 auto}
+.course-deck-shell{flex:1 1 auto;height:calc(100dvh - 60px);min-height:0;overflow:hidden;background:#111}
+.course-deck-stage{height:calc(100dvh - 60px);min-height:0;overflow-y:auto;overflow-x:hidden;scroll-snap-type:y mandatory;background:#111;position:relative}
+.course-deck-stage .slide-wrapper{position:relative;width:100%;height:100%;min-height:100%;overflow:hidden;scroll-snap-align:start;scroll-snap-stop:always}
+.course-deck-stage .slide{position:absolute;left:50%;top:50%;width:1600px;height:900px;aspect-ratio:16/9;max-width:none;max-height:none;transform:translate(-50%,-50%) scale(var(--course-slide-scale,1));transform-origin:center center;flex:none;background:var(--source-slide-background,#FFFFFF)}
+.course-deck-stage .slide-content{max-height:none}
+.course-deck-stage .mt-footer.template-footer{
+  --footer-page-x:77.95px;
+  --footer-text-x:126.39px;
+  --footer-y:838.38px;
+  --footer-page-w:33.33px;
+  --footer-text-w:1151.04px;
+  --footer-h:16.83px;
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  padding:0;
+  margin:0;
+  border:0;
+  background:transparent;
+  box-shadow:none;
+  color:var(--mt-medium-gray,#6b6f7a);
+  font-size:13.8889px;
+  font-weight:400;
+  line-height:1.2;
+  pointer-events:none;
+}
+.course-deck-stage .mt-footer__page,
+.course-deck-stage .mt-footer__text{
+  position:absolute;
+  display:flex;
+  align-items:flex-end;
+  top:var(--footer-y);
+  height:var(--footer-h);
+  overflow:hidden;
+  white-space:nowrap;
+}
+.course-deck-stage .mt-footer__page{
+  left:var(--footer-page-x);
+  width:var(--footer-page-w);
+}
+.course-deck-stage .mt-footer__text{
+  left:var(--footer-text-x);
+  width:var(--footer-text-w);
+}
+.course-deck-stage .slide--cover .mt-footer.template-footer{color:rgba(255,255,255,.68)}
+.course-deck-stage .pdf-slide .slide-content{padding:18px 42px 18px}
+.course-deck-stage .pdf-stage{align-items:center;justify-content:center;min-height:0}
+.course-deck-stage .pdf-frame{max-width:1360px;width:min(1360px,100%);height:auto;aspect-ratio:16/9}
+.course-deck-stage .progress-bar{top:60px;z-index:45}
+.course-deck-stage .nav-dots{right:16px;z-index:45}
+.course-deck-stage .keyboard-hint{z-index:45}
+@media(max-width:760px){
+  html,body.course-deck-page{overflow:auto}
+  body.course-deck-page{display:block}
+  .course-deck-shell,.course-deck-stage{height:calc(100dvh - 104px)}
+  .course-deck-stage .progress-bar{top:104px}
+}
+@media print{
+  html,body.course-deck-page{height:auto;overflow:visible;background:#FFFFFF}
+  .course-deck-shell,.course-deck-stage{height:auto;overflow:visible;background:#FFFFFF}
+  .course-deck-stage .slide-wrapper{width:1600px;height:900px;page-break-after:always}
+  .course-deck-stage .slide{transform:translate(-50%,-50%) scale(1)}
+}
+</style>
+<script id="embedded-s1-deck-scale">
+(function(){
+  function fitS1Deck(){
+    var stage=document.querySelector('.course-deck-stage');
+    if(!stage) return;
+    var scale=Math.min(stage.clientWidth/1600, stage.clientHeight/900);
+    document.documentElement.style.setProperty('--course-slide-scale', Math.max(0.1, scale).toFixed(5));
+  }
+  window.addEventListener('resize', fitS1Deck);
+  document.addEventListener('DOMContentLoaded', fitS1Deck);
+  fitS1Deck();
+})();
+</script>
+
+</head>
+<body data-page-node-id="KIbFA13siaYLVzMF3NhUaC" class="course-deck-page">
+<nav class="nav" aria-label="课程网站导航"><div class="nav-inner"><a class="brand" href="index.html">Medtronic · AIGC 赋能</a><div class="nav-links"><a href="index.html">首页</a><a href="mulu.html">课程目录</a><a href="yiyetong.html">模型速览</a><a href="kejian.html" class="active">课件</a></div></div></nav>
+
+<main class="course-deck-shell">
+<div class="course-deck-stage" aria-label="S1 公司内部线入门课件">
 <div class="progress-bar" data-page-node-id="vWYCZaRMkXCTPhMI1Ivwyr"></div>
 <nav class="nav-dots" aria-label="幻灯片导航" data-page-node-id="CTNYKBY90DQMqQhpGGF1Ct"></nav>
 
 <!-- ============ 1 COVER ============ -->
-<section class="slide slide--cover" data-page-node-id="7k0wGw9f51bC0BxzBWBV4u">
-
-  <div class="slide-content cover-inner" data-page-node-id="DwfQQ0IpFPdLltx6JnFQ1l">
-    <span class="mt-overline reveal" data-page-node-id="C3kAC8Sxk9i9c9cmFJzVD4">Medtronic · AIGC 赋能</span>
-    <h1 class="reveal" data-page-node-id="tMdW1YW4kWGcFVQMZ9qpGJ">AI 版图 · 个人入口</h1>
-    <div class="accent-bar reveal" data-page-node-id="qLtqVQkGqJEq756FNqAm6p"></div>
-    <p class="sub reveal" style="max-width:640px;" data-page-node-id="N70AOXDRDFLwfwwiOqfDbd">两条线，今天只走公司内部那条。
+<section class="slide-wrapper" aria-label="Slide 1 of 31">
+<section class="slide slide--cover" data-page-node-id="s1RestoredCover" data-slide-id="s1-slide-01" data-slide-number="1" data-source-slide="23" data-source-layout="Dark Cover 3" data-source-family="cover" data-adherence="adaptive" style="--source-slide-background:#140F4B">
+  <div class="slide-content cover-inner">
+    <span class="mt-overline reveal">Medtronic · AIGC 赋能</span>
+    <h1 class="reveal">AI 版图 · 个人入口</h1>
+    <div class="accent-bar reveal"></div>
+    <p class="sub reveal" style="max-width:640px;">两条线，今天只走公司内部那条。
     60 分钟，把公司已经给你装好的这套 Copilot 用熟。</p>
-    <div class="cover-meta reveal" data-page-node-id="1KHcxlDkzn1g8xWu0z1TTA">
-      <div data-page-node-id="kHg9SrWaRrPYiUSuPe7tCZ">今天时长<b data-page-node-id="9sk3JomVJPCbPTh4iSixII">1.5 小时</b></div>
-      <div data-page-node-id="cGpw1635N6aFjrkDUHvSmG">讲<b data-page-node-id="1SPIC9lRr764GuolF2fl2H">13 分钟</b></div>
-      <div data-page-node-id="5ufme8CPjBI9GNjqKQifG8">动手<b data-page-node-id="tcUMRILbGP2IHIWDiefGnt">60 分钟</b></div>
-      <div data-page-node-id="3EvCeQbw9IRmEvkH5GeS0Y">独立复现<b data-page-node-id="Vx5i6q1L7uQoYvflDfRZMf">5 分钟</b></div>
+    <div class="cover-meta reveal">
+      <div>今天时长<b>1.5 小时</b></div>
+      <div>讲<b>13 分钟</b></div>
+      <div>动手<b>60 分钟</b></div>
+      <div>独立复现<b>5 分钟</b></div>
     </div>
   </div>
-  <footer class="mt-footer" data-page-node-id="9b1iH9OiABg8Rm2YHzXsKV">
-    <span data-page-node-id="J4xVwypbJxiO0wHfG1cVa2">Medtronic</span>
-    <span data-page-node-id="f9EIPXa4BTzTSQqRXG5rR2"><strong class="mt-footer__confidential" data-page-node-id="t7jdGqbGsNZhFmKffH4m7h">AIGC 赋能 · S1 公司内部线入门</strong></span>
-    <span class="mt-footer__date" data-page-node-id="XHOtHVTo933NDRWtY6C7gy">Sept 2026</span>
-    <span data-page-node-id="z1C1LKHvNq29yHSSRdoSFi">Internal use only</span>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">1</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
+</section>
+</section>
+
+<!-- ============ 内容开场：AGI 引语 ============ -->
+<section class="slide-wrapper" aria-label="Slide 2 of 31">
+<section class="slide slide--content" style="background:#FFFFFF;color:#140F4B;--source-slide-background:#FFFFFF" data-page-node-id="7k0wGw9f51bC0BxzBWBV4u" data-slide-id="s1-slide-02" data-slide-number="2" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive">
+
+  <div class="slide-content cover-inner" data-page-node-id="DwfQQ0IpFPdLltx6JnFQ1l">
+    <span class="mt-overline reveal" data-page-node-id="C3kAC8Sxk9i9c9cmFJzVD4">开场 · 一个时代的判断</span>
+    <h1 class="reveal" style="font-size:80px;line-height:1.06;margin-top:22px;" data-page-node-id="tMdW1YW4kWGcFVQMZ9qpGJ">Welcome to<br>the AGI era.</h1>
+    <div class="accent-bar reveal" data-page-node-id="qLtqVQkGqJEq756FNqAm6p"></div>
+    <p class="reveal" style="font-size:26px;margin:0 0 24px;">欢迎来到 AGI 时代。</p>
+    <blockquote class="reveal" cite="https://mp.weixin.qq.com/s/1R4vSUmjFUINxFbfJLOXng" style="margin:0;max-width:840px;font-size:20px;line-height:1.5;color:#3C3C3C;">
+      “I think it’s not unreasonable to feel that we are now in the AGI era.”
+      <p style="font-size:16px;margin:8px 0 0;">“认为我们如今已身处 AGI 时代，并非没有道理。”</p>
+      <cite style="display:block;font-size:13px;font-style:normal;margin-top:12px;">— Greg Brockman · GPT-6 Astra 媒体交流中的判断</cite>
+    </blockquote>
+    <p class="sub reveal" style="max-width:840px;margin-top:30px;font-size:20px;color:#140F4B;" data-page-node-id="N70AOXDRDFLwfwwiOqfDbd">当 AI 开始理解场景、操作软件、持续完成任务，工作将如何改变？</p>
+    <!-- 引语依据：用户提供原句及微信公众号 1R4vSUmjFUINxFbfJLOXng 已保存原文。原文将两句归于 Greg Brockman 的媒体交流发言；此处作为个人判断引入，不代表 AGI 已达成行业共识。讲师衔接：下一页以真实软件案例观察能力变化，再进入公司内部工具实操。S1 时长 1.5 小时，动手 60 分钟。 -->
+  </div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">2</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
+</section>
+
+<!-- ============ 2 行业观察开场：现象 ============ -->
+<section class="slide-wrapper" aria-label="Slide 3 of 31">
+<section class="slide slide--content" data-page-node-id="astraOpeningPhenomenon" data-slide-id="s1-slide-03" data-slide-number="3" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+  <div class="slide-content" data-page-node-id="astraOpeningPhenomenonContent">
+    <span class="mt-overline reveal" data-page-node-id="astraOpeningPhenomenonOverline">开场 · GPT-6 Astra 案例引子</span>
+    <h2 class="reveal" data-page-node-id="astraOpeningPhenomenonTitle">从 GPT-6 Astra 案例看：AI 正在进入软件现场</h2>
+    <div class="accent-bar reveal" data-page-node-id="astraOpeningPhenomenonAccent"></div>
+    <div class="slide-body" data-page-node-id="astraOpeningPhenomenonBody">
+      <div class="sig reveal" data-page-node-id="astraOpeningPhenomenonSignal1">
+        <span class="mt-badge" data-page-node-id="astraOpeningPhenomenonBadge1">1</span>
+        <div class="sig-tx" data-page-node-id="astraOpeningPhenomenonText1">
+          <b data-page-node-id="astraOpeningPhenomenonLead1">GPT-6 Astra 案例已经进入真实软件</b>
+          <span data-page-node-id="astraOpeningPhenomenonCopy1">关键变化是：AI 不只回答问题，而是开始操作软件。例如一句需求生成初版三维场景；在专业界面里找插件、调材质、修动作；再根据屏幕反馈继续排查问题。</span>
+        </div>
+      </div>
+      <div class="sig reveal" data-page-node-id="astraOpeningPhenomenonSignal2">
+        <span class="mt-badge" data-page-node-id="astraOpeningPhenomenonBadge2">2</span>
+        <div class="sig-tx" data-page-node-id="astraOpeningPhenomenonText2">
+          <b data-page-node-id="astraOpeningPhenomenonLead2">复杂动作被拆解</b>
+          <span data-page-node-id="astraOpeningPhenomenonCopy2">过去一整套专业流程，现在被拆成「找资料 → 判断路径 → 操作界面 → 看反馈 → 再修正」。安装环境、导入素材、设置参数、预览结果都变成可被 AI 接手的步骤。</span>
+        </div>
+      </div>
+      <div class="sig reveal" data-page-node-id="astraOpeningPhenomenonSignal3">
+        <span class="mt-badge" data-page-node-id="astraOpeningPhenomenonBadge3">3</span>
+        <div class="sig-tx" data-page-node-id="astraOpeningPhenomenonText3">
+          <b data-page-node-id="astraOpeningPhenomenonLead3">普通人开始试专业流程</b>
+          <span data-page-node-id="astraOpeningPhenomenonCopy3">一个不会建模、不会动画、不会复杂软件的人，也能先让 AI 搭出第一版，再由人来判断方向、修正标准、决定取舍。</span>
+        </div>
+      </div>
+      <div class="callout reveal" data-page-node-id="astraOpeningPhenomenonCallout">
+        <p data-page-node-id="astraOpeningPhenomenonCalloutText">这不是教大家玩 3D，也不是把课程变成软件课。
+        <em data-page-node-id="astraOpeningPhenomenonCalloutSub">重点是：AI 开始进入真实软件和真实流程，工作入口正在改变。</em></p>
+      </div>
+    </div>
+  </div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">3</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
+</section>
+
+<!-- ============ 3 GPT-6 Astra 截图 + 视频案例 ============ -->
+<section class="slide-wrapper" aria-label="Slide 4 of 31">
+<section class="slide slide--content" data-page-node-id="astraMediaCase" data-slide-id="s1-slide-04" data-slide-number="4" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+  <div class="slide-content" data-page-node-id="astraMediaCaseContent">
+    <span class="mt-overline reveal" data-page-node-id="astraMediaCaseOverline">案例片段 · GPT-6 Astra</span>
+    <h2 class="reveal" data-page-node-id="astraMediaCaseTitle">从平面设计图到三维样机的演示</h2>
+    <div class="accent-bar reveal" data-page-node-id="astraMediaCaseAccent"></div>
+    <div class="slide-body" data-page-node-id="astraMediaCaseBody">
+      <div class="astra-demo-grid" data-page-node-id="astraMediaCaseGrid">
+        <figure class="astra-demo-card reveal" data-page-node-id="astraMediaCaseShotCard">
+          <h3 data-page-node-id="astraMediaCaseShotTitle">动图：二维信息被理解为空间对象</h3>
+          <img class="astra-demo-shot" src="https://mmbiz.qpic.cn/mmbiz_gif/2jjfQoZLoqWEsevzwKIRkFKticrTKE8EtbmMqdRMEPZsGPLxdmOlukC4V09yJ7PXvAYUZOMM22d2DUd9FLicSk64OsptcJ5DocyZN5LYQSO2A/640?wx_fmt=gif&amp;from=appmsg" data-source-asset="https://mmbiz.qpic.cn/mmbiz_gif/2jjfQoZLoqWEsevzwKIRkFKticrTKE8EtbmMqdRMEPZsGPLxdmOlukC4V09yJ7PXvAYUZOMM22d2DUd9FLicSk64OsptcJ5DocyZN5LYQSO2A/640?wx_fmt=gif&amp;from=appmsg" alt="GPT-6 Astra 案例动图：电路板平面设计与三维样机视图" data-page-node-id="astraMediaCaseShot">
+          <p data-page-node-id="astraMediaCaseShotCopy">左侧是平面结构信息，右侧是可观察的三维对象。重点不是某个工具，而是模型开始把视觉信息转成可操作的空间理解。</p>
+        </figure>
+        <figure class="astra-demo-card reveal" data-page-node-id="astraMediaCaseVideoCard">
+          <h3 data-page-node-id="astraMediaCaseVideoTitle">视频：从“看懂”到“操作软件”</h3>
+          <video class="astra-demo-video" controls playsinline preload="metadata" poster="assets/s1/astra/pcb-to-board.png" aria-label="GPT-6 Astra 视频案例：从设计图到三维样机，约30秒" data-mpvid="wxv_4678820753700651008" data-page-node-id="astraMediaCaseVideo" onerror="this.nextElementSibling.hidden=false">
+            <source src="https://mpvideo.qpic.cn/0bc324abaaaap4apsguzonvfbv6dcdlqaeaa.f10004.mp4?dis_k=c4fd11c0e25435cb53bc046e80cd3a0e&amp;dis_t=1789458533&amp;play_scene=10120&amp;auth_info=TpS2tsl7Z191o8ys/CdyF0RrZWgabGpONk8dIDwSGkJwOjYGNlR8EgJhMzIQSn83UGE=&amp;auth_key=7fd230e71182b6baaca56680183b0f37" type="video/mp4" onerror="this.parentElement.nextElementSibling.hidden=false">
+            当前浏览器无法播放此视频，请使用下方原文入口。
+          </video>
+          <p hidden role="status" style="color:#140F4B;">视频暂时无法加载，请点击下方入口在原文中观看。</p>
+          <p data-page-node-id="astraMediaCaseVideoCopy">视频展示的是同一个趋势：AI 不只解释图像，而是把图像、界面和操作步骤连成一个工作过程。</p>
+          <a class="astra-demo-source" href="https://mp.weixin.qq.com/s/1R4vSUmjFUINxFbfJLOXng" target="_blank" rel="noopener" data-page-node-id="astraMediaCaseSource">在原文中观看视频 ↗</a>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">4</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
+</section>
+
+<!-- ============ 3 行业观察开场：变化 ============ -->
+<section class="slide-wrapper" aria-label="Slide 5 of 31">
+<section class="slide slide--content" data-page-node-id="astraOpeningShift" data-slide-id="s1-slide-05" data-slide-number="5" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+  <div class="slide-content" data-page-node-id="astraOpeningShiftContent">
+    <span class="mt-overline reveal" data-page-node-id="astraOpeningShiftOverline">开场 · 变化</span>
+    <h2 class="reveal" data-page-node-id="astraOpeningShiftTitle">GUI 可能是 Agent 时代最通用的入口</h2>
+    <div class="accent-bar reveal" data-page-node-id="astraOpeningShiftAccent"></div>
+    <div class="slide-body" data-page-node-id="astraOpeningShiftBody">
+      <div class="sig reveal" data-page-node-id="astraOpeningShiftSignal1">
+        <span class="mt-badge" data-page-node-id="astraOpeningShiftBadge1">1</span>
+        <div class="sig-tx" data-page-node-id="astraOpeningShiftText1">
+          <b data-page-node-id="astraOpeningShiftLead1">API 不一定在</b>
+          <span data-page-node-id="astraOpeningShiftCopy1">很多老系统、内部工具、专业软件没有开放 API，或者文档不完整。AI 如果只能调用接口，就会卡在门口。</span>
+        </div>
+      </div>
+      <div class="sig reveal" data-page-node-id="astraOpeningShiftSignal2">
+        <span class="mt-badge" data-page-node-id="astraOpeningShiftBadge2">2</span>
+        <div class="sig-tx" data-page-node-id="astraOpeningShiftText2">
+          <b data-page-node-id="astraOpeningShiftLead2">屏幕就是共同语言</b>
+          <span data-page-node-id="astraOpeningShiftCopy2">按钮、菜单、输入框、报错、弹窗，是人和软件共同理解的界面。GUI 变成 Agent 的通用入口，电脑本身，正在变成 AI 的操作界面。</span>
+        </div>
+      </div>
+      <div class="sig reveal" data-page-node-id="astraOpeningShiftSignal3">
+        <span class="mt-badge" data-page-node-id="astraOpeningShiftBadge3">3</span>
+        <div class="sig-tx" data-page-node-id="astraOpeningShiftText3">
+          <b data-page-node-id="astraOpeningShiftLead3">人从操作员变监督者</b>
+          <span data-page-node-id="astraOpeningShiftCopy3">人的角色从「一步一步点」变成「给目标、看过程、把关结果」。真正的变化不是 AI 更会聊天，而是更会接住任务。</span>
+        </div>
+      </div>
+      <div class="callout reveal" data-page-node-id="astraOpeningShiftCallout">
+        <p data-page-node-id="astraOpeningShiftCalloutText">这就是为什么 Agent 会成为下一阶段的关键词。
+        <em data-page-node-id="astraOpeningShiftCalloutSub">它不是一个更聪明的聊天框，而是能围绕目标持续使用工具的执行系统。</em></p>
+      </div>
+    </div>
+  </div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">5</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
+</section>
+
+<!-- ============ 4 行业观察开场：落到工作流 ============ -->
+<section class="slide-wrapper" aria-label="Slide 6 of 31">
+<section class="slide slide--content" data-page-node-id="astraOpeningBridge" data-slide-id="s1-slide-06" data-slide-number="6" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+  <div class="slide-content" data-page-node-id="astraOpeningBridgeContent">
+    <span class="mt-overline reveal" data-page-node-id="astraOpeningBridgeOverline">开场 · 落到工作流</span>
+    <h2 class="reveal" data-page-node-id="astraOpeningBridgeTitle">从企业已配置入口进入真实工作流</h2>
+    <div class="accent-bar reveal" data-page-node-id="astraOpeningBridgeAccent"></div>
+    <div class="slide-body" data-page-node-id="astraOpeningBridgeBody">
+      <div class="sig reveal" data-page-node-id="astraOpeningBridgeSignal1">
+        <span class="mt-badge" data-page-node-id="astraOpeningBridgeBadge1">1</span>
+        <div class="sig-tx" data-page-node-id="astraOpeningBridgeText1">
+          <b data-page-node-id="astraOpeningBridgeLead1">不是某个工具的操作课</b>
+          <span data-page-node-id="astraOpeningBridgeCopy1">本节不讲某个专业软件，也不要求现场搭复杂系统。上述案例用于说明：工作入口正在变化，AI 开始进入真实流程。</span>
+        </div>
+      </div>
+      <div class="sig reveal" data-page-node-id="astraOpeningBridgeSignal2">
+        <span class="mt-badge" data-page-node-id="astraOpeningBridgeBadge2">2</span>
+        <div class="sig-tx" data-page-node-id="astraOpeningBridgeText2">
+          <b data-page-node-id="astraOpeningBridgeLead2">先从 Office 工作流切入</b>
+          <span data-page-node-id="astraOpeningBridgeCopy2">在企业环境中，高频入口是 Word、Excel、PowerPoint、Outlook、Teams 和经批准的 AI 工具。先在日常工作场景中建立可复用方法。</span>
+        </div>
+      </div>
+      <div class="sig reveal" data-page-node-id="astraOpeningBridgeSignal3">
+        <span class="mt-badge" data-page-node-id="astraOpeningBridgeBadge3">3</span>
+        <div class="sig-tx" data-page-node-id="astraOpeningBridgeText3">
+          <b data-page-node-id="astraOpeningBridgeLead3">从 Copilot 过渡到 Agent</b>
+          <span data-page-node-id="astraOpeningBridgeCopy3">S1 聚焦 Copilot，S6 进入 Agent。学习路径先建立单工具辅助能力，再扩展到跨工具、跨步骤的任务推进。</span>
+        </div>
+      </div>
+      <div class="callout reveal" data-page-node-id="astraOpeningBridgeCallout">
+        <p data-page-node-id="astraOpeningBridgeCalloutText">想法到结果的距离，正在被快速压缩。
+        <em data-page-node-id="astraOpeningBridgeCalloutSub">阶段目标：建立公司内部线的基础使用方法。</em></p>
+      </div>
+    </div>
+  </div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">6</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
 </section>
 
 <!-- ============ 2 开场案例上 ============ -->
-<section class="slide slide--content" data-page-node-id="25mmMFtTPFzCfhrPECakQc">
+<section class="slide-wrapper" aria-label="Slide 7 of 31">
+<section class="slide slide--content" data-page-node-id="25mmMFtTPFzCfhrPECakQc" data-slide-id="s1-slide-07" data-slide-number="7" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="60KHM9FF3K0UVesMAkWIQF">
     <span class="mt-overline reveal" data-page-node-id="PPlsYPZlnu7qKrOlWW0Y5w">开场 · 就发生在两周前</span>
     <h2 class="reveal" data-page-node-id="bMwNnfBkyUKDpthe32F9S2">一只「牛」来过，整个 AI 圈猜了一周</h2>
@@ -382,16 +688,16 @@ body>.nav+.progress-bar+.nav-dots+.slide--cover{min-height:calc(100dvh - 91px)}
       </div>
     </div>
   </div>
-  <footer class="mt-footer" data-page-node-id="ulNQNb57xdeEEaoP9ZgqpK">
-    <span data-page-node-id="btlQq0qJuma0XhBJynwJ6A">Medtronic</span>
-    <span data-page-node-id="RSh5ygIXlOmjkR3qVdjSse"><strong class="mt-footer__confidential" data-page-node-id="Hn9vB09mvYpfX8dphegT1g">AIGC 赋能 · S1 公司内部线入门</strong></span>
-    <span class="mt-footer__date" data-page-node-id="VpSqGGs3HwUnY0L1kmo57t">Sept 2026</span>
-    <span data-page-node-id="khR2Lv1evRCDIreIVXQDbM">Internal use only</span>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">7</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
+</section>
 </section>
 
 <!-- ============ 3 开场案例下 ============ -->
-<section class="slide slide--content" data-page-node-id="pcxvzw0xOTDdfe5Sl886x0">
+<section class="slide-wrapper" aria-label="Slide 8 of 31">
+<section class="slide slide--content" data-page-node-id="pcxvzw0xOTDdfe5Sl886x0" data-slide-id="s1-slide-08" data-slide-number="8" data-source-slide="82" data-source-layout="Full Width Image" data-source-family="numbers-stat" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="lIUJR4CjMlIf1GCjooDRPf">
     <span class="mt-overline reveal" data-page-node-id="9FgxpTkwSeLMJGfciznZCq">开场 · 揭晓之后的数字</span>
     <h2 class="reveal" data-page-node-id="FNr5GyJh3TRFKqEITPwPuA">比身份更震撼的，是价格</h2>
@@ -414,16 +720,16 @@ body>.nav+.progress-bar+.nav-dots+.slide--cover{min-height:calc(100dvh - 91px)}
       </div>
     </div>
   </div>
-  <footer class="mt-footer" data-page-node-id="1yEbfHFOPVUA72sUSPienW">
-    <span data-page-node-id="pEWCAOFQvVenUlB2kb25yM">Medtronic</span>
-    <span data-page-node-id="oPEsBMzRzWa2y61e3dQYts"><strong class="mt-footer__confidential" data-page-node-id="TMqFJzsAEtIpcCtYS1vCOu">AIGC 赋能 · S1 公司内部线入门</strong></span>
-    <span class="mt-footer__date" data-page-node-id="hPCiQm1Kceu0I3rgz1y0KE">Sept 2026</span>
-    <span data-page-node-id="SMRNrbRo2oviVEbPfQIW7J">Internal use only</span>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">8</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
+</section>
 </section>
 
 <!-- ============ 4 三个信号 ============ -->
-<section class="slide slide--content" data-page-node-id="B6nZGHnmNJMhcUF1mlTNEz">
+<section class="slide-wrapper" aria-label="Slide 9 of 31">
+<section class="slide slide--content" data-page-node-id="B6nZGHnmNJMhcUF1mlTNEz" data-slide-id="s1-slide-09" data-slide-number="9" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="ncDRqiBx6fPJkDqoJxrXKR">
     <span class="mt-overline reveal" data-page-node-id="WbBxuiMg6GzViU28eS3CjL">这一周，给了三个信号</span>
     <h2 class="reveal" data-page-node-id="nDiSsrbT7tTy7IMDT71lge">不用追新，但你得有张地图</h2>
@@ -435,16 +741,16 @@ body>.nav+.progress-bar+.nav-dots+.slide--cover{min-height:calc(100dvh - 91px)}
       <div class="note-line reveal" data-page-node-id="mMY5O3GNRQtrzbzAoFWC9z">型号清单不在这页 —— 见<b data-page-node-id="YrUEtaxHf3egvbQI9BwYeN">《大模型一页通》</b>。今天只要记住三个词：<b data-page-node-id="XVBV378p3r77iM2uD5ayey">Chat · Copilot · Agent</b>。</div>
     </div>
   </div>
-  <footer class="mt-footer" data-page-node-id="1tCgD4v55P2TDgokbvFORG">
-    <span data-page-node-id="oH8ITOZaIGHU3zTAe0qGGO">Medtronic</span>
-    <span data-page-node-id="ch16TJtFPKoK8MAoCQNneU"><strong class="mt-footer__confidential" data-page-node-id="0JoYr1zVnXNmBx6FlGp0JI">AIGC 赋能 · S1 公司内部线入门</strong></span>
-    <span class="mt-footer__date" data-page-node-id="olEmHnIa1vI779ZGvrAObJ">Sept 2026</span>
-    <span data-page-node-id="C77AcOId6ETBfst1dSpL7J">Internal use only</span>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">9</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
+</section>
 </section>
 
 <!-- ============ 5 三阶段 ============ -->
-<section class="slide slide--content" data-page-node-id="YjhcexfVMibmHn0A68hGtc">
+<section class="slide-wrapper" aria-label="Slide 10 of 31">
+<section class="slide slide--content" data-page-node-id="YjhcexfVMibmHn0A68hGtc" data-slide-id="s1-slide-10" data-slide-number="10" data-source-slide="68" data-source-layout="3 Col Header and Content" data-source-family="three-column" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="xrQdUFDHtXGr3aLRMDZ2ts">
     <span class="mt-overline reveal" data-page-node-id="d0uuGT7IMmJWHHCcTHCGYc">认知地基 · 只需要记住三个词</span>
     <h2 class="reveal" data-page-node-id="77SrHUPe7oewVCJcATsxke">Chat → Copilot → Agent</h2>
@@ -455,37 +761,99 @@ body>.nav+.progress-bar+.nav-dots+.slide--cover{min-height:calc(100dvh - 91px)}
           <div class="card-step" data-page-node-id="LBl3CQn9BG8hakXOo0UqrH">阶段 1</div>
           <h3 data-page-node-id="cH6cWD1VG1ze4xhpHo5U13">Chat</h3>
           <div class="role" data-page-node-id="fYoiRqmpZ8i1hxIppLVhAR">你问它答</div>
-          <p data-page-node-id="aPDUMCirV0NE9boNm1VNDO">你问「帮我写封邮件」，它写一封。人是主导，AI 是应答机。大多数人今天停在这里。</p>
+          <p data-page-node-id="aPDUMCirV0NE9boNm1VNDO">你问「帮我写一封邮件」，它写一封。人是主导，AI 是应答机。大多数人今天停在这里。</p>
         </div>
-        <div class="card is-hi reveal" data-page-node-id="lMgXxgaxmfGphEVzxkG5ab">
+        <div class="card reveal" data-page-node-id="lMgXxgaxmfGphEVzxkG5ab">
           <div class="card-step" data-page-node-id="TGb2cpelGaXNHiWFfrIYvM">阶段 2</div>
           <h3 data-page-node-id="V7ByCRIFnUqxErdtsHaadu">Copilot</h3>
           <div class="role" data-page-node-id="wU16C9t0HIA31mfZELTaAF">你干它帮</div>
-          <p data-page-node-id="tXgSuc6bA6lHYPg4Wcd7Y2">你在 Word 里写方案，它帮你扩写；你在 Outlook 里翻邮件，它帮你收敛。人机协作，它当副驾。<b data-page-node-id="5L8ybs6JqvD6CDWTQh1Gc4">今天练的就是这个。</b></p>
+          <p data-page-node-id="tXgSuc6bA6lHYPg4Wcd7Y2">你正在 Outlook 看邮件，让它帮你总结风险；你在 Word 写方案，它帮你扩写。人机协作，它当副驾。<b data-page-node-id="5L8ybs6JqvD6CDWTQh1Gc4">今天会先把这个练熟。</b></p>
         </div>
-        <div class="card reveal" data-page-node-id="NGezv8tPOQtkGHZeG737X8">
+        <div class="card is-hi reveal" data-page-node-id="NGezv8tPOQtkGHZeG737X8">
           <div class="card-step" data-page-node-id="RPhDW4XVC9KA0EBSOJouGA">阶段 3</div>
           <h3 data-page-node-id="rNztiCFcjX1WLVHFItOnlw">Agent</h3>
           <div class="role" data-page-node-id="m6Oj73ELIsxYDZ92MBb3rZ">它干你看</div>
-          <p data-page-node-id="I8xIYsPaViSCKwCFETSKmo">你给个目标，它自己规划、执行、检查。比如「把这 50 封客户邮件分类并草拟回复」，它干完你只看结果。</p>
+          <p data-page-node-id="I8xIYsPaViSCKwCFETSKmo">你给一个目标，它自己找资料、使用工具、执行步骤；需要我决定时再回来问我。人从操作员变成监督者。<b data-page-node-id="stage3InlineAnchor">Muse 就是这个概念的例子。</b></p>
         </div>
       </div>
-      <div class="callout reveal" data-page-node-id="NE2wXPT2D0goRe8OGKr1kF">
-        <p data-page-node-id="gUfDw2DHDIJxUwNhg6AGE9">今天结束时，你站在第二阶段的门口。
-        <em data-page-node-id="BfeU3rhPtEwqmHYBsy2uLu">剩下八次课，带你从 Copilot 熟手，走到能当 Agent 的治理者 —— 动手搭 Agent 在 S6。</em></p>
+      <div class="muse-film reveal" role="group" aria-label="Muse Personal Agent 概念片" data-page-node-id="NE2wXPT2D0goRe8OGKr1kF">
+        <div class="muse-film__play" aria-hidden="true" data-page-node-id="xQBlVyG8N5Wfw0uSKir2mt">▶</div>
+        <div data-page-node-id="WfqSvaKuTK6bhn1VN9p2an">
+          <div class="muse-film__eyebrow" data-page-node-id="awkdSMs8Xnz7zL4REJ5H35">2026 Personal Agent 示例：Muse</div>
+          <h3 data-page-node-id="GHFHodJwujSwgb3gGQqWvk">播放 45 秒 Muse 概念片</h3>
+          <p data-page-node-id="gUfDw2DHDIJxUwNhg6AGE9">Personal Agent 不是新聊天框，而是从懂我到替我跑流程。Chat 是「回答我」，Copilot 是「帮着我做」，Personal Agent 开始变成「替我完成」。</p>
+        </div>
+        <div class="muse-film__cue" data-page-node-id="BfeU3rhPtEwqmHYBsy2uLu">
+          <b data-page-node-id="QYbx5NnErVwRGEeEQwZDba">看三件事：长期记忆、工具执行、确认权</b>
+          Muse 的价值不是又多一个 App，而是把 Agent 从回答器推进到执行系统。主线不是 Prompt 越写越长，而是 <b style="display:inline;font-size:inherit;margin:0;color:var(--mt-electric-blue);">Prompt → Assistance → Delegation</b>。S6 再真正动手搭一个小型 Agent。
+        </div>
+        <figure class="muse-film__video-wrap" data-page-node-id="gXv2G67P7Tzj6u8k9x8bpm">
+          <video class="muse-film__video" controls preload="metadata" playsinline data-source-asset="Meta Newsroom: Introducing-Muse_Sizzle-Video.mp4" aria-label="Meta Muse official concept video" data-page-node-id="kmYbDk3JafFGGxyufxb4gc">
+            <source src="https://about.fb.com/wp-content/uploads/2026/09/Introducing-Muse_Sizzle-Video.mp4" type="video/mp4" data-page-node-id="oOgoNMSaYkQj4pBzgQyQ42">
+            你的浏览器无法播放此视频。请打开 Meta Newsroom 来源页观看。
+          </video>
+          <a class="muse-film__source" href="https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/" target="_blank" rel="noopener" data-page-node-id="KDMSAFHXEbvbGr9ByEfSq0">Source: Meta Newsroom · Introducing Muse</a>
+        </figure>
       </div>
     </div>
   </div>
-  <footer class="mt-footer" data-page-node-id="XQeCjhtuCZXEuTIOT3byd2">
-    <span data-page-node-id="t0PPAKLx14QmLcBTqY8zwD">Medtronic</span>
-    <span data-page-node-id="LztLCw9mnwzmCSM4McGaGo"><strong class="mt-footer__confidential" data-page-node-id="tIoJr1r5tKjhawkCYUk2m5">AIGC 赋能 · S1 公司内部线入门</strong></span>
-    <span class="mt-footer__date" data-page-node-id="9SylQg7AZozB9cjUGAz94C">Sept 2026</span>
-    <span data-page-node-id="R1wp1r74SABsw4uNhIfw2H">Internal use only</span>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">10</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
+</section>
+</section>
+
+<!-- ============ 6 阶段 3 单独解释：Personal Agent ============ -->
+<section class="slide-wrapper" aria-label="Slide 11 of 31">
+<section class="slide slide--content" data-page-node-id="stage3PersonalAgentConcept" data-slide-id="s1-slide-11" data-slide-number="11" data-source-slide="74" data-source-layout="Blank" data-source-family="multi-column-adaptive" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+  <div class="slide-content" data-page-node-id="stage3PersonalAgentContent">
+    <span class="mt-overline reveal" data-page-node-id="stage3PersonalAgentOverline">阶段 3 单独讲：Personal Agent</span>
+    <h2 class="reveal" data-page-node-id="stage3PersonalAgentTitle">不是更会聊天，而是更会接住目标</h2>
+    <div class="accent-bar reveal" data-page-node-id="stage3PersonalAgentAccent"></div>
+    <div class="slide-body" data-page-node-id="stage3PersonalAgentBody">
+      <div class="cols4" data-page-node-id="stage3PersonalAgentGrid">
+        <div class="card reveal" data-page-node-id="stage3MemoryCard">
+          <div class="card-step" data-page-node-id="stage3MemoryStep">1</div>
+          <h3 data-page-node-id="stage3MemoryTitle">长期记忆</h3>
+          <div class="role" data-page-node-id="stage3MemoryRole">它知道你是谁</div>
+          <p data-page-node-id="stage3MemoryCopy">不是每次重新介绍背景，而是逐步沉淀偏好、目标、关系和限制。Muse 的例子是：记得你只提过一次的信息。</p>
+        </div>
+        <div class="card reveal" data-page-node-id="stage3ToolCard">
+          <div class="card-step" data-page-node-id="stage3ToolStep">2</div>
+          <h3 data-page-node-id="stage3ToolTitle">工具与浏览器</h3>
+          <div class="role" data-page-node-id="stage3ToolRole">它能进入流程</div>
+          <p data-page-node-id="stage3ToolCopy">不只给建议，而是打开网页、读材料、填表、连接应用，把原来需要人手点的步骤串起来。</p>
+        </div>
+        <div class="card reveal" data-page-node-id="stage3RunCard">
+          <div class="card-step" data-page-node-id="stage3RunStep">3</div>
+          <h3 data-page-node-id="stage3RunTitle">持续执行</h3>
+          <div class="role" data-page-node-id="stage3RunRole">它不会只回一句话</div>
+          <p data-page-node-id="stage3RunCopy">目标给出去后，它能拆计划、继续推进、状态变化时回来找你，而不是一次问答结束就停。</p>
+        </div>
+        <div class="card is-hi reveal" data-page-node-id="stage3ControlCard">
+          <div class="card-step" data-page-node-id="stage3ControlStep">4</div>
+          <h3 data-page-node-id="stage3ControlTitle">确认权与审计</h3>
+          <div class="role" data-page-node-id="stage3ControlRole">人仍然拍板</div>
+          <p data-page-node-id="stage3ControlCopy">发送邮件、付款、外部提交这类动作必须让人确认；过程要能回看，出错时知道它做过什么。</p>
+        </div>
+      </div>
+      <div class="callout reveal" data-page-node-id="stage3PersonalAgentCallout">
+        <p data-page-node-id="stage3PersonalAgentCalloutText">Muse 的价值不在于又多一个 App，而在于把 Agent 从回答器推进到执行系统。
+        <em data-page-node-id="stage3PersonalAgentCalloutSub">今天先理解概念；S6 再动手搭一个小型 Agent。记住一句话：目标可以交给 AI，但边界和确认权必须留在人这里。</em></p>
+      </div>
+    </div>
+  </div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">11</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
 </section>
 
 <!-- ============ 6 两条线（提一下） ============ -->
-<section class="slide slide--content" data-page-node-id="LPAfh5YITgN5iKtr6ExCll">
+<section class="slide-wrapper" aria-label="Slide 12 of 31">
+<section class="slide slide--content" data-page-node-id="LPAfh5YITgN5iKtr6ExCll" data-slide-id="s1-slide-12" data-slide-number="12" data-source-slide="66" data-source-layout="2 Col Header and Content" data-source-family="two-column" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="WD0gDJHTwV619eCDqw8DUT">
     <span class="mt-overline reveal" data-page-node-id="OXfPEIupnh532QTIz2TopA">分清楚两条线 · 今天只走第一条</span>
     <h2 class="reveal" data-page-node-id="A1FTqV16IwS4oFStLl0TrL">公司里三个，外面有一大片</h2>
@@ -511,19 +879,19 @@ body>.nav+.progress-bar+.nav-dots+.slide--cover{min-height:calc(100dvh - 91px)}
           </ul>
         </div>
       </div>
-      <div class="note-line reveal" data-page-node-id="PRqKjKTkhQxI4ICFq2yTGq">外面那一大片不是不重要 —— 是<b data-page-node-id="J01QGKA44EoZ2IDUKdnA0g">今天不练</b>。下一节 S2 整节课都在那边做。<b data-page-node-id="edd1FcPliry2BnjJRndpCd">今天先把公司给你的这套用熟。</b></div>
+      <div class="note-line reveal" data-page-node-id="PRqKjKTkhQxI4ICFq2yTGq">外面那一大片不是不重要 —— 是<b data-page-node-id="J01QGKA44EoZ2IDUKdnA0g">本节不练</b>。下一节 S2 整节课都在那边做。<b data-page-node-id="edd1FcPliry2BnjJRndpCd">本节先把公司内部已批准入口用熟。</b></div>
     </div>
   </div>
-  <footer class="mt-footer" data-page-node-id="8d31kXjpkn7Mu6O8ay8nBz">
-    <span data-page-node-id="wTBGStYe6ygDoDdKcw8PIA">Medtronic</span>
-    <span data-page-node-id="w9I9H7IVEBp9oI5TCc3N1S"><strong class="mt-footer__confidential" data-page-node-id="aq6aNXn11LhspeyEabRjxc">AIGC 赋能 · S1 公司内部线入门</strong></span>
-    <span class="mt-footer__date" data-page-node-id="Tp83cRP8c3XoKvX1wOprwE">Sept 2026</span>
-    <span data-page-node-id="etRxxW7mZwD2rjyrsQIyKu">Internal use only</span>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">12</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
+</section>
 </section>
 
 <!-- ============ 7 公司内部三个入口 ============ -->
-<section class="slide slide--content" data-page-node-id="TgEOq12l9QHRVgxHpgcyzj">
+<section class="slide-wrapper" aria-label="Slide 13 of 31">
+<section class="slide slide--content" data-page-node-id="TgEOq12l9QHRVgxHpgcyzj" data-slide-id="s1-slide-13" data-slide-number="13" data-source-slide="68" data-source-layout="3 Col Header and Content" data-source-family="three-column" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="434CaTuqU5WTzFzEs1VfUq">
     <span class="mt-overline reveal" data-page-node-id="D7SGpQcgy4flqRufdVeY7y">公司内部线 · 三个门各管各的事</span>
     <h2 class="reveal" data-page-node-id="YyCtUUV0Zkms9q2j6hjEYD">写东西、找东西、理东西，各找各的门</h2>
@@ -555,16 +923,16 @@ body>.nav+.progress-bar+.nav-dots+.slide--cover{min-height:calc(100dvh - 91px)}
       </div>
     </div>
   </div>
-  <footer class="mt-footer" data-page-node-id="QXTeuf46THspG7VjhgKUsH">
-    <span data-page-node-id="WLVIzuHCFN0kIU2epLgMcc">Medtronic</span>
-    <span data-page-node-id="ogCDIyZuKwXXpCsrRK2ZSx"><strong class="mt-footer__confidential" data-page-node-id="i6PbvhlqAKqk1oZ2LicOM0">AIGC 赋能 · S1 公司内部线入门</strong></span>
-    <span class="mt-footer__date" data-page-node-id="NhwvbDrGciT4TG1EIikQGb">Sept 2026</span>
-    <span data-page-node-id="dfVjXFPe43cVBwOv1EcGO5">Internal use only</span>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">13</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
+</section>
 </section>
 
 <!-- ============ 8 安全红线 ============ -->
-<section class="slide slide--content" data-page-node-id="CAMJT6PRfNEAXyM0j2FhGf">
+<section class="slide-wrapper" aria-label="Slide 14 of 31">
+<section class="slide slide--content" data-page-node-id="CAMJT6PRfNEAXyM0j2FhGf" data-slide-id="s1-slide-14" data-slide-number="14" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="8CEkckzgrm7hzDYUaqCLvn">
     <span class="mt-overline reveal" data-page-node-id="rW8TVUSCU4UtG3pDuDRH7y">今天必须立下的一条规矩</span>
     <h2 class="reveal" data-page-node-id="5d4zShNSjcLCnhNwOiLW8y">安全红线</h2>
@@ -579,15 +947,15 @@ body>.nav+.progress-bar+.nav-dots+.slide--cover{min-height:calc(100dvh - 91px)}
       <div class="note-line reveal" data-page-node-id="SNphJeaUexNnlPHs1Aom6g">反过来说：<b data-page-node-id="YmyMdFYR303RWJQauZQXFm">今天三个任务可以直接用真实邮件、真实会议记录、真实周报</b> —— 不用脱敏、不用编数据。这就是内部线最大的好处。</div>
     </div>
   </div>
-  <footer class="mt-footer" data-page-node-id="5hXNKNYNgXKAGDq852b8dE">
-    <span data-page-node-id="Pqd0nPC4MCtWobgeIwp9Wf">Medtronic</span>
-    <span data-page-node-id="qzjQTJz62kaiy5RigCzslS"><strong class="mt-footer__confidential" data-page-node-id="kTQhoLTgPhYJ8xicqwQiPV">AIGC 赋能 · S1 公司内部线入门</strong></span>
-    <span class="mt-footer__date" data-page-node-id="SqKIieV4bsg20xmb3iuBGj">Sept 2026</span>
-    <span data-page-node-id="nsqQqB8oDIGVP5XKCcbELy">Internal use only</span>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">14</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
+</section>
 
-<section class="slide slide--content" data-page-node-id="nMCDfpnr9cUp92p4WezbBu">
+<section class="slide-wrapper" aria-label="Slide 15 of 31">
+<section class="slide slide--content" data-page-node-id="nMCDfpnr9cUp92p4WezbBu" data-slide-id="s1-slide-15" data-slide-number="15" data-source-slide="74" data-source-layout="Blank" data-source-family="multi-column-adaptive" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="QVTSFvMajUclC2xTF7JoU6">
     <span class="mt-overline reveal" data-page-node-id="xfQixQtxQa5u8wmlzwwmXU">今天要摸到的四个办公入口</span>
     <h2 class="reveal" data-page-node-id="1QpsFuBbMv53bhUbtokJes">办公 AI 四个入口</h2>
@@ -605,60 +973,60 @@ body>.nav+.progress-bar+.nav-dots+.slide--cover{min-height:calc(100dvh - 91px)}
       </div>
     </div>
   </div>
-  <footer class="mt-footer" data-page-node-id="DIxRWc23B3pQJ0PPs1TLmj">
-    <span data-page-node-id="8sK2MeF2890Y7B4aAzt6Vt">Medtronic</span>
-    <span data-page-node-id="oTXzeGCV6TDzqIqNljIbUF"><strong class="mt-footer__confidential" data-page-node-id="Y3kVDGexvOh4LK16oP119D">AIGC 赋能 · S1 公司内部线入门</strong></span>
-    <span class="mt-footer__date" data-page-node-id="vAcdvM8HaxUssYXuUuc0Dj">Sept 2026</span>
-    <span data-page-node-id="deirjjruItCPFXdmV4lMK8">Internal use only</span>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">15</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
+</section>
 
-<!-- ============ 10 Copilot 还能干这些（highlight） ============ -->
-<section class="slide slide--content" data-page-node-id="5m1Gl1ICUK2J7BrjZQh4gk">
+<!-- ============ 10 工作结果视角（highlight） ============ -->
+<section class="slide-wrapper" aria-label="Slide 16 of 31">
+<section class="slide slide--content" data-page-node-id="5m1Gl1ICUK2J7BrjZQh4gk" data-slide-id="s1-slide-16" data-slide-number="16" data-source-slide="66" data-source-layout="2 Col Header and Content" data-source-family="two-column" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="4s2E3HceSeyoLxGl804z0t">
-    <span class="mt-overline reveal" data-page-node-id="kVpO08RU8BpR4z4czQDo4P">先看一眼全貌 · 这四个今天只展示不练</span>
-    <h2 class="reveal" data-page-node-id="Jz9GJ2UcygvVv0bEGgjwAi">Copilot 还能干这些</h2>
+    <span class="mt-overline reveal" data-page-node-id="kVpO08RU8BpR4z4czQDo4P">少讲 Feature，多看 Outcome</span>
+    <h2 class="reveal" data-page-node-id="Jz9GJ2UcygvVv0bEGgjwAi">你的工作里哪种东西最费时间？</h2>
     <div class="accent-bar reveal" data-page-node-id="5eS54FhnAnS31x7UIMPg3Y"></div>
     <div class="slide-body" data-page-node-id="1XhVa80KEPDJS5eK31QR9y">
       <div class="cols2" data-page-node-id="aJNIDcxwPIvSBA0SPcYMJE">
         <div class="card reveal" data-page-node-id="0Kd4inTgAm30JSGQjSuvIT">
-          <div class="card-step" data-page-node-id="GprOsqAlCgrqFkCiRnTR8a">Teams · 会中就能用</div>
-          <h3 data-page-node-id="4qoam9FjGzKmv8yH4MQgDV">同声传译 + Facilitator 主持人</h3>
-          <div class="role" data-page-node-id="LmFuOJe71xod4zL5jjXo93">不只是"会后总结"</div>
-          <p data-page-node-id="PqMwf7dwLx0IlVkZhRLNmo">多语言会议实时翻译，不用等纪要；Facilitator 自动跟议程、边开边提炼要点。<b data-page-node-id="UbbMMBzlcH2GrnZMhHIl9m">会开完，纪要已经在那了。</b></p>
+          <div class="card-step" data-page-node-id="GprOsqAlCgrqFkCiRnTR8a">材料 → 看懂</div>
+          <h3 data-page-node-id="4qoam9FjGzKmv8yH4MQgDV">先把信息收敛成判断</h3>
+          <div class="role" data-page-node-id="LmFuOJe71xod4zL5jjXo93">不是“总结一下”</div>
+          <p data-page-node-id="PqMwf7dwLx0IlVkZhRLNmo">把长材料压成背景、问题、选项、建议。<b data-page-node-id="UbbMMBzlcH2GrnZMhHIl9m">老板不看原材料，也能知道下一步怎么拍板。</b></p>
         </div>
         <div class="card reveal" data-page-node-id="DGhy2BZYiSSViMLYak987K">
-          <div class="card-step" data-page-node-id="fgdGWfmBRVKwf5SwT0w79d">PowerPoint · 一键成型</div>
-          <h3 data-page-node-id="UdLE1E0DaZRnxlJwfyDEAq">一份 Word 文档 → N 页演示稿</h3>
-          <div class="role" data-page-node-id="Wkph6wqzx1iTie1j9T4I2j">"把这份战略文档转成一套汇报演示文稿"</div>
-          <p data-page-node-id="3HKSrX6cKhxDOrpOyj5Y9G">结构、分页、每页要点一次成型。<b data-page-node-id="kXnNA1LE3kCCj1epmZXiNr">你要做的是改细节，不是从空白页开始搭。</b></p>
+          <div class="card-step" data-page-node-id="fgdGWfmBRVKwf5SwT0w79d">邮件 / 会议 → 行动</div>
+          <h3 data-page-node-id="UdLE1E0DaZRnxlJwfyDEAq">把散信息变成责任清单</h3>
+          <div class="role" data-page-node-id="Wkph6wqzx1iTie1j9T4I2j">风险、责任人、截止日期</div>
+          <p data-page-node-id="3HKSrX6cKhxDOrpOyj5Y9G">邮件不是看完就算，会议不是记完就算。<b data-page-node-id="kXnNA1LE3kCCj1epmZXiNr">要能派活、能跟进、能发出去。</b></p>
         </div>
         <div class="card reveal" data-page-node-id="UCW5xTWxzAbuw4dEnUsGdt">
-          <div class="card-step" data-page-node-id="zjWKuKmx4hRGyCAThAy1tp">Excel · 图和结论一起出</div>
-          <h3 data-page-node-id="YX6WW6xviuxqIerh44VnTb">数据可视化 + 自动分析结论</h3>
-          <div class="role" data-page-node-id="3lw9LF8WVR15DW94uWdCMr">"转成易懂的图表，并给出初步分析结论"</div>
-          <p data-page-node-id="b9jcCJxUrXnXOkbOdnCQJV">多数工具只给你一张图。这里要的是<b data-page-node-id="QUzDU08gu755zInDJIimto">图 + 这张图说明什么</b>，一次问出来。</p>
+          <div class="card-step" data-page-node-id="zjWKuKmx4hRGyCAThAy1tp">数据 → 找问题</div>
+          <h3 data-page-node-id="YX6WW6xviuxqIerh44VnTb">图表只是过程，结论才是产出</h3>
+          <div class="role" data-page-node-id="3lw9LF8WVR15DW94uWdCMr">异常、归因、下一步</div>
+          <p data-page-node-id="b9jcCJxUrXnXOkbOdnCQJV">不要只问“帮我画图”。要问：<b data-page-node-id="QUzDU08gu755zInDJIimto">这张图说明什么，哪里异常，下一步查什么。</b></p>
         </div>
         <div class="card is-hi reveal" data-page-node-id="DHht4MSpUMEdirXFgE9QMJ">
-          <div class="card-step" data-page-node-id="QtACKgsCqgFo24CwRvgAm8">Agent · 公司里已经在用的两个</div>
-          <h3 data-page-node-id="HN5zT19OoAuYWI2MCj0DTK">分析助手 / 研究助手</h3>
-          <div class="role" data-page-node-id="OfZ87E1bfslW2kxpXykbxg">第三阶段的实物长这样</div>
-          <p data-page-node-id="X4t68Vt4MGw8JGXQLwarwB"><b data-page-node-id="rcrwla5g7ccNT1TkyLRue7">分析助手</b>：链式推理，做数据洞察与可视化。<br data-page-node-id="lol50zEM3ncg3aubdO2KBt"><b data-page-node-id="ckaeKJvzxj2cnfLWrHIyP8">研究助手</b>：多步骤任务，整合内外数据，自动撰写策略报告与分析报告。</p>
+          <div class="card-step" data-page-node-id="QtACKgsCqgFo24CwRvgAm8">文档 / PPT → 产出</div>
+          <h3 data-page-node-id="HN5zT19OoAuYWI2MCj0DTK">从空白页到可改稿</h3>
+          <div class="role" data-page-node-id="OfZ87E1bfslW2kxpXykbxg">你改细节，不从零搭</div>
+          <p data-page-node-id="X4t68Vt4MGw8JGXQLwarwB">一份材料可以变成摘要、邮件、汇报大纲或初版 PPT。<b data-page-node-id="rcrwla5g7ccNT1TkyLRue7">今天先练三种最高频结果：决策、风险、行动。</b></p>
         </div>
       </div>
-      <div class="note-line reveal" data-page-node-id="D8I7fnIA4htxwpt1GV0Ss8">这四个<b data-page-node-id="A8wYAZmM4OYUC9t2w7dhJI">今天只展示，不练</b>。今天把任务 A / B / C 三个入口用熟 —— 剩下这几个，后面几次课逐个上。</div>
+      <div class="note-line reveal" data-page-node-id="D8I7fnIA4htxwpt1GV0Ss8">所以不要从“Copilot 有什么功能”开始；从<b data-page-node-id="A8wYAZmM4OYUC9t2w7dhJI">你的工作里哪种东西最费时间</b>开始。下一页讲师直接演示：6 份材料 → 为什么这个季度落后？</div>
     </div>
   </div>
-  <footer class="mt-footer" data-page-node-id="ksIHZKH6oG58R2ziRNwRgt">
-    <span data-page-node-id="ZYL3NHhBBs1Fy5Hn66GU7H">Medtronic</span>
-    <span data-page-node-id="gbZQT3t5td2G7NEzAHFAZH"><strong class="mt-footer__confidential" data-page-node-id="d6WsE5ZrPDNbjhINIHchX0">AIGC 赋能 · S1 公司内部线入门</strong></span>
-    <span class="mt-footer__date" data-page-node-id="YC0bquBtGJMDsmzzoRI4GP">Sept 2026</span>
-    <span data-page-node-id="HLV5exAPjiBF687qGKvkUe">Internal use only</span>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">16</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
+</section>
 </section>
 
 <!-- ============ 11 经典案例（讲师演示，学员不动手） ============ -->
-<section class="slide slide--content" data-page-node-id="RvaoxSDFlFZsEqtcBzKDNs">
+<section class="slide-wrapper" aria-label="Slide 17 of 31">
+<section class="slide slide--content" data-page-node-id="RvaoxSDFlFZsEqtcBzKDNs" data-slide-id="s1-slide-17" data-slide-number="17" data-source-slide="66" data-source-layout="2 Col Header and Content" data-source-family="two-column" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="wAjwDP8StAHS7W558fUfc8">
     <span class="mt-overline reveal" data-page-node-id="0e7R66ip9VX2X7qgLxJNHn">经典案例 · 讲师演示，今天不用你动手</span>
     <h2 class="reveal" data-page-node-id="IvEqlxIgRwYE25BILuQ9pE">6 份材料，找出这个季度为什么落后</h2>
@@ -688,16 +1056,16 @@ body>.nav+.progress-bar+.nav-dots+.slide--cover{min-height:calc(100dvh - 91px)}
       </div>
     </div>
   </div>
-  <footer class="mt-footer" data-page-node-id="POJBswdCgh3Bcj1bTob823">
-    <span data-page-node-id="KTzGFniTrmhFXLhOZvFdew">Medtronic</span>
-    <span data-page-node-id="3WX3slGugutbUxIfJsS2KD"><strong class="mt-footer__confidential" data-page-node-id="cWdWvdde9NTIOZh4OihKFS">AIGC 赋能 · S1 公司内部线入门</strong></span>
-    <span class="mt-footer__date" data-page-node-id="6hy8pVcwMIERyCWgS4w3TP">Sept 2026</span>
-    <span data-page-node-id="TwD47ZQ00eGQaG3paqOUHF">Internal use only</span>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">17</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
+</section>
 </section>
 
 <!-- ============ 10 今天三个任务 ============ -->
-<section class="slide slide--content" data-page-node-id="42ff94XZPmYFcjrSnIywJL">
+<section class="slide-wrapper" aria-label="Slide 18 of 31">
+<section class="slide slide--content" data-page-node-id="42ff94XZPmYFcjrSnIywJL" data-slide-id="s1-slide-18" data-slide-number="18" data-source-slide="68" data-source-layout="3 Col Header and Content" data-source-family="three-column" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="APBMtdwgic3D9J0ekz0fkk">
     <span class="mt-overline reveal" data-page-node-id="WQIkMME3GrbCMkFB5KvGKi">接下来 60 分钟 · 全部在公司内部线</span>
     <h2 class="reveal" data-page-node-id="0diXRa74qkMUirRfpjRqax">今天三个任务：先收敛，再产出</h2>
@@ -735,16 +1103,16 @@ body>.nav+.progress-bar+.nav-dots+.slide--cover{min-height:calc(100dvh - 91px)}
       <div class="note-line reveal" data-page-node-id="a1zAAtIWdlSHed7CxpUBMD">B 是<b data-page-node-id="xCk7JaCh4vxoM3jOTgx3w5">收</b>（外部信息 → 风险），C 是<b data-page-node-id="s1TbzQ8wweDOMJKQFJHXgD">出</b>（内部讨论 → 行动）。一收一出，闭环。剩下 4 分钟机动，5 分钟留给下课前独立复现。</div>
     </div>
   </div>
-  <footer class="mt-footer" data-page-node-id="skW61dufllUC5HzXELYdei">
-    <span data-page-node-id="MMgBUgdhPn0HTjiWl6iq1O">Medtronic</span>
-    <span data-page-node-id="PCkcvhzB9Fa0AS3q42Djsi"><strong class="mt-footer__confidential" data-page-node-id="auSDFxz6z3i6qXwsFSvMau">AIGC 赋能 · S1 公司内部线入门</strong></span>
-    <span class="mt-footer__date" data-page-node-id="vEE3OErxsGCKiFE93dbzJl">Sept 2026</span>
-    <span data-page-node-id="egt6im4sD34rqPcXewXczf">Internal use only</span>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">18</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
+</section>
 </section>
 
 <!-- ============ 13 任务 A 带练 ============ -->
-<section class="slide slide--content" data-page-node-id="6AyIAVNRRVXX6UBRgO0VYX">
+<section class="slide-wrapper" aria-label="Slide 19 of 31">
+<section class="slide slide--content" data-page-node-id="6AyIAVNRRVXX6UBRgO0VYX" data-slide-id="s1-slide-19" data-slide-number="19" data-source-slide="66" data-source-layout="2 Col Header and Content" data-source-family="two-column" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="GuxmlQjAxmXlxhHOcK9PVF">
     <span class="mt-overline reveal" data-page-node-id="kHwjIwVD9cAXKBpbOEFpXA">任务 A · 带练 10 → 变体 10 → 点评 5</span>
     <h2 class="reveal" data-page-node-id="g9EiY662p7Sjy9unQlGkZi">三份材料，变成一句能拍板的话</h2>
@@ -768,19 +1136,19 @@ body>.nav+.progress-bar+.nav-dots+.slide--cover{min-height:calc(100dvh - 91px)}
       </div>
     </div>
   </div>
-  <footer class="mt-footer" data-page-node-id="IU0lgJDSfPM9BecT8gHacT">
-    <span data-page-node-id="B0eKxF7RFe47F3yRJZLWOs">Medtronic</span>
-    <span data-page-node-id="QDH13s6DrKxcZZe9NJ004C"><strong class="mt-footer__confidential" data-page-node-id="4aUAgfgRdSLu0iDryG71Dg">AIGC 赋能 · S1 公司内部线入门</strong></span>
-    <span class="mt-footer__date" data-page-node-id="WiynQjg7rPIwuM27nvWs9F">Sept 2026</span>
-    <span data-page-node-id="pI6srMchGY5eQiw3h5MM5H">Internal use only</span>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">19</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
+</section>
 </section>
 
 <!-- ============ 14 提示词四件套 ============ -->
-<section class="slide slide--content" data-page-node-id="QJge6X2IiA4m7CUJ1GHbEl">
+<section class="slide-wrapper" aria-label="Slide 20 of 31">
+<section class="slide slide--content" data-page-node-id="QJge6X2IiA4m7CUJ1GHbEl" data-slide-id="s1-slide-20" data-slide-number="20" data-source-slide="68" data-source-layout="3 Col Header and Content" data-source-family="three-column" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="fAGOd1f2m8tsckXJB7ScIy">
     <span class="mt-overline reveal" data-page-node-id="9yVnm0aMhk2eCLQBsn7uHq">任务 A 点评用 · 全课只讲这一次</span>
-    <h2 class="reveal" data-page-node-id="BlmN0dbShRnLBjZfPqWptv">四件套：给角色 · 给材料 · 给格式 · 给例子</h2>
+    <h2 class="reveal" data-page-node-id="BlmN0dbShRnLBjZfPqWptv">四件套 + 成功标准</h2>
     <div class="accent-bar reveal" data-page-node-id="zqrdiQiE90hQujKmQdAA7r"></div>
     <div class="slide-body" data-page-node-id="eUaWMxHdzK3YnUlQQUyldq">
       <div class="cols2" data-page-node-id="GC1iFIM2NzW4zcLmQuHxC8">
@@ -792,7 +1160,7 @@ body>.nav+.progress-bar+.nav-dots+.slide--cover{min-height:calc(100dvh - 91px)}
         <div class="ck is-a reveal" data-page-node-id="lpOBRfhmqTRtpbph5p9sWG">
           <h3 data-page-node-id="pTPxxLuWnv00lPZ9N8ASAg">✓ 这样说</h3>
           <p style="font-size:var(--body-small-size);line-height:1.6;" data-page-node-id="fXePAipnu17h63hUt4a3Q5">「你是我的执行助理。基于这 3 份材料，用『背景 / 问题 / 选项 / 建议』四段式，写一份 300 字以内的决策摘要。」</p>
-          <p style="margin-top:14px;" data-page-node-id="zjovRzVvHtXimnYZzsrby6">四件齐了：<b data-page-node-id="EruxTztgUoDMaUPN44fICN">角色</b>（执行助理）+ <b data-page-node-id="4RDBaH0eN8cyyViIUxLDMo">材料</b>（这 3 份）+ <b data-page-node-id="IYn2nKnW8iy02B4lSOBuUC">格式</b>（四段式、300 字）+ <b data-page-node-id="BFLGgtzLaZTKCvlsZkpBaC">例子</b>（这个结构本身就是例子）。</p>
+          <p style="margin-top:14px;" data-page-node-id="zjovRzVvHtXimnYZzsrby6">四件齐了：<b data-page-node-id="EruxTztgUoDMaUPN44fICN">角色</b>（执行助理）+ <b data-page-node-id="4RDBaH0eN8cyyViIUxLDMo">材料</b>（这 3 份）+ <b data-page-node-id="IYn2nKnW8iy02B4lSOBuUC">格式</b>（四段式、300 字）+ <b data-page-node-id="BFLGgtzLaZTKCvlsZkpBaC">成功标准</b>（老板不看原材料也能做决定）。</p>
         </div>
       </div>
       <div class="cols3" style="margin-top:20px;" data-page-node-id="eiUco3cTJTH0Ygq8HoxChh">
@@ -807,23 +1175,23 @@ body>.nav+.progress-bar+.nav-dots+.slide--cover{min-height:calc(100dvh - 91px)}
           <p data-page-node-id="Nw3nCZaDi7HE0NxZLnW0Zt">出得不对，改的是<b data-page-node-id="odVyn2hBZhKlRnG3rV9Hcm">描述</b>，不是<b data-page-node-id="gVVGZ6C2Xesaa4OKFrqRhk">重试</b>。同一句话跑十次，还是同一个结果。</p>
         </div>
         <div class="card reveal" data-page-node-id="dp2FQi3Diek8NcAORdMi2r">
-          <div class="card-step" data-page-node-id="ODFPB0Egdl7cLvz3SBpuzv">提效点 3</div>
-          <h3 data-page-node-id="HavmymACtOHdt2B7VxLecL">常用提示存起来</h3>
-          <p data-page-node-id="7Kch1cE6aJDQ8Ap360B9YJ">微软官方提示库 / Copilot 提示词管理。今天写顺手的那句，存进去，下次一键调用。</p>
+          <div class="card-step" data-page-node-id="ODFPB0Egdl7cLvz3SBpuzv">第五个隐形元素</div>
+          <h3 data-page-node-id="HavmymACtOHdt2B7VxLecL">成功标准</h3>
+          <p data-page-node-id="7Kch1cE6aJDQ8Ap360B9YJ">四件套让 AI 知道怎么做；成功标准告诉 AI 什么叫做完。到了 Agent，<b>success criteria 比 prompt wording 更重要</b>。</p>
         </div>
       </div>
     </div>
   </div>
-  <footer class="mt-footer" data-page-node-id="tJ1r83kU2C979KHHtmBcBt">
-    <span data-page-node-id="ef2s0DEbEtihc9TGBv4Bt6">Medtronic</span>
-    <span data-page-node-id="ADDtwpDG5WfPmfeMRpjoMg"><strong class="mt-footer__confidential" data-page-node-id="39AubxURcuddPPCu8NbJh2">AIGC 赋能 · S1 公司内部线入门</strong></span>
-    <span class="mt-footer__date" data-page-node-id="LdhfHLHIKQN0ysfPjlpR0r">Sept 2026</span>
-    <span data-page-node-id="QAZBZcswvhk7Pva3BmSluS">Internal use only</span>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">20</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
+</section>
 </section>
 
 <!-- ============ 15 Copilot Memory 与自定义说明 ============ -->
-<section class="slide slide--content" data-page-node-id="a9NquBorqOyCGzLCAKt8fv">
+<section class="slide-wrapper" aria-label="Slide 21 of 31">
+<section class="slide slide--content" data-page-node-id="a9NquBorqOyCGzLCAKt8fv" data-slide-id="s1-slide-21" data-slide-number="21" data-source-slide="66" data-source-layout="2 Col Header and Content" data-source-family="two-column" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="qtlqdJgxdcFOl4yh9BeDt4">
     <span class="mt-overline reveal" data-page-node-id="Vl8LUU0mFmGRoFkSHn65CX">任务 B 之前 · 2 分钟设定，省掉以后每次重讲</span>
     <h2 class="reveal" data-page-node-id="KiU4fbNdFAO2VCFsA4ie8N">让它记住你，别每次从头讲背景</h2>
@@ -833,33 +1201,33 @@ body>.nav+.progress-bar+.nav-dots+.slide--cover{min-height:calc(100dvh - 91px)}
         <div class="card reveal" data-page-node-id="0jUJL9kfGKxAWWwHVbvXPp">
           <div class="card-step" data-page-node-id="FvoTrVAtRdkBQbyHOtCpaF">能力 1</div>
           <h3 data-page-node-id="zWXtrecimvCHZlvHHPuoEf">Memory</h3>
-          <div class="role" data-page-node-id="jnuXkZKk0yMhYsp3zKVlZJ">它记得住你上次说过的偏好</div>
-          <p data-page-node-id="vLF7H3klSgbFOs3Q9RxSLS">不用每次都把「我是谁、我负责什么、我喜欢什么格式」重讲一遍。<br data-page-node-id="ZKY9vaZyHtVzrUWrSjw8Vo"><br data-page-node-id="HW3nvW6vbrmpIEgWjPV00r"><b data-page-node-id="qVpA2buZu3vZ0Tz5NvQbwB">现场演示：</b>问一次「我负责哪些事」，关掉对话再开一个，它还记得。</p>
+          <div class="role" data-page-node-id="jnuXkZKk0yMhYsp3zKVlZJ">启用后可跨对话使用已保存信息</div>
+          <p data-page-node-id="vLF7H3klSgbFOs3Q9RxSLS">在启用 Memory / Personalization 的情况下，Copilot 可以跨对话使用与你和工作有关的已保存信息。<br data-page-node-id="ZKY9vaZyHtVzrUWrSjw8Vo"><br data-page-node-id="HW3nvW6vbrmpIEgWjPV00r"><b data-page-node-id="qVpA2buZu3vZ0Tz5NvQbwB">现场演示：</b>先检查功能是否已启用，再让它用你的角色和偏好改写同一个问题。</p>
         </div>
         <div class="card reveal" data-page-node-id="nIMU0qXfM5TEEtQmuIN0Cj">
           <div class="card-step" data-page-node-id="6rAj1BRJu41Ho3e6BFQtqO">能力 2</div>
           <h3 data-page-node-id="4hCHQEVYPBYMe6cF86EGye">自定义说明</h3>
-          <div class="role" data-page-node-id="71QAC5WjZQn6ROkaMCR1rN">一次设定，长期生效</div>
+          <div class="role" data-page-node-id="71QAC5WjZQn6ROkaMCR1rN">一次设定，减少重复背景</div>
           <p data-page-node-id="08XKxFFwUztsD528f2lZCm">把「我的角色 / 我的输出偏好」写成一段固定说明，之后每次提问都自动带上。<br data-page-node-id="rIt68oJRR4fsEqEaAqcRDt"><br data-page-node-id="avr0pBxBB3jlJoS5tPiXqQ"><b data-page-node-id="f8PXrFgmb3RDDzIKsFXRhY">现场演示：</b>设定前 vs 设定后，同一个问题的回答差异。</p>
         </div>
       </div>
       <div class="hint-box reveal" style="margin-top:20px;" data-page-node-id="4sitTe7WUY4hVSGxDdbOQi">
-        <h3 data-page-node-id="kDl46PHIOs2fLjEkR4s4lj">今天就做这一件事</h3>
-        <p data-page-node-id="pWECmK92iGPYUOKdW95Twx">把「我的角色 + 我喜欢的输出格式」写进自定义说明。</p>
-        <div class="why" data-page-node-id="UNAEGOPhpdh4pJZqaut1Wg">省下的不是时间，是每一次提问开头那半句话。</div>
+        <h3 data-page-node-id="kDl46PHIOs2fLjEkR4s4lj">把 Prompt / Memory / Agent 串起来</h3>
+        <p data-page-node-id="pWECmK92iGPYUOKdW95Twx">Prompt = 我这一次告诉你什么<br>Memory = 你长期知道我什么<br>Agent = 你知道我以后，能替我做什么</p>
+        <div class="why" data-page-node-id="UNAEGOPhpdh4pJZqaut1Wg">今天先做前两步：把「我的角色 + 我喜欢的输出格式」写进自定义说明；未来 Agent 课再练授权和监督。</div>
       </div>
     </div>
   </div>
-  <footer class="mt-footer" data-page-node-id="uN4mCKFB6KIywUm3EaLYCc">
-    <span data-page-node-id="N9VW9ENFwGdGC13DKlwSCQ">Medtronic</span>
-    <span data-page-node-id="OEjFQSgdsXa9JO0zdTMxb7"><strong class="mt-footer__confidential" data-page-node-id="W0pbiVwFlGgXhU3xBv3PJK">AIGC 赋能 · S1 公司内部线入门</strong></span>
-    <span class="mt-footer__date" data-page-node-id="hSWL0o6g960poNtqEhFrDp">Sept 2026</span>
-    <span data-page-node-id="p803LFK7HPadRADiN1AiwE">Internal use only</span>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">21</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
+</section>
 </section>
 
 <!-- ============ 16 任务 B 带练（Outlook） ============ -->
-<section class="slide slide--content" data-page-node-id="p80LXZALEQQJSDBJyht2gY">
+<section class="slide-wrapper" aria-label="Slide 22 of 31">
+<section class="slide slide--content" data-page-node-id="p80LXZALEQQJSDBJyht2gY" data-slide-id="s1-slide-22" data-slide-number="22" data-source-slide="66" data-source-layout="2 Col Header and Content" data-source-family="two-column" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="jLGKAGECrkryX5leXcGACT">
     <span class="mt-overline reveal" data-page-node-id="MoNyEqxrcX2LEXdaYAjKUK">任务 B · 带练 5 → 练 5 → 点评 2｜收：外部信息 → 风险</span>
     <h2 class="reveal" data-page-node-id="KEHlan6qhXhVtx8nD2uCMt">48 小时的邮件，变成风险点 + 下一步</h2>
@@ -883,16 +1251,16 @@ body>.nav+.progress-bar+.nav-dots+.slide--cover{min-height:calc(100dvh - 91px)}
       </div>
     </div>
   </div>
-  <footer class="mt-footer" data-page-node-id="YjEejI8kQRXYQNcfCkDddG">
-    <span data-page-node-id="t0XICDGSr0dgVnD4oozPW9">Medtronic</span>
-    <span data-page-node-id="Db3okBR4fKIeTF0kFuHbMH"><strong class="mt-footer__confidential" data-page-node-id="KdIxcYOUZm9nekPHwcyFB6">AIGC 赋能 · S1 公司内部线入门</strong></span>
-    <span class="mt-footer__date" data-page-node-id="Wu51WpnKVfDcX03EPpbRJJ">Sept 2026</span>
-    <span data-page-node-id="N9sEIW7BAj1img56BGdBF9">Internal use only</span>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">22</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
+</section>
 </section>
 
 <!-- ============ 17 任务 C 带练（Teams） ============ -->
-<section class="slide slide--content" data-page-node-id="h4YYo3FcFcBlbSvBknXEVd">
+<section class="slide-wrapper" aria-label="Slide 23 of 31">
+<section class="slide slide--content" data-page-node-id="h4YYo3FcFcBlbSvBknXEVd" data-slide-id="s1-slide-23" data-slide-number="23" data-source-slide="66" data-source-layout="2 Col Header and Content" data-source-family="two-column" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="pyctIognHw19QKoRwXDSrk">
     <span class="mt-overline reveal" data-page-node-id="m3VTBKfe5vNxfzEGGa265E">任务 C · 带练 5 → 练 5 → 点评 2｜出：内部讨论 → 行动</span>
     <h2 class="reveal" data-page-node-id="b82N9AKCtiXSzMpCc8ZLre">一份会议记录，变成四栏 + 一封跟进邮件</h2>
@@ -917,116 +1285,154 @@ body>.nav+.progress-bar+.nav-dots+.slide--cover{min-height:calc(100dvh - 91px)}
       <div class="note-line reveal" data-page-node-id="HxKckh7NegB0tmzQkwqqtI">现场材料：优先用<b data-page-node-id="jHAEIxLF9R1iMEx6QOJRxf">一段真实的会议记录</b>；没有的话用讲师准备的备用纪要（季度业务复盘会）。</div>
     </div>
   </div>
-  <footer class="mt-footer" data-page-node-id="wkLhIETTpGJ5lWWOwwyhBR">
-    <span data-page-node-id="x6k6uVzhFD6apYqxg5Puix">Medtronic</span>
-    <span data-page-node-id="cfwECawmaFkEHEuz0qFQrO"><strong class="mt-footer__confidential" data-page-node-id="gmkHf18FNIRJ1V6jbRzFmq">AIGC 赋能 · S1 公司内部线入门</strong></span>
-    <span class="mt-footer__date" data-page-node-id="1xl4A8CpBE6Z9dLFpH1FNO">Sept 2026</span>
-    <span data-page-node-id="oltwv8FSYYoneEiDW2asgC">Internal use only</span>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">23</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
+</section>
 </section>
 
 <!-- ============ 7 M365 COPILOT SUPPLEMENT DIVIDER ============ -->
-<section class="slide slide--content pdf-divider" data-page-node-id="X5QJcESE8XsByK0TF61AjM">
+<section class="slide-wrapper" aria-label="Slide 24 of 31">
+<section class="slide slide--content pdf-divider" data-page-node-id="X5QJcESE8XsByK0TF61AjM" data-slide-id="s1-slide-24" data-slide-number="24" data-source-slide="36" data-source-layout="Divider: Electric Blue" data-source-family="divider" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="pVZISPg9dopVAicctrdtHJ">
-    <span class="mt-overline reveal" data-page-node-id="dvlGRz8HBrQZnAvLTkfLJd">Microsoft 365 Copilot · 操作入口</span>
-    <h2 class="reveal" data-page-node-id="nREkunqeNnDVdqGQjxH8DK">Copilot Chat 操作补充</h2>
+    <span class="mt-overline reveal" data-page-node-id="dvlGRz8HBrQZnAvLTkfLJd">Copilot Chat 操作补充 · Appendix</span>
+    <h2 class="reveal" data-page-node-id="nREkunqeNnDVdqGQjxH8DK">Copilot Chat：只需要认识这 5 个地方</h2>
     <div class="accent-bar reveal" data-page-node-id="LF9VKiyPcR5qPz0SjsCX1V"></div>
     <div class="slide-body" data-page-node-id="vG41hgDGxRUVkWbBiEiCbT">
       <div class="pdf-divider-grid reveal" data-page-node-id="UxrCBp9WFsSwmMfHiwEXsv">
         <div class="pdf-divider-copy" data-page-node-id="CMGEcY3nLNbzAfXHrUMeGP">
           <div class="pdf-divider-kicker" data-page-node-id="o8hVYoGgVmSsooFAwpXHgu">Hands-on guide</div>
-          <p data-page-node-id="2vvAXjXRFkAeFNpjYQpNFA">前面讲的是在哪用，这 6 页讲怎么上手——登录、入口、界面按钮，跟着点一遍就记住了。</p>
+          <p data-page-node-id="2vvAXjXRFkAeFNpjYQpNFA">正文只留这一页：记住 New Chat | Prompt | Upload | Agents | History。后面 6 页作为 Appendix · M365 Copilot Chat，讲师需要时再展开。</p>
         </div>
         <div class="pdf-divider-points" data-page-node-id="hNs5uPkErMap99mMOcghkb">
-          <div class="pdf-divider-point" data-page-node-id="9SqMGK6jkgTAGEJ2D6nm7P"><b data-page-node-id="qHpaspJrGfBAFHmCKMZVBX">先登录</b><span data-page-node-id="CrPF3d8Nnu8LP8dwoR6wm6">M365Copilot.com + work account + green shield，是企业数据保护的关键提示。</span></div>
-          <div class="pdf-divider-point" data-page-node-id="u6Fdc5dnsh1eMN3Eg2xSlO"><b data-page-node-id="UGKEB0WIZhoLcqefybO8JZ">再识别入口</b><span data-page-node-id="omFKZWCW3QbYihL2JCTbBa">Web、Teams、Outlook、Microsoft 365 App、Edge sidebar、mobile app。</span></div>
-          <div class="pdf-divider-point" data-page-node-id="gXkTtw0vIuTFJ8xW10fKRF"><b data-page-node-id="fhOVGGzQoJ7Vi3gM2kdyC0">最后上手界面</b><span data-page-node-id="5MLkxTkpgUhHTOR1Lz2T0y">New chat、Agents、Prompt box、file upload、recommended prompts。</span></div>
+          <div class="pdf-divider-point" data-page-node-id="9SqMGK6jkgTAGEJ2D6nm7P"><b data-page-node-id="qHpaspJrGfBAFHmCKMZVBX">New Chat</b><span data-page-node-id="CrPF3d8Nnu8LP8dwoR6wm6">重新开始，不把上一轮上下文混进来。</span></div>
+          <div class="pdf-divider-point" data-page-node-id="u6Fdc5dnsh1eMN3Eg2xSlO"><b data-page-node-id="UGKEB0WIZhoLcqefybO8JZ">Prompt</b><span data-page-node-id="omFKZWCW3QbYihL2JCTbBa">把目标、材料、格式和成功标准说清楚。</span></div>
+          <div class="pdf-divider-point" data-page-node-id="gXkTtw0vIuTFJ8xW10fKRF"><b data-page-node-id="fhOVGGzQoJ7Vi3gM2kdyC0">Upload</b><span data-page-node-id="5MLkxTkpgUhHTOR1Lz2T0y">上传允许使用的文件；敏感材料只走公司批准入口。</span></div>
+          <div class="pdf-divider-point" data-page-node-id="PE2Lmo2ZRCIoW4Km27R14m"><b data-page-node-id="zlsUpCKMh05szj3CuVZo0O">Agents</b><span data-page-node-id="g4w8nPBsDqVsaz6J3eyvTj">需要多步骤任务时，再进入 Agent，而不是普通聊天里硬凑。</span></div>
+          <div class="pdf-divider-point" data-page-node-id="WF1sB2hwCCpr2mzXbYqV2m"><b data-page-node-id="Df0rr7A01lRrOQPLWtbRHB">History</b><span data-page-node-id="REw9BMFegWoQl9FMhEFLD2">回看最近任务，复用有效提示词。</span></div>
         </div>
       </div>
     </div>
   </div>
-  <footer class="mt-footer" data-page-node-id="H1QUJrrp4x5PIIlycM3kSG">
-    <span data-page-node-id="gk1OnLeOWAnHZ3oKQA3Ltp">Medtronic</span>
-    <span data-page-node-id="V4jyCZxCYo19CUEY9Q4c8D"><strong class="mt-footer__confidential" data-page-node-id="hYLVm62UEA3e4R5gRmonGy">AIGC 赋能 · S1 M365 Copilot Chat 补充</strong></span>
-    <span class="mt-footer__date" data-page-node-id="EhVnlsXD4z6BroOFE5O0Jo">Sept 2026</span>
-    <span data-page-node-id="6wgqYa10ePspNxhlwsgjsv">Internal use only</span>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">24</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
+</section>
 </section>
 
 <!-- ============ 8 M365 COPILOT PDF PAGE 1 ============ -->
-<section class="slide slide--content pdf-slide" data-page-node-id="7divxDMZuhaX7EpvfLf9qS">
+<section class="slide-wrapper" aria-label="Slide 25 of 31">
+<section class="slide slide--content pdf-slide" data-page-node-id="7divxDMZuhaX7EpvfLf9qS" data-slide-id="s1-slide-25" data-slide-number="25" data-source-slide="80" data-source-layout="Full Background Image" data-source-family="image-supplement" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="iePs20AFwFQypFoT68sKgg">
-    <span class="mt-overline reveal" data-page-node-id="FsNYvHBAREzB2nRkxuTdhk">M365 Copilot Chat · 操作补充 1/6</span>
+    <span class="mt-overline reveal" data-page-node-id="FsNYvHBAREzB2nRkxuTdhk">Appendix · M365 Copilot Chat 1/6</span>
     <div class="pdf-stage reveal" data-page-node-id="3Jd53aBAO1sxaXiA1LoUhK">
       <figure class="pdf-frame" data-page-node-id="MZpm8lHcaYQTvPWnCm1U7h">
-        <img src="assets/s1/m365-copilot-en/page-1.png" alt="AI tools within the Microsoft ecosystem: Copilot Chat" data-page-node-id="YMhqmkhFUwOi22NeJ2FY3Q">
+        <img src="assets/s1/m365-copilot-en/page-1.png" data-source-asset="assets/s1/m365-copilot-en/page-1.png" alt="AI tools within the Microsoft ecosystem: Copilot Chat" data-page-node-id="YMhqmkhFUwOi22NeJ2FY3Q">
       </figure>
     </div>
   </div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">25</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
 </section>
 
 <!-- ============ 9 M365 COPILOT PDF PAGE 2 ============ -->
-<section class="slide slide--content pdf-slide" data-page-node-id="DFlSO7B0iEnzqDFj9nVHpP">
+<section class="slide-wrapper" aria-label="Slide 26 of 31">
+<section class="slide slide--content pdf-slide" data-page-node-id="DFlSO7B0iEnzqDFj9nVHpP" data-slide-id="s1-slide-26" data-slide-number="26" data-source-slide="80" data-source-layout="Full Background Image" data-source-family="image-supplement" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="EhFjxuGHuSm7zIhjleS0Vq">
-    <span class="mt-overline reveal" data-page-node-id="q3SYBJ91LX8UGzN2VDG9Db">M365 Copilot Chat · 操作补充 2/6</span>
+    <span class="mt-overline reveal" data-page-node-id="q3SYBJ91LX8UGzN2VDG9Db">Appendix · M365 Copilot Chat 2/6</span>
     <div class="pdf-stage reveal" data-page-node-id="OAox9Bw5ybqvkR7oVKpGDX">
       <figure class="pdf-frame" data-page-node-id="1yxK4j4dO0EO05yW2987hZ">
-        <img src="assets/s1/m365-copilot-en/page-2.png" alt="Enterprise-grade AI chat tool: Microsoft 365 Copilot Chat protects work data and supports file uploads, images, data visualizations, and co-editing" data-page-node-id="K6OtBruIDSZPvj36nKYuTC">
+        <img src="assets/s1/m365-copilot-en/page-2.png" data-source-asset="assets/s1/m365-copilot-en/page-2.png" alt="Enterprise-grade AI chat tool: Microsoft 365 Copilot Chat protects work data and supports file uploads, images, data visualizations, and co-editing" data-page-node-id="K6OtBruIDSZPvj36nKYuTC">
       </figure>
     </div>
   </div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">26</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
 </section>
 
 <!-- ============ 10 M365 COPILOT PDF PAGE 3 ============ -->
-<section class="slide slide--content pdf-slide" data-page-node-id="R4PahF7ZNoKuw086K11FqR">
+<section class="slide-wrapper" aria-label="Slide 27 of 31">
+<section class="slide slide--content pdf-slide" data-page-node-id="R4PahF7ZNoKuw086K11FqR" data-slide-id="s1-slide-27" data-slide-number="27" data-source-slide="80" data-source-layout="Full Background Image" data-source-family="image-supplement" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="hRyMJP7AasDQgCEQphUR0c">
-    <span class="mt-overline reveal" data-page-node-id="B5T3BtnbZs0aIOpCF0DI7U">M365 Copilot Chat · 操作补充 3/6</span>
+    <span class="mt-overline reveal" data-page-node-id="B5T3BtnbZs0aIOpCF0DI7U">Appendix · M365 Copilot Chat 3/6</span>
     <div class="pdf-stage reveal" data-page-node-id="YtPAgvD2T32SBE5WZ6eJTG">
       <figure class="pdf-frame" data-page-node-id="L4L2NVWZiFnDB5Am9qPvZ9">
-        <img src="assets/s1/m365-copilot-en/page-3.png" alt="Sign in with your work account: open M365Copilot.com and confirm the green shield icon for enterprise data protection" data-page-node-id="3h5T9Lzg9YMbrhZtjrC0rx">
+        <img src="assets/s1/m365-copilot-en/page-3.png" data-source-asset="assets/s1/m365-copilot-en/page-3.png" alt="Sign in with your work account: open M365Copilot.com and confirm the green shield icon for enterprise data protection" data-page-node-id="3h5T9Lzg9YMbrhZtjrC0rx">
       </figure>
     </div>
   </div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">27</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
 </section>
 
 <!-- ============ 11 M365 COPILOT PDF PAGE 4 ============ -->
-<section class="slide slide--content pdf-slide" data-page-node-id="STKUYtlsmn6wEVIQz6LD89">
+<section class="slide-wrapper" aria-label="Slide 28 of 31">
+<section class="slide slide--content pdf-slide" data-page-node-id="STKUYtlsmn6wEVIQz6LD89" data-slide-id="s1-slide-28" data-slide-number="28" data-source-slide="80" data-source-layout="Full Background Image" data-source-family="image-supplement" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="OuL8SLCFDwbphnYItRxPkC">
-    <span class="mt-overline reveal" data-page-node-id="qqLKvFbTajBaZvACX5VDo6">M365 Copilot Chat · 操作补充 4/6</span>
+    <span class="mt-overline reveal" data-page-node-id="qqLKvFbTajBaZvACX5VDo6">Appendix · M365 Copilot Chat 4/6</span>
     <div class="pdf-stage reveal" data-page-node-id="MsBsDpzrw1cdPxBhqDAb1T">
       <figure class="pdf-frame" data-page-node-id="gooUvFRU80kCBBQcrZaWSZ">
-        <img src="assets/s1/m365-copilot-en/page-4.png" alt="Access Copilot Chat and work anytime, anywhere through M365Copilot.com, Teams, Outlook, Microsoft 365 app, Edge sidebar, and mobile app" data-page-node-id="ZareOTlKFSA0zJhTSi92gR">
+        <img src="assets/s1/m365-copilot-en/page-4.png" data-source-asset="assets/s1/m365-copilot-en/page-4.png" alt="Access Copilot Chat and work anytime, anywhere through M365Copilot.com, Teams, Outlook, Microsoft 365 app, Edge sidebar, and mobile app" data-page-node-id="ZareOTlKFSA0zJhTSi92gR">
       </figure>
     </div>
   </div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">28</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
 </section>
 
 <!-- ============ 12 M365 COPILOT PDF PAGE 5 ============ -->
-<section class="slide slide--content pdf-slide" data-page-node-id="GciP4o6hLjB3YcHXkmYK0s">
+<section class="slide-wrapper" aria-label="Slide 29 of 31">
+<section class="slide slide--content pdf-slide" data-page-node-id="GciP4o6hLjB3YcHXkmYK0s" data-slide-id="s1-slide-29" data-slide-number="29" data-source-slide="80" data-source-layout="Full Background Image" data-source-family="image-supplement" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="PiRoTVt9DxAHrhA1YRFwcZ">
-    <span class="mt-overline reveal" data-page-node-id="YoqNgo1vssv74CaNMuFIww">M365 Copilot Chat · 操作补充 5/6</span>
+    <span class="mt-overline reveal" data-page-node-id="YoqNgo1vssv74CaNMuFIww">Appendix · M365 Copilot Chat 5/6</span>
     <div class="pdf-stage reveal" data-page-node-id="VX9b82IGAQOiEyHk38SDeS">
       <figure class="pdf-frame" data-page-node-id="ywnHID007XloruG669dVcB">
-        <img src="assets/s1/m365-copilot-en/page-5.png" alt="Learn about Copilot Chat interface: New Chat button, Agents, Prompt Box, Recent Chats, Dictation, Upload Files, Chat with Agents, Recommended Prompts, and Copilot Prompt Gallery" data-page-node-id="mIde6vDQaBAusTvkID9z9D">
+        <img src="assets/s1/m365-copilot-en/page-5.png" data-source-asset="assets/s1/m365-copilot-en/page-5.png" alt="Learn about Copilot Chat interface: New Chat button, Agents, Prompt Box, Recent Chats, Dictation, Upload Files, Chat with Agents, Recommended Prompts, and Copilot Prompt Gallery" data-page-node-id="mIde6vDQaBAusTvkID9z9D">
       </figure>
     </div>
   </div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">29</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
 </section>
 
 <!-- ============ 13 M365 COPILOT PDF PAGE 6 ============ -->
-<section class="slide slide--content pdf-slide" data-page-node-id="PwXrWFKIuifSYOLTEtMax9">
+<section class="slide-wrapper" aria-label="Slide 30 of 31">
+<section class="slide slide--content pdf-slide" data-page-node-id="PwXrWFKIuifSYOLTEtMax9" data-slide-id="s1-slide-30" data-slide-number="30" data-source-slide="80" data-source-layout="Full Background Image" data-source-family="image-supplement" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="5Zsg2xyv8W3AN12qRhJAa8">
-    <span class="mt-overline reveal" data-page-node-id="qIXsgGzLG0fFgI1VolqZDn">M365 Copilot Chat · 操作补充 6/6</span>
+    <span class="mt-overline reveal" data-page-node-id="qIXsgGzLG0fFgI1VolqZDn">Appendix · M365 Copilot Chat 6/6</span>
     <div class="pdf-stage reveal" data-page-node-id="GODFidfNrAAFV3Qz02ZMQf">
       <figure class="pdf-frame" data-page-node-id="XbIoZmQDkQrpgLeGhiHiUw">
-        <img src="assets/s1/m365-copilot-en/page-6.png" alt="Adoption and administration: Expanded language support with 12 new languages and 37 supported interaction languages" data-page-node-id="LUvLoOfxa18MKIkvINKw6Y">
+        <img src="assets/s1/m365-copilot-en/page-6.png" data-source-asset="assets/s1/m365-copilot-en/page-6.png" alt="Adoption and administration: Expanded language support with 12 new languages and 37 supported interaction languages" data-page-node-id="LUvLoOfxa18MKIkvINKw6Y">
       </figure>
     </div>
   </div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">30</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
 </section>
 
 <!-- ============ 25 下课前 + 这两周 ============ -->
-<section class="slide slide--content" data-page-node-id="OuNYJaMtQSDU24FP3d8BET">
+<section class="slide-wrapper" aria-label="Slide 31 of 31">
+<section class="slide slide--content" data-page-node-id="OuNYJaMtQSDU24FP3d8BET" data-slide-id="s1-slide-31" data-slide-number="31" data-source-slide="66" data-source-layout="2 Col Header and Content" data-source-family="two-column" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
   <div class="slide-content" data-page-node-id="x2jkKK10ceeUOrvrsdf9mP">
     <span class="mt-overline reveal" data-page-node-id="WerrTSt1cjC0jmfozbfvry">下课前 5 分钟 + 这两周</span>
     <h2 class="reveal" data-page-node-id="W7W5nwUGa2m937oCKxu7PC">怎么算今天没白来</h2>
@@ -1052,15 +1458,16 @@ body>.nav+.progress-bar+.nav-dots+.slide--cover{min-height:calc(100dvh - 91px)}
       </div>
     </div>
   </div>
-  <footer class="mt-footer" data-page-node-id="eyAzkRQ2Dj4NsQMZytV2ol">
-    <span data-page-node-id="zrJnDIy3DxMrfdrjHI8Buy">Medtronic</span>
-    <span data-page-node-id="Nh6QuiWVtC11ABGKLVvmnN"><strong class="mt-footer__confidential" data-page-node-id="THzxx2500GluPQSYGv8GP2">AIGC 赋能 · S1 公司内部线入门</strong></span>
-    <span class="mt-footer__date" data-page-node-id="5CSF1z1CXHi7TDTiRTdPFi">Sept 2026</span>
-    <span data-page-node-id="IDr3QhwbCWo9YLVkFvHZZd">Internal use only</span>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">31</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
+</section>
 </section>
 
 <div class="keyboard-hint" data-page-node-id="hgactZphNeHEY5qBi6BcCz">↑ ↓ 或空格翻页 · 按 P 打印 / 存 PDF</div>
+</div>
+</main>
 
 <script>
 // ============================================
@@ -1080,6 +1487,7 @@ class SlidePresentation {
 
     wrapSlides() {
         document.querySelectorAll('.slide').forEach(slide => {
+            if (slide.parentElement && slide.parentElement.classList.contains('slide-wrapper')) return;
             const wrapper = document.createElement('div');
             wrapper.className = 'slide-wrapper';
             slide.parentNode.insertBefore(wrapper, slide);

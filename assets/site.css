@@ -29,7 +29,7 @@
 
   /* === UI Design System Tier 0 === */
   --mt-action-hover:#0C0CA5;
-  --mt-focus:#ED7008;
+  --mt-focus:var(--mt-orange);
   --mt-misc-navy:#170F5F;
 
   /* === Tint 背景（强调色 10%） === */
@@ -42,7 +42,7 @@
   --mt-navy-10:#E9E9F5;
 
   /* === Typography === */
-  --mt-font-primary:"Avenir Next World","Segoe UI",Helvetica,Arial,sans-serif;
+  --mt-font-primary:"Avenir Next World","Noto Sans SC","Noto Sans CJK SC","Segoe UI",Helvetica,Arial,sans-serif;
 
   /* === Layout === */
   --mt-radius-card:8px;
@@ -179,7 +179,7 @@ ul.clean li::before{content:"";position:absolute;left:2px;top:15px;width:6px;hei
 @keyframes pop{from{transform:translateY(12px);opacity:0}to{transform:translateY(0);opacity:1}}
 .modal .mh{padding:22px 26px;color:var(--mt-white);position:relative}
 .modal .mh.t1{background:linear-gradient(135deg,var(--mt-navy-dark),var(--mt-navy-medium))}
-.modal .mh.t2{background:linear-gradient(135deg,var(--mt-lightblue-80),#083C71)}
+.modal .mh.t2{background:linear-gradient(135deg,var(--mt-navy-dark),var(--mt-navy));box-shadow:inset 0 -4px 0 var(--mt-light-blue)}
 .modal .mh.t3{background:linear-gradient(135deg,var(--mt-pink-60),var(--mt-pink-70))}
 .modal .mh .mt{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;opacity:.9}
 .modal .mh h3{font-size:22px;font-weight:400;margin-top:4px}
@@ -262,7 +262,7 @@ ul.clean li::before{content:"";position:absolute;left:2px;top:15px;width:6px;hei
 /* ===== 课程详情页 ===== */
 .detail-hero{color:var(--mt-white);padding:40px 24px 34px}
 .detail-hero.t1{background:linear-gradient(135deg,var(--mt-navy-dark),var(--mt-navy-medium))}
-.detail-hero.t2{background:linear-gradient(135deg,var(--mt-lightblue-80),#083C71)}
+.detail-hero.t2{background:linear-gradient(135deg,var(--mt-navy-dark),var(--mt-navy));box-shadow:inset 0 -4px 0 var(--mt-light-blue)}
 .detail-hero.t3{background:linear-gradient(135deg,var(--mt-pink-60),var(--mt-pink-70))}
 .detail-hero .back{color:rgba(255,255,255,.85);text-decoration:none;font-size:13px;font-weight:600;display:inline-block;margin-bottom:16px}
 .detail-hero .back:hover{color:var(--mt-white)}
@@ -290,11 +290,50 @@ ul.clean li::before{content:"";position:absolute;left:2px;top:15px;width:6px;hei
 .lecture-article code{font-family:Consolas,"SFMono-Regular",monospace;background:var(--bg);padding:2px 5px;border-radius:4px;font-size:.92em}
 .lecture-article hr{border:0;border-top:1px solid var(--line);margin:36px 0}
 
+/* ===== 模型详解 ===== */
+.model-entry{margin:18px auto 22px}
+.model-entry .entry-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:12px}
+.model-entry h2{font-size:22px;font-weight:500;color:var(--mt-navy-dark);margin:0}
+.model-entry p{font-size:14.5px;line-height:1.7;color:var(--mt-dark-gray);margin:4px 0 0;max-width:690px}
+.model-pill{font-size:11.5px;font-weight:600;color:var(--mt-navy-dark);background:var(--mt-bg-informative);border:1px solid rgba(15,201,247,.34);border-radius:var(--mt-radius-pill);padding:4px 8px}
+.vendor-model-index{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.vendor-model-list{background:var(--mt-white);border:1px solid var(--mt-surface-l2);border-radius:var(--mt-radius-card);box-shadow:var(--mt-shadow-card);overflow:hidden}
+.vendor-model-list summary{cursor:pointer;list-style:none;padding:15px 18px;font-size:16px;font-weight:700;color:var(--mt-navy-dark);background:linear-gradient(90deg,rgba(16,16,235,.08),rgba(15,201,247,.08));display:flex;align-items:center;justify-content:space-between}
+.vendor-model-list summary::-webkit-details-marker{display:none}
+.vendor-model-list summary::after{content:"⌄";font-size:18px;color:var(--mt-electric-blue);transition:.16s}
+.vendor-model-list[open] summary::after{transform:rotate(180deg)}
+.vendor-model-list ul{margin:0;padding:10px 18px 16px 34px}
+.vendor-model-list li{font-size:14.5px;line-height:1.7;color:var(--mt-dark-gray);margin:7px 0}
+.vendor-model-list a{font-weight:700;color:var(--mt-electric-blue);text-decoration:none}
+.vendor-model-list a:hover{text-decoration:underline}
+.model-profile{display:grid;grid-template-columns:1fr;gap:18px;margin-top:-18px;position:relative}
+.model-panel{background:var(--card);border:1px solid var(--line);border-radius:var(--mt-radius-card);box-shadow:var(--shadow);padding:24px}
+.model-panel h2{font-size:21px;font-weight:500;line-height:1.4;color:var(--mt-navy-dark);margin:0 0 14px}
+.model-panel p,.model-panel li{font-size:14.5px;line-height:1.75;color:var(--mt-dark-gray)}
+.model-panel p{margin:0}
+.model-panel ul{margin:0;padding-left:19px}
+.model-panel li{margin:5px 0}
+.model-fact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.model-fact{border:1px solid var(--line);border-radius:14px;background:var(--mt-light-gray);padding:12px}
+.model-fact span{display:block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mt-medium-gray);margin-bottom:4px}
+.model-fact b{display:block;font-size:14px;line-height:1.45;color:var(--mt-navy-dark)}
+.model-task-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.model-task{border:1px solid var(--line);border-radius:14px;padding:14px;background:rgba(255,255,255,.78)}
+.model-task b{display:block;font-size:14.5px;color:var(--mt-navy-dark);margin-bottom:6px}
+.model-task span{display:block;font-size:13px;line-height:1.65;color:var(--mt-dark-gray)}
+.model-feature{background:linear-gradient(135deg,var(--mt-navy-dark),var(--mt-navy-medium));color:var(--mt-white);border:0}
+.model-feature h2,.model-feature p,.model-feature li{color:var(--mt-white)}
+.model-feature .model-pill{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.3);color:var(--mt-white)}
+.model-source a{color:var(--mt-electric-blue);font-weight:600;text-decoration:none}
+.model-source a:hover{text-decoration:underline}
+
 @media(max-width:760px){
   .nav-inner{flex-direction:column;height:auto;padding:10px 16px;gap:8px}
   .nav-links{flex-wrap:wrap;justify-content:center}
   .mulu .items{grid-template-columns:1fr}
   .deck-grid{grid-template-columns:1fr}
+  .model-entry .entry-head{display:block}
+  .vendor-model-index,.model-fact-grid,.model-task-grid{grid-template-columns:1fr}
   .detail-hero h1{font-size:24px}
   .lecture-wrap{margin-top:20px}
   .lecture-article{padding:24px 20px;font-size:14px}

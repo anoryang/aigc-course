@@ -81,7 +81,7 @@
 
   /* === UI DS Tier 0 === */
   --mt-action-hover:#0C0CA5;
-  --mt-focus:#ED7008;
+  --mt-focus:var(--mt-orange);
   --mt-surface-l2:#DCDCDC;
 
   /* === Semantic surfaces === */
@@ -91,7 +91,7 @@
   --mt-text-informative:#0A5694;
 
   /* === Typography === */
-  --mt-font-primary:"Avenir Next World","Segoe UI",Helvetica,Arial,sans-serif;
+  --mt-font-primary:"Avenir Next World","Noto Sans SC","Noto Sans CJK SC","Segoe UI",Helvetica,Arial,sans-serif;
 
   /* === Layout === */
   --mt-radius-card:8px;
@@ -192,6 +192,10 @@ td.mk .mn{display:block;font-size:10.5px;line-height:1.25;text-align:center;
 .sect td b{font-weight:600;color:var(--mt-navy-dark)}
 .sect .note{font-size:11.5px;color:var(--mt-dark-gray);margin-top:10px;line-height:1.65}
 .sect .note b{color:var(--mt-navy-dark)}
+.sect ul{margin:0;padding-left:18px}
+.sect li{font-size:12.5px;color:var(--mt-dark-gray);line-height:1.75;margin:4px 0}
+.sect a{color:var(--mt-electric-blue);font-weight:600;text-decoration:none}
+.sect a:hover{text-decoration:underline}
 
 .tips{background:var(--mt-white);border:1px solid var(--mt-line-color);
   border-radius:var(--mt-radius-card);padding:18px 24px;margin-top:14px}
@@ -230,7 +234,6 @@ body>.nav+.wrap>.head h1{font-size:38px;line-height:1.25;letter-spacing:-.4px}
 body>.nav+.wrap>.head .mt-overline{display:inline-block;font-size:12px;letter-spacing:.12em;color:rgba(255,255,255,.92);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.32);padding:6px 10px;border-radius:var(--mt-radius-pill);margin-bottom:18px}
 body>.nav+.wrap>.head .accent-bar{width:56px;margin:16px 0}
 body>.nav+.wrap>.head p{font-size:17px;max-width:680px}
-body>.nav+.progress-bar+.nav-dots+.slide--cover{min-height:calc(100dvh - 91px)}
 .nav,.nav *{box-sizing:border-box}
 .nav{position:sticky;top:0;z-index:40;background:var(--mt-navy-dark);box-shadow:0 2px 12px rgba(0,0,0,.18);line-height:1.65}
 .nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:60px}
@@ -280,16 +283,35 @@ body>.nav+.wrap>.sect tbody tr:nth-child(even) td{background:rgba(245,245,245,.7
 body>.nav+.wrap>.tips li::before{background:var(--mt-electric-blue)}
 </style>
 
+
+<style id="embedded-model-profile-styles">
+body>.nav+.wrap>.model-entry{max-width:1032px;margin:18px auto 22px}
+.model-entry .entry-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:12px}
+.model-entry h2{font-size:22px;font-weight:500;color:var(--mt-navy-dark);margin:0}
+.model-entry p{font-size:14.5px;line-height:1.7;color:var(--mt-dark-gray);margin:4px 0 0;max-width:690px}
+.vendor-model-index{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.vendor-model-list{background:var(--mt-white);border:1px solid var(--mt-surface-l2);border-radius:var(--mt-radius-card);box-shadow:var(--mt-shadow-card);overflow:hidden}
+.vendor-model-list summary{cursor:pointer;list-style:none;padding:15px 18px;font-size:16px;font-weight:700;color:var(--mt-navy-dark);background:linear-gradient(90deg,rgba(16,16,235,.08),rgba(15,201,247,.08));display:flex;align-items:center;justify-content:space-between}
+.vendor-model-list summary::-webkit-details-marker{display:none}
+.vendor-model-list summary::after{content:"⌄";font-size:18px;color:var(--mt-electric-blue);transition:.16s}
+.vendor-model-list[open] summary::after{transform:rotate(180deg)}
+.vendor-model-list ul{margin:0;padding:10px 18px 16px 34px}
+.vendor-model-list li{font-size:14.5px;line-height:1.7;color:var(--mt-dark-gray);margin:7px 0}
+.vendor-model-list a{font-weight:700;color:var(--mt-electric-blue);text-decoration:none}
+.vendor-model-list a:hover{text-decoration:underline}
+@media(max-width:760px){body>.nav+.wrap>.model-entry{width:auto;max-width:none;margin-left:24px;margin-right:24px}.model-entry .entry-head{display:block}.vendor-model-index{grid-template-columns:1fr}}
+</style>
+
 </head>
 <body>
-<nav class="nav" aria-label="课程网站导航"><div class="nav-inner"><a class="brand" href="index.html">AIGC 赋能</a><div class="nav-links"><a href="index.html">首页</a><a href="mulu.html">课程目录</a><a href="yiyetong.html" class="active">模型速览</a><a href="kejian.html">课件</a></div></div></nav>
+<nav class="nav" aria-label="课程网站导航"><div class="nav-inner"><a class="brand" href="index.html">Medtronic · AIGC 赋能</a><div class="nav-links"><a href="index.html">首页</a><a href="mulu.html">课程目录</a><a href="yiyetong.html" class="active">模型速览</a><a href="kejian.html">课件</a></div></div></nav>
 <div class="wrap">
 
   <header class="head">
     <span class="mt-overline">AIGC 赋能 · 速查资料</span>
     <h1>大模型一页通</h1>
     <div class="accent-bar"></div>
-    <p><strong>竖着看任务，横着看厂商。</strong>圆点是截至 2026-09-02 的编辑选型提示；厂商归属不代表部署地域、数据驻留或合规结论。</p>
+    <p><strong>竖着看任务，横着看厂商。</strong>圆点是截至 2026-09-15 的编辑选型提示；厂商归属不代表部署地域、数据驻留或合规结论。</p>
   </header>
 
   <div class="scroll">
@@ -319,7 +341,7 @@ body>.nav+.wrap>.tips li::before{background:var(--mt-electric-blue)}
     <tbody>
       <tr>
         <td class="fn">通用对话<small>问答 · 分析 · 写作</small></td>
-        <td class="mk cn"><span class="d s"></span><span class="mn">V4-Pro</span></td>
+        <td class="mk cn"><span class="d s"></span><span class="mn">DeepSeek-V4.1-Flash</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">Qwen3.8-Max</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">Kimi K3</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">GLM-5.3-Flash</span></td>
@@ -329,13 +351,13 @@ body>.nav+.wrap>.tips li::before{background:var(--mt-electric-blue)}
         <td class="mk cn"><span class="d s"></span><span class="mn">MiniMax M3</span></td>
         <td class="mk int"><span class="d s"></span><span class="mn">Sonnet 5</span></td>
         <td class="mk int"><span class="d s"></span><span class="mn">5.6 Terra</span></td>
-        <td class="mk int"><span class="d s"></span><span class="mn">3.7 Flash</span></td>
+        <td class="mk int"><span class="d s"></span><span class="mn">Gemini 3.8 Flash</span></td>
         <td class="mk int"><span class="d s"></span><span class="mn">Grok 4.6</span></td>
         <td class="mk int"><span class="d p"></span><span class="mn">Muse Spark 1.2</span></td>
       </tr>
       <tr>
         <td class="fn">长文本文档<small>长篇 · 报告 · 合同</small></td>
-        <td class="mk cn"><span class="d s"></span><span class="mn">V4-Pro</span></td>
+        <td class="mk cn"><span class="d s"></span><span class="mn">DeepSeek-V4.1-Flash</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">Qwen3.8-Max</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">Kimi K3</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">GLM-5.3</span></td>
@@ -345,13 +367,13 @@ body>.nav+.wrap>.tips li::before{background:var(--mt-electric-blue)}
         <td class="mk cn"><span class="d s"></span><span class="mn">MiniMax M3</span></td>
         <td class="mk int"><span class="d s"></span><span class="mn">Opus 5</span></td>
         <td class="mk int"><span class="d s"></span><span class="mn">5.6 Sol</span></td>
-        <td class="mk int"><span class="d w"></span><span class="mn">3.7 Flash</span></td>
+        <td class="mk int"><span class="d w"></span><span class="mn">Gemini 3.8 Flash</span></td>
         <td class="mk int"><span class="d w"></span><span class="mn">Grok 4.6</span></td>
         <td class="mk int"><span class="d s"></span><span class="mn">Llama 4 Scout</span></td>
       </tr>
       <tr>
         <td class="fn">编程开发<small>写代码 · 调试 · 工程</small></td>
-        <td class="mk cn"><span class="d s"></span><span class="mn">V4-Pro</span></td>
+        <td class="mk cn"><span class="d s"></span><span class="mn">DeepSeek-V4.1-Flash</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">Qwen3.8-Max</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">Kimi K3</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">GLM-5.3</span></td>
@@ -361,13 +383,13 @@ body>.nav+.wrap>.tips li::before{background:var(--mt-electric-blue)}
         <td class="mk cn"><span class="d s"></span><span class="mn">MiniMax M3</span></td>
         <td class="mk int"><span class="d s"></span><span class="mn">Opus 5</span></td>
         <td class="mk int"><span class="d s"></span><span class="mn">5.6 Sol</span></td>
-        <td class="mk int"><span class="d w"></span><span class="mn">3.7 Flash</span></td>
+        <td class="mk int"><span class="d w"></span><span class="mn">Gemini 3.8 Flash</span></td>
         <td class="mk int"><span class="d w"></span><span class="mn">Grok 4.6</span></td>
         <td class="mk int"><span class="d p"></span><span class="mn">Muse Spark 1.2</span></td>
       </tr>
       <tr>
         <td class="fn">视觉 / 视频理解<small>读图 · 看视频 · 图表</small></td>
-        <td class="mk cn"><span class="d p"></span><span class="mn">V4-Flash-Vision-Exp</span></td>
+        <td class="mk cn"><span class="d s"></span><span class="mn">DeepSeek-V4.1-Flash</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">Qwen3.8-Max</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">Kimi K3</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">GLM-5.3-Flash</span></td>
@@ -377,7 +399,7 @@ body>.nav+.wrap>.tips li::before{background:var(--mt-electric-blue)}
         <td class="mk cn"><span class="d s"></span><span class="mn">MiniMax M3</span></td>
         <td class="mk int"><span class="d s"></span><span class="mn">Sonnet 5</span></td>
         <td class="mk int"><span class="d s"></span><span class="mn">5.6 Sol</span></td>
-        <td class="mk int"><span class="d s"></span><span class="mn">3.7 Flash</span></td>
+        <td class="mk int"><span class="d s"></span><span class="mn">Gemini 3.8 Flash</span></td>
         <td class="mk int"><span class="d s"></span><span class="mn">Grok 4.6</span></td>
         <td class="mk int"><span class="d p"></span><span class="mn">Muse Spark 1.2</span></td>
       </tr>
@@ -449,6 +471,8 @@ body>.nav+.wrap>.tips li::before{background:var(--mt-electric-blue)}
   </table>
   </div>
 
+<section class="model-entry" aria-labelledby="model-entry-title"><div class="entry-head"><div><h2 id="model-entry-title">模型详解</h2></div></div><div class="vendor-model-index"><details class="vendor-model-list" open><summary>Kimi</summary><ul><li><a href="model-kimi-k3.html">Kimi K3</a></li></ul></details><details class="vendor-model-list" open><summary>OpenAI</summary><ul><li><a href="model-gpt-6-astra.html">GPT-6 Astra</a></li></ul></details></div></section>
+
   <div class="legend-box">
     <span><i></i>编辑推荐：公开可用、优先评估</span>
     <span><i class="w"></i>公开可用：备选</span>
@@ -458,32 +482,43 @@ body>.nav+.wrap>.tips li::before{background:var(--mt-electric-blue)}
   </div>
 
   <div class="tipnote">
-    <b>状态口径：</b>GA、Public Beta、Preview、实验版与即将停用型号分开标注；“推荐”是基于公开能力、可接入性、价格和课程场景的编辑判断，不是统一条件下的横向基准测试。DeepSeek V4-Flash 为 Public Beta，因此通用任务改列 GA 的 V4-Pro；腾讯 <b>Hy4 Preview</b> 是 8 月 28 日上线的早期预览版，官网标注<b>最大输入 960K、最大输出 64K</b>，生产稳定性优先时可回退 Hy3；Meta 最新 API 模型 Muse Spark 1.2 仍处于 Public Preview。<b>核验快照：2026-09-02。</b>
+    <b>状态口径：</b>GA、Public Beta、Preview、实验版与即将停用型号分开标注；“推荐”是基于公开能力、可接入性、价格和课程场景的编辑判断，不是统一条件下的横向基准测试。DeepSeek 9 月发布 <b>DeepSeek-V4.1-Flash</b>，旧 Flash / Vision / Pro 通路已进入迁移或兼容路由；腾讯 <b>Hy4 Preview</b> 是 8 月 28 日上线的早期预览版，官网标注<b>最大输入 960K、最大输出 64K</b>，生产稳定性优先时可回退 Hy3；Meta 最新 API 模型 Muse Spark 1.2 仍处于 Public Preview。<b>核验快照：2026-09-15。</b>
   </div>
+
+  <section class="sect">
+    <h3>本次更新依据（2026-09-15）</h3>
+    <ul>
+      <li><b>OpenAI</b>：<a href="https://developers.openai.com/api/docs/models/gpt-6-astra">GPT-6 Astra</a> 已进入官方模型目录，定位复杂推理、代码、computer use、研究和文档生产。</li>
+      <li><b>Google</b>：<a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/">Gemini 3.8 Flash / 3.8 Flash Cyber</a> 发布；3.8 Flash 作为 agentic workflow / coding workhorse 进入表格，Cyber 只作为安全方向趋势备注。</li>
+      <li><b>DeepSeek</b>：<a href="https://api-docs.deepseek.com/news/news260910/">DeepSeek-V4.1-Flash</a> 上线并接管旧 Flash / Vision / Pro 通路，主表统一换到新型号。</li>
+      <li><b>Kimi</b>：<a href="https://platform.kimi.com/docs/models">Kimi 模型列表</a>标注 kimi-k2.5、moonshot-v1 与 K2 系列旧型号已下线，课程统一指向 Kimi K3。</li>
+      <li><b>行业趋势</b>：模型选择从“单次问答”转向“长程工程、agentic workflow、成本/缓存、专用安全模型”。</li>
+    </ul>
+  </section>
 
   <section class="sect">
     <h3>价格阶梯（每百万 token，输入 / 输出）</h3>
     <table>
       <thead><tr><th>档位</th><th>型号</th><th>价格</th><th>说明</th></tr></thead>
       <tbody>
-        <tr><td>前沿</td><td><b>Claude Fable 5.1</b></td><td>$10 / $50</td><td>最难的推理与 agent 任务才用</td></tr>
+        <tr><td>前沿</td><td><b>Claude Fable 5.1</b> · <b>GPT-6 Astra</b></td><td>$10 / $50 · $10 / $50</td><td>最难的推理与 agent 任务才用</td></tr>
         <tr><td>旗舰</td><td><b>Claude Opus 5</b> · <b>GPT-5.6 Sol</b> · <b>Kimi K3</b></td><td>$5 / $25 · $4 / $20 · $3 / $15</td><td>日常重活的默认档</td></tr>
         <tr><td>中档</td><td><b>Claude Sonnet 5</b> · <b>GPT-5.6 Terra</b> · <b>Grok 4.6</b></td><td>$2 / $10 · $2 / $12 · $2 / $6</td><td>多数场景可先从这一档评估</td></tr>
-        <tr><td>轻快</td><td><b>Gemini 3.7 Flash</b> · <b>Claude Haiku 4.5</b> · <b>GPT-5.6 Luna</b></td><td>$0.75 / $3.75 · $1 / $5 · $0.20 / $1.20</td><td>批量 / 高并发 / 简单任务</td></tr>
-        <tr><td>开放权重自建</td><td><b>DeepSeek-V4</b> · <b>GLM-5.3-Flash</b> · <b>混元 Hy3</b></td><td>逐一核对模型许可证</td><td>除算力外还需计入存储、部署、运维、安全与合规成本</td></tr>
+        <tr><td>轻快</td><td><b>Gemini 3.8 Flash</b> · <b>Claude Haiku 4.5</b> · <b>GPT-5.6 Luna</b></td><td>$0.75 / $3.75 · $1 / $5 · $0.20 / $1.20</td><td>批量 / 高并发 / 简单任务</td></tr>
+        <tr><td>开放权重自建</td><td><b>DeepSeek-V4.1-Flash</b> · <b>GLM-5.3-Flash</b> · <b>混元 Hy3</b></td><td>逐一核对模型许可证</td><td>除算力外还需计入存储、部署、运维、安全与合规成本</td></tr>
         <tr><td>定制许可证</td><td><b>Kimi K3</b> · <b>Llama 4</b></td><td>非 MIT / Apache-2.0</td><td>商用、再分发与规模条款须按具体许可证审查</td></tr>
       </tbody>
     </table>
-    <div class="note"><b>口径：</b>原厂 API、美元、标准同步请求的基础文本 token 价；未计缓存、Batch / Flex / Priority、搜索与工具调用、税费及云渠道加价。长上下文可能触发整次请求加价，例如 GPT-5.6 超过 272K 输入、Grok 4.6 达到 200K。<b>Gemini 3.7 Flash 的 $0.75 / $3.75 为截至 2026-12-31 的促销价，之后为 $1.50 / $7.50。</b>签合同和做长期预算前按实际输入 / 输出比、缓存命中率与工具调用量复算。</div>
+    <div class="note"><b>口径：</b>原厂 API、美元、标准同步请求的基础文本 token 价；未计缓存、Batch / Flex / Priority、搜索与工具调用、税费及云渠道加价。长上下文可能触发整次请求加价，例如 GPT-6 Astra / GPT-5.6 超过 272K 输入、Grok 4.6 达到 200K。<b>Gemini 3.8 Flash 的 $0.75 / $3.75 为官方发布期价格。</b>签合同和做长期预算前按实际输入 / 输出比、缓存命中率与工具调用量复算。</div>
   </section>
 
   <section class="tips">
     <h3>怎么选（四句话）</h3>
     <ul>
       <li><b>公司数据、正式业务</b> → 用公司批准的内部工具，不在这张表上</li>
-      <li><b>中文日常、要私有化部署</b> → 先按硬件规模、许可证与运维能力筛选 DeepSeek-V4 / GLM-5.3-Flash / Hy3</li>
+      <li><b>中文日常、要私有化部署</b> → 先按硬件规模、许可证与运维能力筛选 DeepSeek-V4.1-Flash / GLM-5.3-Flash / Hy3</li>
       <li><b>长合同、长报告、写作</b> → 可评估 Claude Opus 5、Kimi K3、ERNIE 5.1；真实业务仍须走公司批准的工具与审查流程</li>
-      <li><b>写代码、跑 Agent</b> → 可比较 Claude Opus 5、Kimi K3、MiniMax M3；成本敏感时测试 Gemini 3.7 Flash</li>
+      <li><b>写代码、跑 Agent</b> → 高难度端到端任务可看 GPT-6 Astra；日常工程可比较 Claude Opus 5、Kimi K3、MiniMax M3；成本敏感时测试 Gemini 3.8 Flash / DeepSeek-V4.1-Flash</li>
       <li><b>出图 / 出视频 / 出 3D</b> → 选专用型号：Seedream 5.0 Pro / Qwen-Image-3.0-Pro；Seedance 2.5 / Wan3.0-Video / HY-Video-1.5；Seed3D 2.0 / HY-3D-3.1</li>
       <li><b>预算敏感</b> → 用自己的任务集比较质量、首 token 延迟、总耗时和完整账单，不预设固定节省比例</li>
     </ul>
