@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>大模型一页通 · 功能 × 厂商对照 — Medtronic</title>
+<title>大模型一页通 — Medtronic</title>
 <style>
 ﻿/* ==========================================================================
    Medtronic Brand Fonts — Avenir Next World Base64 Inline
@@ -115,7 +115,7 @@ body{font-family:var(--mt-font-primary);background:var(--mt-light-gray);color:va
 
 /* ===== Matrix ===== */
 .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--mt-radius-card)}
-table{width:100%;min-width:1180px;border-collapse:separate;border-spacing:0;
+table{width:100%;min-width:1360px;border-collapse:separate;border-spacing:0;
   background:var(--mt-white);border:1px solid var(--mt-line-color);
   border-radius:var(--mt-radius-card);overflow:hidden}
 th,td{padding:8px 4px;text-align:center;vertical-align:middle;
@@ -312,7 +312,7 @@ body>.nav+.wrap>.model-entry{max-width:1032px;margin:18px auto 22px}
 
     <h1>大模型一页通</h1>
     <div class="accent-bar"></div>
-    <p><strong>竖着看任务，横着看厂商。</strong>圆点是截至 2026-09-15 的编辑选型提示；厂商归属不代表部署地域、数据驻留或合规结论。</p>
+    <p><strong>竖着看任务，横着看厂商。</strong>圆点是截至 2026-10-12 的编辑选型提示；厂商归属不代表部署地域、数据驻留或合规结论。</p>
   </header>
 
   <div class="scroll">
@@ -320,8 +320,8 @@ body>.nav+.wrap>.model-entry{max-width:1032px;margin:18px auto 22px}
     <thead>
       <tr>
         <th class="fn" rowspan="2">功能</th>
-        <th class="camp cn" colspan="8">国内</th>
-        <th class="camp int" colspan="5">国外</th>
+        <th class="camp cn" colspan="9">国内</th>
+        <th class="camp int" colspan="6">国外</th>
       </tr>
       <tr>
         <th class="mdl cn"><b>深度求索</b></th>
@@ -332,10 +332,12 @@ body>.nav+.wrap>.model-entry{max-width:1032px;margin:18px auto 22px}
         <th class="mdl cn"><b>百度</b></th>
         <th class="mdl cn"><b>腾讯</b></th>
         <th class="mdl cn"><b>MiniMax</b></th>
+        <th class="mdl cn"><b>小米</b></th>
         <th class="mdl int"><b>Anthropic</b></th>
         <th class="mdl int"><b>OpenAI</b></th>
         <th class="mdl int"><b>Google</b></th>
         <th class="mdl int"><b>xAI</b></th>
+        <th class="mdl int"><b>TypeSafe</b></th>
         <th class="mdl int"><b>Meta</b></th>
       </tr>
     </thead>
@@ -346,15 +348,17 @@ body>.nav+.wrap>.model-entry{max-width:1032px;margin:18px auto 22px}
         <td class="mk cn"><span class="d s"></span><span class="mn">Qwen3.8-Max</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">Kimi K3</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">GLM-5.3-Flash</span></td>
-        <td class="mk cn"><span class="d s"></span><span class="mn">Seed 2.1</span></td>
+        <td class="mk cn"><span class="d s"></span><span class="mn">Seed 2.1 Pro</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">ERNIE 5.1</span></td>
         <td class="mk cn"><span class="d p"></span><span class="mn">Hy4 Preview</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">MiniMax M3</span></td>
-        <td class="mk int"><span class="d s"></span><span class="mn">Sonnet 5</span></td>
-        <td class="mk int"><span class="d s"></span><span class="mn">5.6 Terra</span></td>
+        <td class="mk cn"><span class="d s"></span><span class="mn">MiMo-V2.6-Pro</span></td>
+        <td class="mk int"><span class="d s"></span><span class="mn">Claude Opus 5.5</span></td>
+        <td class="mk int"><span class="d s"></span><span class="mn">GPT-6.1 Sol</span></td>
         <td class="mk int"><span class="d s"></span><span class="mn">Gemini 3.8 Flash</span></td>
-        <td class="mk int"><span class="d s"></span><span class="mn">Grok 4.6</span></td>
-        <td class="mk int"><span class="d p"></span><span class="mn">Muse Spark 1.2</span></td>
+        <td class="mk int"><span class="d s"></span><span class="mn">Grok 4.7</span></td>
+        <td class="mk int"><span class="d n">—</span></td>
+        <td class="mk int"><span class="d p"></span><span class="mn">Muse Spark 1.3</span></td>
       </tr>
       <tr>
         <td class="fn">长文本文档<small>长篇 · 报告 · 合同</small></td>
@@ -362,14 +366,16 @@ body>.nav+.wrap>.model-entry{max-width:1032px;margin:18px auto 22px}
         <td class="mk cn"><span class="d s"></span><span class="mn">Qwen3.8-Max</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">Kimi K3</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">GLM-5.3</span></td>
-        <td class="mk cn"><span class="d w"></span><span class="mn">Seed 2.1</span></td>
+        <td class="mk cn"><span class="d w"></span><span class="mn">Seed 2.1 Pro</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">ERNIE 5.1</span></td>
         <td class="mk cn"><span class="d p"></span><span class="mn">Hy4 Preview</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">MiniMax M3</span></td>
-        <td class="mk int"><span class="d s"></span><span class="mn">Opus 5</span></td>
-        <td class="mk int"><span class="d s"></span><span class="mn">5.6 Sol</span></td>
+        <td class="mk cn"><span class="d s"></span><span class="mn">MiMo-V2.6-Pro</span></td>
+        <td class="mk int"><span class="d s"></span><span class="mn">Claude Opus 5.5</span></td>
+        <td class="mk int"><span class="d s"></span><span class="mn">GPT-6.1 Sol</span></td>
         <td class="mk int"><span class="d w"></span><span class="mn">Gemini 3.8 Flash</span></td>
-        <td class="mk int"><span class="d w"></span><span class="mn">Grok 4.6</span></td>
+        <td class="mk int"><span class="d w"></span><span class="mn">Grok 4.7</span></td>
+        <td class="mk int"><span class="d n">—</span></td>
         <td class="mk int"><span class="d s"></span><span class="mn">Llama 4 Scout</span></td>
       </tr>
       <tr>
@@ -378,15 +384,17 @@ body>.nav+.wrap>.model-entry{max-width:1032px;margin:18px auto 22px}
         <td class="mk cn"><span class="d s"></span><span class="mn">Qwen3.8-Max</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">Kimi K3</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">GLM-5.3</span></td>
-        <td class="mk cn"><span class="d w"></span><span class="mn">Seed 2.1</span></td>
+        <td class="mk cn"><span class="d w"></span><span class="mn">Seed 2.1 Pro</span></td>
         <td class="mk cn"><span class="d w"></span><span class="mn">ERNIE 5.1</span></td>
         <td class="mk cn"><span class="d p"></span><span class="mn">Hy4 Preview</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">MiniMax M3</span></td>
-        <td class="mk int"><span class="d s"></span><span class="mn">Opus 5</span></td>
-        <td class="mk int"><span class="d s"></span><span class="mn">5.6 Sol</span></td>
+        <td class="mk cn"><span class="d s"></span><span class="mn">MiMo-V2.6-Pro</span></td>
+        <td class="mk int"><span class="d s"></span><span class="mn">Claude Opus 5.5</span></td>
+        <td class="mk int"><span class="d s"></span><span class="mn">GPT-6 Astra</span></td>
         <td class="mk int"><span class="d w"></span><span class="mn">Gemini 3.8 Flash</span></td>
-        <td class="mk int"><span class="d w"></span><span class="mn">Grok 4.6</span></td>
-        <td class="mk int"><span class="d p"></span><span class="mn">Muse Spark 1.2</span></td>
+        <td class="mk int"><span class="d w"></span><span class="mn">Grok 4.7</span></td>
+        <td class="mk int"><span class="d n">—</span></td>
+        <td class="mk int"><span class="d p"></span><span class="mn">Muse Spark 1.3</span></td>
       </tr>
       <tr>
         <td class="fn">视觉 / 视频理解<small>读图 · 看视频 · 图表</small></td>
@@ -394,15 +402,17 @@ body>.nav+.wrap>.model-entry{max-width:1032px;margin:18px auto 22px}
         <td class="mk cn"><span class="d s"></span><span class="mn">Qwen3.8-Max</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">Kimi K3</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">GLM-5.3-Flash</span></td>
-        <td class="mk cn"><span class="d s"></span><span class="mn">Seed 2.1</span></td>
+        <td class="mk cn"><span class="d s"></span><span class="mn">Seed 2.1 Pro</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">ERNIE 5.0</span></td>
         <td class="mk cn"><span class="d w"></span><span class="mn">HY-Vision-2.0-Instruct</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">MiniMax M3</span></td>
-        <td class="mk int"><span class="d s"></span><span class="mn">Sonnet 5</span></td>
-        <td class="mk int"><span class="d s"></span><span class="mn">5.6 Sol</span></td>
+        <td class="mk cn"><span class="d s"></span><span class="mn">MiMo-V2.6-Pro</span></td>
+        <td class="mk int"><span class="d s"></span><span class="mn">Claude Opus 5.5</span></td>
+        <td class="mk int"><span class="d s"></span><span class="mn">GPT-6.1 Sol</span></td>
         <td class="mk int"><span class="d s"></span><span class="mn">Gemini 3.8 Flash</span></td>
-        <td class="mk int"><span class="d s"></span><span class="mn">Grok 4.6</span></td>
-        <td class="mk int"><span class="d p"></span><span class="mn">Muse Spark 1.2</span></td>
+        <td class="mk int"><span class="d s"></span><span class="mn">Grok 4.7</span></td>
+        <td class="mk int"><span class="d n">—</span></td>
+        <td class="mk int"><span class="d p"></span><span class="mn">Muse Spark 1.3</span></td>
       </tr>
       <tr>
         <td class="fn">文生图<small>海报 · 配图 · 电商图</small></td>
@@ -414,10 +424,12 @@ body>.nav+.wrap>.model-entry{max-width:1032px;margin:18px auto 22px}
         <td class="mk cn"><span class="d w"></span><span class="mn">ERNIE-Image-Turbo</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">HY-Image-3.0</span></td>
         <td class="mk cn"><span class="d w"></span><span class="mn">Image-01</span></td>
+        <td class="mk cn"><span class="d n">—</span></td>
         <td class="mk int"><span class="d n">—</span></td>
-        <td class="mk int"><span class="d s"></span><span class="mn">GPT-Image-2</span></td>
-        <td class="mk int"><span class="d s"></span><span class="mn">Nano Banana 2</span></td>
+        <td class="mk int"><span class="d s"></span><span class="mn">GPT-Image-2.5 Sunburst</span></td>
+        <td class="mk int"><span class="d s"></span><span class="mn">Nano Banana 2.1</span></td>
         <td class="mk int"><span class="d s"></span><span class="mn">Grok Imagine Image 2.0</span></td>
+        <td class="mk int"><span class="d n">—</span></td>
         <td class="mk int"><span class="d s"></span><span class="mn">Muse Image</span></td>
       </tr>
       <tr>
@@ -430,10 +442,12 @@ body>.nav+.wrap>.model-entry{max-width:1032px;margin:18px auto 22px}
         <td class="mk cn"><span class="d n">—</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">HY-Video-1.5</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">MiniMax H3</span></td>
+        <td class="mk cn"><span class="d n">—</span></td>
         <td class="mk int"><span class="d n">—</span></td>
-        <td class="mk int"><span class="d x"></span><span class="mn">Sora 2<br>9/24 停用</span></td>
-        <td class="mk int"><span class="d s"></span><span class="mn">Gemini Omni Flash</span></td>
+        <td class="mk int"><span class="d x"></span><span class="mn">Sora 2<br>已停用</span></td>
+        <td class="mk int"><span class="d p"></span><span class="mn">Gemini Omni Flash</span></td>
         <td class="mk int"><span class="d w"></span><span class="mn">Grok Imagine Video 1.5</span></td>
+        <td class="mk int"><span class="d n">—</span></td>
         <td class="mk int"><span class="d p"></span><span class="mn">Muse Video<br>未开放 API</span></td>
       </tr>
       <tr>
@@ -446,10 +460,30 @@ body>.nav+.wrap>.model-entry{max-width:1032px;margin:18px auto 22px}
         <td class="mk cn"><span class="d n">—</span></td>
         <td class="mk cn"><span class="d p"></span><span class="mn">Hy-ASR-3.0-Preview</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">Speech-2.8-HD</span></td>
+        <td class="mk cn"><span class="d n">—</span></td>
         <td class="mk int"><span class="d n">—</span></td>
-        <td class="mk int"><span class="d s"></span><span class="mn">GPT-Realtime-2.1</span></td>
-        <td class="mk int"><span class="d p"></span><span class="mn">Gemini 3.1 Flash Live</span></td>
-        <td class="mk int"><span class="d w"></span><span class="mn">Grok Voice Think Fast 2.0</span></td>
+        <td class="mk int"><span class="d s"></span><span class="mn">GPT-Live 1</span></td>
+        <td class="mk int"><span class="d s"></span><span class="mn">Gemini 3.8 Live</span></td>
+        <td class="mk int"><span class="d w"></span><span class="mn">Grok Voice API</span></td>
+        <td class="mk int"><span class="d n">—</span></td>
+        <td class="mk int"><span class="d n">—</span></td>
+      </tr>
+      <tr>
+        <td class="fn">决策 / 路由<small>分类 · 评分 · 工具选择</small></td>
+        <td class="mk cn"><span class="d n">—</span></td>
+        <td class="mk cn"><span class="d n">—</span></td>
+        <td class="mk cn"><span class="d n">—</span></td>
+        <td class="mk cn"><span class="d n">—</span></td>
+        <td class="mk cn"><span class="d n">—</span></td>
+        <td class="mk cn"><span class="d n">—</span></td>
+        <td class="mk cn"><span class="d n">—</span></td>
+        <td class="mk cn"><span class="d n">—</span></td>
+        <td class="mk cn"><span class="d n">—</span></td>
+        <td class="mk int"><span class="d n">—</span></td>
+        <td class="mk int"><span class="d n">—</span></td>
+        <td class="mk int"><span class="d n">—</span></td>
+        <td class="mk int"><span class="d n">—</span></td>
+        <td class="mk int"><span class="d p"></span><span class="mn">Jev 1.13</span></td>
         <td class="mk int"><span class="d n">—</span></td>
       </tr>
       <tr>
@@ -462,6 +496,8 @@ body>.nav+.wrap>.model-entry{max-width:1032px;margin:18px auto 22px}
         <td class="mk cn"><span class="d n">—</span></td>
         <td class="mk cn"><span class="d s"></span><span class="mn">HY-3D-3.1</span></td>
         <td class="mk cn"><span class="d n">—</span></td>
+        <td class="mk cn"><span class="d n">—</span></td>
+        <td class="mk int"><span class="d n">—</span></td>
         <td class="mk int"><span class="d n">—</span></td>
         <td class="mk int"><span class="d n">—</span></td>
         <td class="mk int"><span class="d n">—</span></td>
@@ -472,7 +508,7 @@ body>.nav+.wrap>.model-entry{max-width:1032px;margin:18px auto 22px}
   </table>
   </div>
 
-<section class="model-entry" aria-labelledby="model-entry-title"><div class="entry-head"><div><h2 id="model-entry-title">模型详解</h2></div></div><div class="vendor-model-index"><details class="vendor-model-list" open><summary>Kimi</summary><ul><li><a href="model-kimi-k3.html">Kimi K3</a></li></ul></details><details class="vendor-model-list" open><summary>OpenAI</summary><ul><li><a href="model-gpt-6-astra.html">GPT-6 Astra</a></li></ul></details></div></section>
+<section class="model-entry" aria-labelledby="model-entry-title"><div class="entry-head"><div><h2 id="model-entry-title">模型详解</h2></div></div><div class="vendor-model-index"><details class="vendor-model-list" open><summary>Kimi</summary><ul><li><a href="model-kimi-k3.html">Kimi K3</a></li></ul></details><details class="vendor-model-list" open><summary>OpenAI</summary><ul><li><a href="model-gpt-6-astra.html">GPT-6 Astra</a></li></ul></details><details class="vendor-model-list" open><summary>TypeSafe AI</summary><ul><li><a href="model-jev-1-13.html">Jev 1.13</a></li></ul></details></div></section>
 
   <div class="legend-box">
     <span><i></i>编辑推荐：公开可用、优先评估</span>
@@ -483,16 +519,27 @@ body>.nav+.wrap>.model-entry{max-width:1032px;margin:18px auto 22px}
   </div>
 
   <div class="tipnote">
-    <b>状态口径：</b>GA、Public Beta、Preview、实验版与即将停用型号分开标注；“推荐”是基于公开能力、可接入性、价格和课程场景的编辑判断，不是统一条件下的横向基准测试。DeepSeek 9 月发布 <b>DeepSeek-V4.1-Flash</b>，旧 Flash / Vision / Pro 通路已进入迁移或兼容路由；腾讯 <b>Hy4 Preview</b> 是 8 月 28 日上线的早期预览版，官网标注<b>最大输入 960K、最大输出 64K</b>，生产稳定性优先时可回退 Hy3；Meta 最新 API 模型 Muse Spark 1.2 仍处于 Public Preview。<b>核验快照：2026-09-15。</b>
+    <b>状态口径：</b>GA、Public Beta、Preview、实验版与即将停用型号分开标注；“推荐”是基于公开能力、可接入性、价格和课程场景的编辑判断，不是统一条件下的横向基准测试。DeepSeek 9 月发布 <b>DeepSeek-V4.1-Flash</b>，旧 Flash / Vision / Pro 通路已进入迁移或兼容路由；腾讯 <b>Hy4 Preview</b> 是 8 月 28 日上线的早期预览版，官网标注<b>最大输入 960K、最大输出 64K</b>，生产稳定性优先时可回退 Hy3；<b>Grok 4.7</b>、<b>Claude Opus 5.5</b>、<b>GPT-6.1 Sol</b>、<b>MiMo-V2.6-Pro</b> 已按 10 月 12 日官网口径更新；<b>Jev 1.13</b> 是 System One / typed decision 方向的早期可用模型，不按聊天模型理解。Meta 官方目录已推荐 Muse Spark 1.3 用于新任务；其音频理解尚未完整支持，音频任务仍选 1.2 或专用转写模型。<b>核验快照：2026-10-12。</b>
   </div>
 
   <section class="sect">
-    <h3>本次更新依据（2026-09-15）</h3>
+    <h3>本次更新依据（2026-10-12）</h3>
     <ul>
-      <li><b>OpenAI</b>：<a href="https://developers.openai.com/api/docs/models/gpt-6-astra">GPT-6 Astra</a> 已进入官方模型目录，定位复杂推理、代码、computer use、研究和文档生产。</li>
+      <li><b>本次复核</b>：OpenAI 主力均衡档改为 GPT-6.1 Sol；Claude Sonnet / Haiku 更新为 5.5；Google 出图改为 Nano Banana 2.1，实时语音改为 Gemini 3.8 Live（Stable）。模型发布、API 可用性与单个账号的权限分别判断。</li>
+      <li><b>Meta</b>：<a href="https://dev.meta.ai/docs/models">官方模型目录</a>推荐 Muse Spark 1.3 用于新任务；音频理解尚未完整支持，1.2 仍可作为音频输入的备选。</li>
+      <li><b>MiniMax</b>：<a href="https://platform.minimax.io/docs/guides/models-intro">模型目录</a>新增 MiniMax-M3.1-Flash-Preview，目前仅通过 M Plan / MiniMax Code 使用；通用 API 主表继续列 M3，避免把套餐预览型号当成普遍可用 API。</li>
+      <li><b>字节</b>：<a href="https://docs.volcengine.com/docs/ark/coding-plan-personal-model-release?lang=zh">官方模型发布记录</a>列出 doubao-seed-2.1-pro / lite；主表明确选取 Seed 2.1 Pro，不再只写家族名。</li>
+      <li><b>Google</b>：<a href="https://ai.google.dev/gemini-api/docs/models">API 模型目录</a>核对 Nano Banana 2.1、Gemini 3.8 Live 与 Gemini Omni Flash 的稳定 / 预览状态；Omni Flash 仍按 Preview 标注。</li>
+      <li><b>Jev</b>：<a href="https://docs.typesafe.ai/models">模型限制</a>仍为 Jev 1.13；64K 为请求总量，state 加最长问题上限 32K。<a href="https://docs.typesafe.ai/confidence">置信度文档</a>明确 Noul 不带独立 confidence。</li>
+      <li><b>停用状态</b>：<a href="https://developers.openai.com/api/docs/deprecations">OpenAI 停用记录</a>列明 Sora 2 与 Videos API 于 2026-09-24 停用，本页保留作历史迁移提示。</li>
+      <li><b>OpenAI</b>：<a href="https://developers.openai.com/api/docs/models">模型目录</a>已将 GPT-6 Astra / Sol / Luna 作为最新通用模型家族，并列出 GPT-Live 1、GPT-Image-2.5 Sunburst 等专用模型；Astra 仍作为复杂推理、代码、computer use、研究和文档生产的前沿档。</li>
+      <li><b>xAI</b>：<a href="https://x.ai/news/grok-4-7">Grok 4.7</a> 发布，官方定位为 coding 与 knowledge work 的主力模型；主表按最新旗舰口径更新。</li>
+      <li><b>Anthropic</b>：<a href="https://docs.anthropic.com/en/docs/about-claude/models/overview">Claude 模型概览</a>更新到 Claude Fable 5.1、Claude Opus 5.5、Sonnet 5.5、Haiku 5.5 组合；Haiku 5.5 价格起于 $0.10 / $0.50，不能沿用 Haiku 4.5 的价格。</li>
+      <li><b>MiMo</b>：<a href="https://mimo.mi.com/models/en-US/mimo-v2.6-pro">MiMo-V2.6-Pro</a> 作为小米新一代 reasoning / omni-modal 模型进入通用、长文档、代码和视觉理解列；价格按官方美元口径摘录。</li>
+      <li><b>TypeSafe AI / Jev</b>：<a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev">Jev</a> 进入早期访问；它更像 typed decision / routing 模型，不替代聊天、写作或总结模型。</li>
       <li><b>Google</b>：<a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/">Gemini 3.8 Flash / 3.8 Flash Cyber</a> 发布；3.8 Flash 作为 agentic workflow / coding workhorse 进入表格，Cyber 只作为安全方向趋势备注。</li>
       <li><b>DeepSeek</b>：<a href="https://api-docs.deepseek.com/news/news260910/">DeepSeek-V4.1-Flash</a> 上线并接管旧 Flash / Vision / Pro 通路，主表统一换到新型号。</li>
-      <li><b>Kimi</b>：<a href="https://platform.kimi.com/docs/models">Kimi 模型列表</a>标注 kimi-k2.5、moonshot-v1 与 K2 系列旧型号已下线，课程统一指向 Kimi K3。</li>
+      <li><b>Kimi</b>：<a href="https://platform.kimi.com/docs/models">Kimi 模型列表</a>标注 kimi-k2.5、moonshot-v1 与旧 kimi-k2 型号已下线；K2.6 与 K2.7 Code 仍在目录中。本页以 K3 为代表，并补充当前搜索工具限制。</li>
       <li><b>行业趋势</b>：模型选择从“单次问答”转向“长程工程、agentic workflow、成本/缓存、专用安全模型”。</li>
     </ul>
   </section>
@@ -503,30 +550,32 @@ body>.nav+.wrap>.model-entry{max-width:1032px;margin:18px auto 22px}
       <thead><tr><th>档位</th><th>型号</th><th>价格</th><th>说明</th></tr></thead>
       <tbody>
         <tr><td>前沿</td><td><b>Claude Fable 5.1</b> · <b>GPT-6 Astra</b></td><td>$10 / $50 · $10 / $50</td><td>最难的推理与 agent 任务才用</td></tr>
-        <tr><td>旗舰</td><td><b>Claude Opus 5</b> · <b>GPT-5.6 Sol</b> · <b>Kimi K3</b></td><td>$5 / $25 · $4 / $20 · $3 / $15</td><td>日常重活的默认档</td></tr>
-        <tr><td>中档</td><td><b>Claude Sonnet 5</b> · <b>GPT-5.6 Terra</b> · <b>Grok 4.6</b></td><td>$2 / $10 · $2 / $12 · $2 / $6</td><td>多数场景可先从这一档评估</td></tr>
-        <tr><td>轻快</td><td><b>Gemini 3.8 Flash</b> · <b>Claude Haiku 4.5</b> · <b>GPT-5.6 Luna</b></td><td>$0.75 / $3.75 · $1 / $5 · $0.20 / $1.20</td><td>批量 / 高并发 / 简单任务</td></tr>
-        <tr><td>开放权重自建</td><td><b>DeepSeek-V4.1-Flash</b> · <b>GLM-5.3-Flash</b> · <b>混元 Hy3</b></td><td>逐一核对模型许可证</td><td>除算力外还需计入存储、部署、运维、安全与合规成本</td></tr>
+        <tr><td>旗舰</td><td><b>Claude Opus 5.5</b> · <b>GPT-6.1 Sol</b> · <b>Kimi K3</b> · <b>MiMo-V2.6-Pro</b></td><td>$4 / $20 · $2 / $10 · $3 / $15 · $0.435 / $0.87</td><td>日常重活的默认档；MiMo 价按 cache miss / output 摘录</td></tr>
+        <tr><td>中档</td><td><b>Claude Sonnet 5.5</b> · <b>Grok 4.7</b> · <b>GPT-6 Luna</b></td><td>$2 / $10 · $2 / $6 · $0.1 / $0.5</td><td>多数场景可先从这一档评估</td></tr>
+        <tr><td>轻快</td><td><b>Gemini 3.8 Flash</b> · <b>Claude Haiku 5.5</b></td><td>$0.75 / $3.75 · 起 $0.10 / $0.50</td><td>批量 / 高并发 / 简单任务</td></tr>
+        <tr><td>决策模型</td><td><b>Jev 1.13</b></td><td>$0.042 / Input MTok · $0 / Output</td><td>System One / typed decision；适合分类、评分、路由，不负责写长文本</td></tr>
+        <tr><td>开放权重自建</td><td><b>DeepSeek-V4.1-Flash</b> · <b>MiMo-V2.6-Pro</b> · <b>GLM-5.3-Flash</b> · <b>混元 Hy3</b></td><td>逐一核对模型许可证</td><td>除算力外还需计入存储、部署、运维、安全与合规成本</td></tr>
         <tr><td>定制许可证</td><td><b>Kimi K3</b> · <b>Llama 4</b></td><td>非 MIT / Apache-2.0</td><td>商用、再分发与规模条款须按具体许可证审查</td></tr>
       </tbody>
     </table>
-    <div class="note"><b>口径：</b>原厂 API、美元、标准同步请求的基础文本 token 价；未计缓存、Batch / Flex / Priority、搜索与工具调用、税费及云渠道加价。长上下文可能触发整次请求加价，例如 GPT-6 Astra / GPT-5.6 超过 272K 输入、Grok 4.6 达到 200K。<b>Gemini 3.8 Flash 的 $0.75 / $3.75 为官方发布期价格。</b>签合同和做长期预算前按实际输入 / 输出比、缓存命中率与工具调用量复算。</div>
+    <div class="note"><b>口径：</b>原厂 API、美元、标准同步请求的基础文本 token 价；未计缓存、Batch / Flex / Priority、搜索与工具调用、税费及云渠道加价。长上下文、快/优先模式和缓存命中会改变真实价格，例如 GPT-6 家族为 1.05M context，Grok 4.7 为 500K context，MiMo-V2.6-Pro 同时有 cache hit / cache miss 口径。<b>Gemini 3.8 Flash 的 $0.75 / $3.75 适用至 2026-12-31；2027-01-01 起为 $1.50 / $7.50，按官方定价页复核。</b>签合同和做长期预算前按实际输入 / 输出比、缓存命中率与工具调用量复算。</div>
   </section>
 
   <section class="tips">
-    <h3>怎么选（四句话）</h3>
+    <h3>按任务怎么选</h3>
     <ul>
-      <li><b>隐私与敏感素材</b> → 课堂使用公开、原创或虚构内容</li>
+      <li><b>公司数据、正式业务</b> → 用公司批准的内部工具，不在这张表上</li>
       <li><b>中文日常、要私有化部署</b> → 先按硬件规模、许可证与运维能力筛选 DeepSeek-V4.1-Flash / GLM-5.3-Flash / Hy3</li>
-      <li><b>长合同、长报告、写作</b> → 可评估 Claude Opus 5、Kimi K3、ERNIE 5.1；真实业务仍须走公司批准的工具与审查流程</li>
-      <li><b>写代码、跑 Agent</b> → 高难度端到端任务可看 GPT-6 Astra；日常工程可比较 Claude Opus 5、Kimi K3、MiniMax M3；成本敏感时测试 Gemini 3.8 Flash / DeepSeek-V4.1-Flash</li>
+      <li><b>长合同、长报告、写作</b> → 可评估 Claude Opus 5.5、Kimi K3、ERNIE 5.1、MiMo-V2.6-Pro；真实业务仍须走公司批准的工具与审查流程</li>
+      <li><b>写代码、跑 Agent</b> → 高难度端到端任务可看 GPT-6 Astra / Claude Fable 5.1；日常工程可比较 GPT-6.1 Sol、Claude Opus 5.5、Grok 4.7、Kimi K3、MiMo-V2.6-Pro；成本敏感时测试 GPT-6 Luna / Gemini 3.8 Flash / DeepSeek-V4.1-Flash</li>
+      <li><b>大量分类、打分、路由</b> → 可关注 Jev 1.13 这类 System One / typed decision 模型，但不要把它当通用聊天模型</li>
       <li><b>出图 / 出视频 / 出 3D</b> → 选专用型号：Seedream 5.0 Pro / Qwen-Image-3.0-Pro；Seedance 2.5 / Wan3.0-Video / HY-Video-1.5；Seed3D 2.0 / HY-3D-3.1</li>
       <li><b>预算敏感</b> → 用自己的任务集比较质量、首 token 延迟、总耗时和完整账单，不预设固定节省比例</li>
     </ul>
   </section>
 
   <div class="tipnote">
-    <b>接口迁移提醒：</b>腾讯 TokenHub 已将部分旧版图像 / 视频 model 参数标注为 2026-09-15 下线；新接入优先使用当前型号：HY-Image-3.0、HY-Video-1.5、HY-3D-3.1。Sora 2 视频模型及 Videos API 已进入弃用期，计划于 2026-09-24 停用。
+    <b>接口迁移提醒：</b>腾讯 TokenHub 已将部分旧版图像 / 视频 model 参数标注为 2026-09-15 下线；新接入优先使用当前型号：HY-Image-3.0、HY-Video-1.5、HY-3D-3.1。Sora 2 视频模型及 Videos API 已于 2026-09-24 停用。
   </div>
 
   <div class="hint-box">
@@ -537,9 +586,9 @@ body>.nav+.wrap>.model-entry{max-width:1032px;margin:18px auto 22px}
     <span class="dot"></span>
     <span class="conf">Medtronic</span>
     <span>│</span>
-    <span>大模型一页通 · 功能 × 厂商对照</span>
+    <span>大模型一页通</span>
     <span>│</span>
-    <span>Sept 2026</span>
+    <span>Oct 2026</span>
     <span>│</span>
     <span>Internal use only</span>
   </footer>

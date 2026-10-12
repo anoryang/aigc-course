@@ -3,7 +3,7 @@
 <head data-page-node-id="aXoNjFXGfaSq5yCgQ1nCS3">
 <meta charset="UTF-8" data-page-node-id="3NE9Fx8DT85XPFBZwAeiLx" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="TdU2OFO0BWQHr5yDRdN80P" />
-<title>S1 AI 惊喜开场 · Version 2 — Medtronic</title>
+<title>S1 公司内部线入门 v2 — Medtronic</title>
 <style>
 ﻿/* ==========================================================================
    Medtronic Brand Fonts — Avenir Next World Base64 Inline
@@ -176,7 +176,7 @@ h2 { font-size:var(--h1-size); color:var(--mt-navy-dark); }
     box-shadow:0 10px 20px rgba(12,30,61,0.16); }
 .muse-film__source { display:block; margin-top:6px; font-size:10px; color:var(--mt-medium-gray); text-decoration:none; }
 .muse-film__source:hover { color:var(--mt-electric-blue); text-decoration:underline; }
-.astra-demo-grid { display:grid; grid-template-columns:0.9fr 1.1fr; gap:24px; align-items:stretch; margin-top:18px; }
+.astra-demo-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:stretch; margin-top:18px; }
 .astra-demo-card { background:var(--mt-light-gray); border-radius:var(--mt-radius-card); padding:18px;
     border:1px solid rgba(16,22,70,0.08); display:flex; flex-direction:column; min-height:0; }
 .astra-demo-card h3 { margin:0 0 10px; font-size:var(--h3-size); font-weight:500; color:var(--mt-navy-dark); }
@@ -187,6 +187,68 @@ h2 { font-size:var(--h1-size); color:var(--mt-navy-dark); }
     box-shadow:0 10px 24px rgba(12,30,61,0.12); display:block; }
 .astra-demo-source { display:inline-block; margin-top:8px; font-size:10px; color:var(--mt-medium-gray); text-decoration:none; }
 .astra-demo-source:hover { color:var(--mt-electric-blue); text-decoration:underline; }
+.astra-evidence-grid { display:grid; grid-template-columns:1.12fr .88fr; gap:28px; align-items:stretch; margin-top:16px; }
+.astra-evidence-link { display:block; min-width:0; color:inherit; text-decoration:none; }
+.astra-evidence-link .astra-evidence-visual { height:100%; margin:0; }
+.astra-evidence-visual { position:relative; min-height:460px; overflow:hidden; border-radius:var(--mt-radius-card); background:#10192B; }
+.astra-evidence-visual img { width:100%; height:100%; min-height:460px; object-fit:cover; display:block; }
+.astra-evidence-visual::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,transparent 45%,rgba(12,30,61,.88)); }
+.astra-evidence-caption { position:absolute; z-index:1; left:24px; right:24px; bottom:20px; color:#fff; font-size:15px; line-height:1.45; }
+.astra-evidence-copy { display:flex; flex-direction:column; justify-content:center; gap:14px; }
+.astra-evidence-point { padding:17px 18px; border-left:5px solid var(--mt-electric-blue); background:var(--mt-light-gray); border-radius:0 var(--mt-radius-card) var(--mt-radius-card) 0; }
+.astra-evidence-point b { display:block; margin-bottom:5px; color:var(--mt-navy-dark); font-size:21px; }
+.astra-evidence-point span { color:var(--mt-medium-gray); font-size:15px; line-height:1.45; }
+.arc-score-row { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin:34px 0 26px; }
+.arc-score-card { position:relative; min-height:188px; padding:24px 20px 20px; background:var(--mt-light-gray); border-top:7px solid #C7D1DC; border-radius:var(--mt-radius-card); }
+.arc-score-card.is-frontier { color:#fff; background:linear-gradient(145deg,#140F4B,#5D35B0); border-top-color:var(--mt-teal); box-shadow:0 18px 40px rgba(20,15,75,.22); }
+.arc-score-value { font-size:54px; font-weight:700; letter-spacing:-2px; line-height:1; }
+.arc-score-model { display:block; margin-top:15px; font-size:17px; font-weight:600; }
+.arc-score-note { display:block; margin-top:8px; font-size:13px; line-height:1.4; color:var(--mt-medium-gray); }
+.arc-score-card.is-frontier .arc-score-note { color:rgba(255,255,255,.76); }
+.arc-takeaway { display:grid; grid-template-columns:.72fr 1.28fr; gap:22px; align-items:stretch; margin-top:24px; }
+.arc-parity { display:flex; flex-direction:column; justify-content:center; padding:24px 26px; color:#fff; background:var(--mt-navy-dark); border-radius:var(--mt-radius-card); }
+.arc-stat { display:flex; flex-direction:column; }
+.arc-stat strong { font-size:66px; line-height:.95; color:var(--mt-teal); }
+.arc-stat span { margin-top:10px; font-size:15px; line-height:1.42; }
+.arc-stat-divider { height:1px; margin:18px 0 16px; background:rgba(255,255,255,.24); }
+.arc-stat--human { display:grid; grid-template-columns:auto 1fr; column-gap:13px; align-items:center; }
+.arc-stat--human strong { grid-row:1 / span 2; font-size:42px; color:#fff; }
+.arc-stat--human span { margin:0; font-size:17px; font-weight:650; }
+.arc-stat--human small { margin-top:3px; color:rgba(255,255,255,.7); font-size:11px; line-height:1.35; }
+.arc-meaning { padding:26px 30px; background:linear-gradient(135deg,#F3F7FA,#E9F7F8); border-radius:var(--mt-radius-card); }
+.arc-meaning h3 { margin:0 0 12px; font-size:28px; color:var(--mt-navy-dark); }
+.arc-meaning p { margin:0; font-size:18px; line-height:1.58; color:#3C3C3C; }
+.visual-judgment-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:18px; }
+.visual-judgment-card { overflow:hidden; background:#10192B; border-radius:var(--mt-radius-card); outline:none; }
+.visual-judgment-card img { width:100%; height:244px; object-fit:cover; display:block; cursor:zoom-in; }
+.visual-judgment-card:focus { box-shadow:0 0 0 4px var(--mt-electric-blue); }
+.visual-judgment-card figcaption { padding:14px 18px 16px; color:#fff; font-size:14px; line-height:1.45; }
+.visual-judgment-card b { display:block; margin-bottom:4px; color:var(--mt-teal); font-size:18px; }
+.visual-image-preview { position:fixed; inset:0; z-index:10000; display:flex; align-items:center; justify-content:center;
+    padding:40px 24px; pointer-events:none; opacity:0; visibility:hidden; background:rgba(8,14,42,.78); transition:opacity .16s ease; }
+.visual-image-preview.is-visible { opacity:1; visibility:visible; }
+.visual-image-preview img { display:block; width:auto; height:auto; max-width:calc(100vw - 48px); max-height:calc(100vh - 80px);
+    object-fit:contain; border-radius:14px; background:#080E2A; box-shadow:0 28px 80px rgba(0,0,0,.52); }
+.visual-rule-row { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:18px; }
+.visual-rule { padding:13px 12px; text-align:center; font-size:15px; font-weight:600; color:var(--mt-navy-dark); background:var(--mt-light-gray); border-radius:10px; }
+.creative-flow { display:grid; grid-template-columns:1fr 74px 1fr; gap:16px; align-items:center; margin-top:18px; }
+.creative-stage { position:relative; overflow:hidden; min-height:326px; border-radius:var(--mt-radius-card); background:#10192B; }
+.creative-stage img { width:100%; height:326px; object-fit:cover; display:block; }
+.creative-stage video { width:100%; height:326px; object-fit:contain; display:block; background:#050817; }
+.creative-stage figcaption { position:absolute; left:0; right:0; bottom:0; padding:36px 18px 16px; color:#fff; font-size:14px; background:linear-gradient(transparent,rgba(12,30,61,.92)); }
+.creative-stage b { display:block; margin-bottom:3px; font-size:20px; }
+.creative-arrow { text-align:center; font-size:38px; font-weight:700; color:var(--mt-electric-blue); }
+.creative-bridge { margin-top:18px; padding:16px 20px; border-left:6px solid var(--mt-teal); background:#E9F7F8; border-radius:0 10px 10px 0; font-size:17px; line-height:1.45; color:var(--mt-navy-dark); }
+.gui-closing-hero { margin-top:18px; padding:28px 32px; border-radius:var(--mt-radius-card); color:#fff;
+    background:linear-gradient(120deg,var(--mt-navy-dark),#2C49FF); box-shadow:0 18px 40px rgba(20,15,75,.18); }
+.gui-closing-hero strong { display:block; max-width:1180px; font-size:34px; line-height:1.28; font-weight:600; }
+.gui-closing-hero span { display:block; margin-top:9px; font-size:16px; color:rgba(255,255,255,.78); }
+.gui-closing-points { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:20px; }
+.gui-closing-point { min-height:142px; padding:20px 21px; border-top:6px solid var(--mt-teal); border-radius:var(--mt-radius-card); background:var(--mt-light-gray); }
+.gui-closing-point b { display:block; margin-bottom:8px; font-size:20px; color:var(--mt-navy-dark); }
+.gui-closing-point p { margin:0; font-size:15px; line-height:1.5; color:var(--mt-dark-gray); }
+.gui-closing-final { margin-top:20px; padding:17px 22px; border-left:6px solid var(--mt-electric-blue); border-radius:0 10px 10px 0;
+    background:#EEF0FF; font-size:18px; line-height:1.48; color:var(--mt-navy-dark); }
 
 /* Signal list */
 .sig { display:flex; gap:16px; align-items:flex-start; padding:16px 0;
@@ -458,235 +520,862 @@ body.course-deck-page>.nav{flex:0 0 auto}
 </script>
 
 </head>
-<body class="course-deck-page">
-<nav class="nav" aria-label="课程网站导航"><div class="nav-inner"><a class="brand" href="index.html">Medtronic · AIGC</a><div class="nav-links"><a href="index.html">首页</a><a href="mulu.html">课程目录</a><a href="yiyetong.html">模型速览</a><a href="kejian.html" class="active">课件</a><details class="lab-dropdown"><summary class="lab-toggle">Lab <span class="lab-chevron" aria-hidden="true"></span></summary><div class="lab-menu"><a href="image-lab.html">Image Lab</a><a href="video-lab.html">Video Lab</a></div></details></div></div></nav><main class="course-deck-shell">
-<div class="course-deck-stage" aria-label="S1 AI 惊喜开场 Version 2 课件">
-<div class="progress-bar"></div><nav class="nav-dots" aria-label="幻灯片导航"></nav>
-<section class="slide-wrapper" aria-label="Slide 1 of 25">
-<section class="slide slide--cover" data-slide-id="s1-v2-01" data-slide-number="1" aria-label="第 1 页，共 25 页" data-source-slide="23" data-source-layout="Dark Cover 3" data-source-family="cover" data-adherence="adaptive" style="--source-slide-background:#140F4B">
-<div class="slide-content cover-inner"><span class="mt-overline reveal">S1 · Version 2</span><h1 class="reveal">AI 惊喜开场</h1><div class="accent-bar reveal"></div><p class="sub reveal" style="max-width:800px;">用同一个脑洞，做一张海报，<br>再做一支 10–15 秒短视频。</p><div class="cover-meta reveal"><div>惊喜演示<b>15 分钟</b></div><div>海报创作<b>30 分钟</b></div><div>视频创作<b>35 分钟</b></div><div>作品放映<b>10 分钟</b></div></div></div>
+<body data-page-node-id="KIbFA13siaYLVzMF3NhUaC" class="course-deck-page">
+<nav class="nav" aria-label="课程网站导航"><div class="nav-inner"><a class="brand" href="index.html">Medtronic · AIGC</a><div class="nav-links"><a href="index.html">首页</a><a href="mulu.html">课程目录</a><a href="yiyetong.html">模型速览</a><a href="kejian.html" class="active">课件</a><details class="lab-dropdown"><summary class="lab-toggle">Lab <span class="lab-chevron" aria-hidden="true"></span></summary><div class="lab-menu"><a href="image-lab.html">Image Lab</a><a href="video-lab.html">Video Lab</a></div></details></div></div></nav>
+
+<main class="course-deck-shell">
+<div class="course-deck-stage" aria-label="S1 公司内部线入门课件">
+<div class="progress-bar" data-page-node-id="vWYCZaRMkXCTPhMI1Ivwyr"></div>
+<nav class="nav-dots" aria-label="幻灯片导航" data-page-node-id="CTNYKBY90DQMqQhpGGF1Ct"></nav>
+
+<!-- ============ 1 COVER ============ -->
+<section class="slide-wrapper" aria-label="Slide 1 of 41">
+<section class="slide slide--cover" data-page-node-id="s1RestoredCover" data-slide-id="s1-slide-01" data-slide-number="1" aria-label="第 1 页，共 41 页" data-source-slide="23" data-source-layout="Dark Cover 3" data-source-family="cover" data-adherence="adaptive" style="--source-slide-background:#140F4B">
+  <div class="slide-content cover-inner">
+    <span class="mt-overline reveal">Medtronic · AIGC 赋能</span>
+    <h1 class="reveal">AI 版图 · 个人入口</h1>
+    <div class="accent-bar reveal"></div>
+    <p class="sub reveal" style="max-width:840px;">从 AI 能力与 Agent 概念，到办公协作、海报与视频实操。
+    完整内容按模块展开，现场演练可按课程时长选用。</p>
+    <div class="cover-meta reveal">
+      <div>认知与案例<b>AI → Agent</b></div>
+      <div>内容实操<b>海报与视频</b></div>
+      <div>学习闭环<b>复现与复用</b></div>
+    </div>
+  </div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">1</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 2 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-02" data-slide-number="2" aria-label="第 2 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">路线 · 90 分钟</span><h2 class="reveal">今天的四个时刻</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">00–15 分钟</div><div class="tl-t">三个模型惊喜：理解资料、修改图像、音画视频。</div></div><div class="tl-row"><div class="tl-d">15–45 分钟</div><div class="tl-t">主题海报：写清画面，生成后改两轮。</div></div><div class="tl-row"><div class="tl-d">45–80 分钟</div><div class="tl-t">短视频：把选定海报变成镜头，生成后改两轮。</div></div><div class="tl-row"><div class="tl-d">80–90 分钟</div><div class="tl-t">作品放映：展示你最满意的一次修改。</div></div></div></div></div>
+
+<!-- ============ 内容开场：AGI 引语 ============ -->
+<section class="slide-wrapper" aria-label="Slide 2 of 41">
+<section class="slide slide--content" style="background:#FFFFFF;color:#140F4B;--source-slide-background:#FFFFFF" data-page-node-id="7k0wGw9f51bC0BxzBWBV4u" data-slide-id="s1-slide-02" data-slide-number="2" aria-label="第 2 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive">
+
+  <div class="slide-content cover-inner" data-page-node-id="DwfQQ0IpFPdLltx6JnFQ1l">
+    <span class="mt-overline reveal" data-page-node-id="C3kAC8Sxk9i9c9cmFJzVD4">开场 · 一个时代的判断</span>
+    <h1 class="reveal" style="font-size:80px;line-height:1.06;margin-top:22px;" data-page-node-id="tMdW1YW4kWGcFVQMZ9qpGJ">Welcome to<br>the AGI era.</h1>
+    <div class="accent-bar reveal" data-page-node-id="qLtqVQkGqJEq756FNqAm6p"></div>
+    <p class="reveal" style="font-size:26px;margin:0 0 24px;">欢迎来到 AGI 时代。</p>
+    <blockquote class="reveal" cite="https://mp.weixin.qq.com/s/1R4vSUmjFUINxFbfJLOXng" style="margin:0;max-width:840px;font-size:20px;line-height:1.5;color:#3C3C3C;">
+      “I think it’s not unreasonable to feel that we are now in the AGI era.”
+      <p style="font-size:16px;margin:8px 0 0;">“认为我们如今已身处 AGI 时代，并非没有道理。”</p>
+      <cite style="display:block;font-size:13px;font-style:normal;margin-top:12px;">— Greg Brockman · GPT-6 Astra 媒体交流中的判断</cite>
+    </blockquote>
+    <p class="sub reveal" style="max-width:840px;margin-top:30px;font-size:20px;color:#140F4B;" data-page-node-id="N70AOXDRDFLwfwwiOqfDbd">当 AI 开始理解场景、操作软件、持续完成任务，工作将如何改变？</p>
+    <!-- 引语依据：用户提供原句及微信公众号 1R4vSUmjFUINxFbfJLOXng 已保存原文。原文将两句归于 Greg Brockman 的媒体交流发言；此处作为个人判断引入，不代表 AGI 已达成行业共识。讲师衔接：下一页以真实软件案例观察能力变化，再进入公司内部工具实操。S1 时长 1.5 小时，动手 60 分钟。 -->
+  </div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">2</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 3 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-03" data-slide-number="3" aria-label="第 3 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">惊喜开场</span><h2 class="reveal">先猜一猜：它能做到哪一步？</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">理解</div><div class="tl-t">几张图片和一段文字，能否找出共同风格？</div></div><div class="tl-row"><div class="tl-d">修改</div><div class="tl-t">只改天气和标题，主体会不会一起变？</div></div><div class="tl-row"><div class="tl-d">运动</div><div class="tl-t">静止画面怎样变成有节奏、有声音的小片段？</div></div></div><div class="callout reveal"><p>每个演示先猜结果，再看实际输出。</p></div></div></div>
+
+<!-- ============ 2 行业观察开场：现象 ============ -->
+<section class="slide-wrapper" aria-label="Slide 3 of 41">
+<section class="slide slide--content" data-page-node-id="astraOpeningPhenomenon" data-slide-id="s1-slide-03" data-slide-number="3" aria-label="第 3 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+  <div class="slide-content" data-page-node-id="astraOpeningPhenomenonContent">
+    <span class="mt-overline reveal" data-page-node-id="astraOpeningPhenomenonOverline">开场 · GPT-6 Astra 案例引子</span>
+    <h2 class="reveal" data-page-node-id="astraOpeningPhenomenonTitle">从 GPT-6 Astra 案例看：AI 正在进入软件现场</h2>
+    <div class="accent-bar reveal" data-page-node-id="astraOpeningPhenomenonAccent"></div>
+    <div class="slide-body" data-page-node-id="astraOpeningPhenomenonBody">
+      <div class="sig reveal" data-page-node-id="astraOpeningPhenomenonSignal1">
+        <span class="mt-badge" data-page-node-id="astraOpeningPhenomenonBadge1">1</span>
+        <div class="sig-tx" data-page-node-id="astraOpeningPhenomenonText1">
+          <b data-page-node-id="astraOpeningPhenomenonLead1">GPT-6 Astra 案例已经进入真实软件</b>
+          <span data-page-node-id="astraOpeningPhenomenonCopy1">关键变化是：AI 不只回答问题，而是开始操作软件。例如一句需求生成初版三维场景；在专业界面里找插件、调材质、修动作；再根据屏幕反馈继续排查问题。</span>
+        </div>
+      </div>
+      <div class="sig reveal" data-page-node-id="astraOpeningPhenomenonSignal2">
+        <span class="mt-badge" data-page-node-id="astraOpeningPhenomenonBadge2">2</span>
+        <div class="sig-tx" data-page-node-id="astraOpeningPhenomenonText2">
+          <b data-page-node-id="astraOpeningPhenomenonLead2">复杂动作被拆解</b>
+          <span data-page-node-id="astraOpeningPhenomenonCopy2">过去一整套专业流程，现在被拆成「找资料 → 判断路径 → 操作界面 → 看反馈 → 再修正」。安装环境、导入素材、设置参数、预览结果都变成可被 AI 接手的步骤。</span>
+        </div>
+      </div>
+      <div class="sig reveal" data-page-node-id="astraOpeningPhenomenonSignal3">
+        <span class="mt-badge" data-page-node-id="astraOpeningPhenomenonBadge3">3</span>
+        <div class="sig-tx" data-page-node-id="astraOpeningPhenomenonText3">
+          <b data-page-node-id="astraOpeningPhenomenonLead3">普通人开始试专业流程</b>
+          <span data-page-node-id="astraOpeningPhenomenonCopy3">一个不会建模、不会动画、不会复杂软件的人，也能先让 AI 搭出第一版，再由人来判断方向、修正标准、决定取舍。</span>
+        </div>
+      </div>
+      <div class="callout reveal" data-page-node-id="astraOpeningPhenomenonCallout">
+        <p data-page-node-id="astraOpeningPhenomenonCalloutText">这不是教大家玩 3D，也不是把课程变成软件课。
+        <em data-page-node-id="astraOpeningPhenomenonCalloutSub">重点是：AI 开始进入真实软件和真实流程，工作入口正在改变。</em></p>
+      </div>
+    </div>
+  </div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">3</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 4 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-04" data-slide-number="4" aria-label="第 4 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">Kimi K3 · 多模态理解</span><h2 class="reveal">惊喜一：把素材读成一个创意</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">输入</div><div class="tl-t">三张自己有权使用的咖啡馆参考图＋一句创作想法。</div></div><div class="tl-row"><div class="tl-d">现场提问</div><div class="tl-t">找出共同的色彩、光线和空间特点；再提出三个海报方向。</div></div><div class="tl-row"><div class="tl-d">一起核对</div><div class="tl-t">指出回答对应哪张图；没有依据的细节，请它重新说明。</div></div></div><div class="callout reveal"><p>演示脚本：功能依据官方介绍，课堂效果以实际输出为准。</p></div></div></div>
+
+<!-- ============ 3 GPT-6 Astra 截图 + 视频案例 ============ -->
+<section class="slide-wrapper" aria-label="Slide 4 of 41">
+<section class="slide slide--content" data-page-node-id="astraMediaCase" data-slide-id="s1-slide-04" data-slide-number="4" aria-label="第 4 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+  <div class="slide-content" data-page-node-id="astraMediaCaseContent">
+    <span class="mt-overline reveal" data-page-node-id="astraMediaCaseOverline">案例片段 · GPT-6 Astra</span>
+    <h2 class="reveal" data-page-node-id="astraMediaCaseTitle">从数据看板到三维样机的演示</h2>
+    <div class="accent-bar reveal" data-page-node-id="astraMediaCaseAccent"></div>
+    <div class="slide-body" data-page-node-id="astraMediaCaseBody">
+      <div class="astra-demo-grid" data-page-node-id="astraMediaCaseGrid">
+        <figure class="astra-demo-card reveal" data-page-node-id="astraMediaCaseShotCard">
+          <h3 data-page-node-id="astraMediaCaseShotTitle">视频：在 Power BI 里把数据变成决策看板</h3>
+          <video class="astra-demo-video" controls playsinline preload="metadata" aria-label="GPT-6 Astra 视频案例：在 Power BI 中搭建并迭代车辆数据仪表板，30秒" data-page-node-id="astraMediaCaseShot">
+            <source src="assets/s1/astra/power-bi-dashboard-demo.mp4" type="video/mp4">
+            当前浏览器无法播放此视频。
+          </video>
+          <p data-page-node-id="astraMediaCaseShotCopy">GPT-6 Astra 在 Power BI 中直接搭建并迭代仪表板，把车辆数据转成续航、价格与效率的清晰对比，帮助分析者看见取舍并分享洞察。</p>
+          <a class="astra-demo-source" href="https://openai.com/index/gpt-6-astra/?video=1223245006" target="_blank" rel="noopener" data-page-node-id="astraMediaCaseShotSource">来源：OpenAI 官方发布页 ↗</a>
+        </figure>
+        <figure class="astra-demo-card reveal" data-page-node-id="astraMediaCaseVideoCard">
+          <h3 data-page-node-id="astraMediaCaseVideoTitle">视频：从“看懂”到“操作软件”</h3>
+          <video class="astra-demo-video" controls playsinline preload="metadata" poster="assets/s1/astra/pcb-to-board.png" aria-label="GPT-6 Astra 视频案例：在 KiCad 中完成电路板布局，15秒" data-page-node-id="astraMediaCaseVideo">
+            <source src="assets/s1/astra/pcb-to-board-demo.mp4" type="video/mp4">
+            当前浏览器无法播放此视频。
+          </video>
+          <p data-page-node-id="astraMediaCaseVideoCopy">视频展示的是同一个趋势：AI 不只解释图像，而是把图像、界面和操作步骤连成一个工作过程。</p>
+          <a class="astra-demo-source" href="https://openai.com/index/gpt-6-astra/?video=1223245030" target="_blank" rel="noopener" data-page-node-id="astraMediaCaseSource">来源：OpenAI 官方发布页 ↗</a>
+        </figure>
+      </div>
+    </div>
+  </div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">4</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 5 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-05" data-slide-number="5" aria-label="第 5 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">Nano Banana 2 · 图像编辑</span><h2 class="reveal">惊喜二：一句话改变画面</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">第一轮</div><div class="tl-t">保留咖啡馆构图，把白天改成雨夜，保留暖色窗光。</div></div><div class="tl-row"><div class="tl-d">第二轮</div><div class="tl-t">只将标题改为「云端咖啡馆」，保持其他部分不变。</div></div><div class="tl-row"><div class="tl-d">一起找茬</div><div class="tl-t">文字准确吗？杯子、窗框、招牌有没有偷偷变化？</div></div></div><div class="callout reveal"><p>变化越具体，越容易看清模型有没有照做。</p></div></div></div>
+
+<!-- ============ 3 行业观察开场：变化 ============ -->
+<section class="slide-wrapper" aria-label="Slide 5 of 41">
+<section class="slide slide--content" data-page-node-id="astraOpeningShift" data-slide-id="s1-slide-05" data-slide-number="5" aria-label="第 5 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+  <div class="slide-content" data-page-node-id="astraOpeningShiftContent">
+    <span class="mt-overline reveal" data-page-node-id="astraOpeningShiftOverline">开场 · 变化</span>
+    <h2 class="reveal" data-page-node-id="astraOpeningShiftTitle">GUI 可能是 Agent 时代最通用的入口</h2>
+    <div class="accent-bar reveal" data-page-node-id="astraOpeningShiftAccent"></div>
+    <div class="slide-body" data-page-node-id="astraOpeningShiftBody">
+      <div class="sig reveal" data-page-node-id="astraOpeningShiftSignal1">
+        <span class="mt-badge" data-page-node-id="astraOpeningShiftBadge1">1</span>
+        <div class="sig-tx" data-page-node-id="astraOpeningShiftText1">
+          <b data-page-node-id="astraOpeningShiftLead1">API 不一定在</b>
+          <span data-page-node-id="astraOpeningShiftCopy1">很多老系统、内部工具、专业软件没有开放 API，或者文档不完整。AI 如果只能调用接口，就会卡在门口。</span>
+        </div>
+      </div>
+      <div class="sig reveal" data-page-node-id="astraOpeningShiftSignal2">
+        <span class="mt-badge" data-page-node-id="astraOpeningShiftBadge2">2</span>
+        <div class="sig-tx" data-page-node-id="astraOpeningShiftText2">
+          <b data-page-node-id="astraOpeningShiftLead2">屏幕就是共同语言</b>
+          <span data-page-node-id="astraOpeningShiftCopy2">按钮、菜单、输入框、报错、弹窗，是人和软件共同理解的界面。GUI 变成 Agent 的通用入口，电脑本身，正在变成 AI 的操作界面。</span>
+        </div>
+      </div>
+      <div class="sig reveal" data-page-node-id="astraOpeningShiftSignal3">
+        <span class="mt-badge" data-page-node-id="astraOpeningShiftBadge3">3</span>
+        <div class="sig-tx" data-page-node-id="astraOpeningShiftText3">
+          <b data-page-node-id="astraOpeningShiftLead3">人从操作员变监督者</b>
+          <span data-page-node-id="astraOpeningShiftCopy3">人的角色从「一步一步点」变成「给目标、看过程、把关结果」。真正的变化不是 AI 更会聊天，而是更会接住任务。</span>
+        </div>
+      </div>
+      <div class="callout reveal" data-page-node-id="astraOpeningShiftCallout">
+        <p data-page-node-id="astraOpeningShiftCalloutText">这就是为什么 Agent 会成为下一阶段的关键词。
+        <em data-page-node-id="astraOpeningShiftCalloutSub">它不是一个更聪明的聊天框，而是能围绕目标持续使用工具的执行系统。</em></p>
+      </div>
+    </div>
+  </div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">5</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 6 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-06" data-slide-number="6" aria-label="第 6 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">可灵 3.0 · 音画短视频</span><h2 class="reveal">惊喜三：让画面开始讲故事</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">起点</div><div class="tl-t">使用同一张海报作为参考图。</div></div><div class="tl-row"><div class="tl-d">变化</div><div class="tl-t">镜头缓慢推近，咖啡热气上升，窗外雨点滑落。</div></div><div class="tl-row"><div class="tl-d">一起观察</div><div class="tl-t">主体是否稳定？镜头是否连贯？声音是否与画面匹配？</div></div></div><div class="callout reveal"><p>播放已跑通的演示；现场生成的排队时间不固定。</p></div></div></div>
+
+<!-- ============ ARC-AGI-3：测试什么 ============ -->
+<section class="slide-wrapper" aria-label="Slide 6 of 41">
+<section class="slide slide--content" data-page-node-id="arcAgi3WhatItTests" data-slide-id="s1-slide-06" data-slide-number="6" aria-label="第 6 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+  <div class="slide-content" data-page-node-id="arcAgi3WhatItTestsContent">
+    <span class="mt-overline reveal">能力证据 · ARC-AGI-3</span>
+    <h2 class="reveal">它测的不是知识量，而是面对陌生环境时的摸索能力</h2>
+    <div class="accent-bar reveal"></div>
+    <div class="slide-body">
+      <div class="astra-evidence-grid">
+        <a class="astra-evidence-link reveal" href="https://arcprize.org/arc-agi/3" target="_blank" rel="noopener" aria-label="访问 ARC Prize 的 ARC-AGI-3 官方页面">
+          <figure class="astra-evidence-visual">
+            <img src="assets/s1/astra/arc-agi-3-hero.png" data-source-asset="assets/s1/astra/arc-agi-3-hero.png" alt="ARC-AGI-3 官方发布视觉：复古电视中的交互式环境">
+            <figcaption class="astra-evidence-caption">ARC-AGI-3 把模型放进没有说明书的交互式环境：先观察，再试探，再从反馈中推断目标与规则。</figcaption>
+          </figure>
+        </a>
+        <div class="astra-evidence-copy">
+          <div class="astra-evidence-point reveal"><b>没有题目说明</b><span>模型看不到规则、操作方式和明确目标，不能靠背答案开局。</span></div>
+          <div class="astra-evidence-point reveal"><b>必须边做边学</b><span>每一次动作都会改变环境；模型要从结果里判断什么有效。</span></div>
+          <div class="astra-evidence-point reveal"><b>考的是新环境适应</b><span>数百个交互环境、数千个游戏式关卡，重点是快速形成可执行策略。</span></div>
+        </div>
+      </div>
+      <a class="astra-demo-source" href="https://arcprize.org/blog/arc-agi-3-launch" target="_blank" rel="noopener">来源：ARC Prize Foundation，2026-03-25 ↗</a>
+    </div>
+  </div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">6</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 7 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-07" data-slide-number="7" aria-label="第 7 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">开始创作</span><h2 class="reveal">选一个你愿意分享的脑洞</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">共同示例</div><div class="tl-t">云端咖啡馆：一间漂浮在云海中的温暖小店。</div></div><div class="tl-row"><div class="tl-d">也可以选</div><div class="tl-t">宠物的新产品广告 / 梦想旅行目的地 / 个人音乐节。</div></div><div class="tl-row"><div class="tl-d">现在说出来</div><div class="tl-t">我想让谁看到什么，并感到什么？用一句话写下。</div></div></div><div class="callout reveal"><p>同一个主题贯穿海报和视频。后续文字均为练习示例。</p></div></div></div>
+
+<!-- ============ ARC-AGI-3：成绩跃迁 ============ -->
+<section class="slide-wrapper" aria-label="Slide 7 of 41">
+<section class="slide slide--content" data-page-node-id="arcAgi3ScoreJump" data-slide-id="s1-slide-07" data-slide-number="7" aria-label="第 7 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+  <div class="slide-content" data-page-node-id="arcAgi3ScoreJumpContent">
+    <span class="mt-overline reveal">能力证据 · 成绩跃迁</span>
+    <h2 class="reveal">从几乎不会，到 99.9%：不是渐进改良</h2>
+    <div class="accent-bar reveal"></div>
+    <div class="slide-body">
+      <div class="arc-score-row reveal">
+        <div class="arc-score-card"><div class="arc-score-value">0.51%</div><span class="arc-score-model">发布时前沿 AI</span><span class="arc-score-note">ARC-AGI-3 发布时的最好成绩</span></div>
+        <div class="arc-score-card"><div class="arc-score-value">7.8%</div><span class="arc-score-model">GPT-5.6 Sol</span><span class="arc-score-note">OpenAI 官方评测表</span></div>
+        <div class="arc-score-card"><div class="arc-score-value">30.2%</div><span class="arc-score-model">Claude Opus 5</span><span class="arc-score-note">同表对照模型</span></div>
+        <div class="arc-score-card is-frontier"><div class="arc-score-value">99.9%</div><span class="arc-score-model">GPT-6 Astra</span><span class="arc-score-note">在该评测上接近饱和</span></div>
+      </div>
+      <div class="callout reveal"><p>真正重要的不是多了几个百分点。<em>而是模型第一次在大量陌生交互环境里，稳定地完成“看反馈、猜规则、改动作”。</em></p></div>
+      <a class="astra-demo-source" href="https://openai.com/index/gpt-6-astra/" target="_blank" rel="noopener">来源：OpenAI 官方评测表；ARC Prize 发布资料 ↗</a>
+    </div>
+  </div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">7</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 8 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-08" data-slide-number="8" aria-label="第 8 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">海报 · 30 分钟</span><h2 class="reveal">一张好海报，先决定四件事</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">主体</div><div class="tl-t">主角是谁？示例：云海里的一间小咖啡馆。</div></div><div class="tl-row"><div class="tl-d">场景</div><div class="tl-t">在哪里、什么时间？示例：日落、暖光、安静。</div></div><div class="tl-row"><div class="tl-d">风格</div><div class="tl-t">照片感、手绘或黏土？第一版只选一种。</div></div><div class="tl-row"><div class="tl-d">文字</div><div class="tl-t">短标题是什么？放在哪里？示例：云端咖啡馆。</div></div></div></div></div>
+
+<!-- ============ ARC-AGI-3：意味着什么 ============ -->
+<section class="slide-wrapper" aria-label="Slide 8 of 41">
+<section class="slide slide--content" data-page-node-id="arcAgi3Meaning" data-slide-id="s1-slide-08" data-slide-number="8" aria-label="第 8 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+  <div class="slide-content" data-page-node-id="arcAgi3MeaningContent">
+    <span class="mt-overline reveal">能力证据 · 怎么理解</span>
+    <h2 class="reveal">从“会做题”到“有悟性”</h2>
+    <div class="accent-bar reveal"></div>
+    <div class="slide-body">
+      <div class="arc-takeaway">
+        <div class="arc-parity reveal">
+          <div class="arc-stat"><strong>96%</strong><span>Astra 在 96% 的关卡上超过 ARC Prize 的人类“行动效率”基线。</span></div>
+          <div class="arc-stat-divider" aria-hidden="true"></div>
+          <div class="arc-stat arc-stat--human"><strong>48%</strong><span>人类平均得分</span><small>两项数据口径不同：96% 是行动效率覆盖比例，48% 是平均得分。</small></div>
+        </div>
+        <div class="arc-meaning reveal">
+          <h3>更接近工作现场的能力</h3>
+          <p>现实任务很少把规则写完整。真正有用的 Agent，需要在不确定中观察、尝试、修正，并且尽量少走弯路。</p>
+          <p style="margin-top:14px;"><b>所以，“悟性”在这里不是玄学：</b>它是用有限反馈快速理解陌生环境，再把理解转成有效行动。</p>
+        </div>
+      </div>
+      <div class="callout reveal" style="margin-top:24px;"><p>这是一项重要的能力证据，但不是“AGI 已被单一测试证明”。<em>把它放进课程，是为了看清 Agent 为什么开始能接住更开放、更真实的任务。</em></p></div>
+      <a class="astra-demo-source" href="https://openai.com/index/gpt-6-astra/" target="_blank" rel="noopener">引语与数据：OpenAI 引述 ARC Prize Foundation ↗</a>
+    </div>
+  </div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">8</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 9 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-09" data-slide-number="9" aria-label="第 9 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">提示词 · 练习示例</span><h2 class="reveal">可直接抄用：第一张海报</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">复制并修改</div><div class="tl-t">生成一张 16:9 横版海报：日落时，一间小咖啡馆漂浮在云海中。主体位于画面右侧，窗内透出暖光，电影摄影风格，色彩柔和。</div></div><div class="tl-row"><div class="tl-d">写清文字</div><div class="tl-t">左侧留出清晰标题区，准确写出中文「云端咖啡馆」，不要添加其他文字。</div></div><div class="tl-row"><div class="tl-d">马上动手</div><div class="tl-t">只替换主题、主体和标题，先生成第一版。</div></div></div><div class="callout reveal"><p>这是提示词示例，并非已经生成的海报。</p></div></div></div>
+
+<!-- ============ 视觉判断：文档与演示 ============ -->
+<section class="slide-wrapper" aria-label="Slide 9 of 41">
+<section class="slide slide--content" data-page-node-id="astraVisualJudgmentDocs" data-slide-id="s1-slide-09" data-slide-number="9" aria-label="第 9 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+  <div class="slide-content" data-page-node-id="astraVisualJudgmentDocsContent">
+    <span class="mt-overline reveal">能力证据 · 视觉判断</span>
+    <h2 class="reveal">审美不是多加装饰，而是更会判断版式</h2>
+    <div class="accent-bar reveal"></div>
+    <div class="slide-body">
+      <div class="visual-judgment-grid">
+        <figure class="visual-judgment-card reveal" tabindex="0"><img src="assets/s1/astra/document-style-clean.png" data-source-asset="assets/s1/astra/document-style-clean.png" data-watermark-removed="true" alt="参考版式与 GPT-6 Astra 生成演示文稿的对照"><figcaption><b>结构判断</b>把信息层级、图文比例和留白组织成一页，而不是把文字堆进模板。</figcaption></figure>
+        <figure class="visual-judgment-card reveal" tabindex="0"><img src="assets/s1/astra/presentation-style-clean.png" data-source-asset="assets/s1/astra/presentation-style-clean.png" data-watermark-removed="true" alt="参考文档与品牌化输出的视觉风格对照"><figcaption><b>风格判断</b>参考既有视觉与写作语调，在保留实质内容的同时贴近品牌原生感。</figcaption></figure>
+      </div>
+      <div class="visual-rule-row reveal"><div class="visual-rule">版式</div><div class="visual-rule">信息层级</div><div class="visual-rule">模板遵循</div><div class="visual-rule">视觉风格</div></div>
+      <a class="astra-demo-source" href="https://openai.com/index/gpt-6-astra/" target="_blank" rel="noopener">依据：OpenAI 官方发布页“professional work / visual judgment” ↗</a>
+    </div>
+  </div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">9</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 10 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-10" data-slide-number="10" aria-label="第 10 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">海报 · 第一版</span><h2 class="reveal">生成的时候，给作品取个名字</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">保存</div><div class="tl-t">保存原始提示词和第一版图片，命名 poster-v1。</div></div><div class="tl-row"><div class="tl-d">挑选</div><div class="tl-t">从可用结果中选一张；讲清楚你选它的一个原因。</div></div><div class="tl-row"><div class="tl-d">观察</div><div class="tl-t">主体是否突出？文字是否正确？整体氛围是否吻合？</div></div></div><div class="callout reveal"><p>不要只说“还不错”，找一个具体优点和一个具体问题。</p></div></div></div>
+
+<!-- ============ 视觉判断：网站、游戏与 3D ============ -->
+<section class="slide-wrapper" aria-label="Slide 10 of 41">
+<section class="slide slide--content" data-page-node-id="astraVisualJudgment3d" data-slide-id="s1-slide-10" data-slide-number="10" aria-label="第 10 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+  <div class="slide-content" data-page-node-id="astraVisualJudgment3dContent">
+    <span class="mt-overline reveal">能力证据 · 从图到可体验空间</span>
+    <h2 class="reveal">视觉判断开始贯穿文档、网站与 3D</h2>
+    <div class="accent-bar reveal"></div>
+    <div class="slide-body">
+      <div class="creative-flow">
+        <figure class="creative-stage reveal"><img src="assets/s1/astra/blender-scene.jpg" data-source-asset="assets/s1/astra/blender-scene.jpg" alt="GPT-6 Astra 在 Blender 中根据静帧建立建筑与环境模型"><figcaption><b>静态参考 → Blender 场景</b>先理解空间关系，再建立可编辑的三维模型。</figcaption></figure>
+        <div class="creative-arrow reveal">→</div>
+        <figure class="creative-stage reveal"><video controls playsinline preload="metadata" aria-label="Blender 场景导入 UE5 后的第一人称漫游视频"><source src="assets/s1/astra/blender-ue5-walkthrough.mp4" type="video/mp4">当前浏览器无法播放此视频。</video><figcaption><b>Blender → UE5 可漫游场景</b>把生成的三维空间导入引擎，再用第一人称视角进入并体验场景。</figcaption></figure>
+      </div>
+      <div class="creative-bridge reveal"><b>对课程的意义：</b>以后做海报、视频或网页，不只问“能不能生成”，还要学会给参考、定标准、看层级、做取舍。</div>
+      <a class="astra-demo-source" href="https://openai.com/index/gpt-6-astra/" target="_blank" rel="noopener">案例：OpenAI 官方发布页；图片来自文章对应案例截图 ↗</a>
+    </div>
+  </div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">10</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 11 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-11" data-slide-number="11" aria-label="第 11 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">海报 · 修改 1</span><h2 class="reveal">第一轮修改：只改变氛围</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">可抄提示词</div><div class="tl-t">以这张图为基础，保持主体位置、构图和标题不变。将日落改成蓝色雨夜，保留咖啡馆内温暖的灯光。</div></div><div class="tl-row"><div class="tl-d">核对</div><div class="tl-t">只改了天气与光线吗？标题是否还正确？</div></div><div class="tl-row"><div class="tl-d">保存</div><div class="tl-t">保留修改前后两张图，第二版命名 poster-v2。</div></div></div></div></div>
+
+<!-- ============ AGI × GUI 小结 ============ -->
+<section class="slide-wrapper" aria-label="Slide 11 of 41">
+<section class="slide slide--content" data-page-node-id="astraGuiClosing" data-slide-id="s1-slide-11" data-slide-number="11" aria-label="第 11 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+  <div class="slide-content" data-page-node-id="astraGuiClosingContent">
+    <span class="mt-overline reveal">小结 · AGI × GUI</span>
+    <h2 class="reveal">GUI，正在成为 Agent 时代最通用的 API</h2>
+    <div class="accent-bar reveal"></div>
+    <div class="slide-body">
+      <div class="gui-closing-hero reveal">
+        <strong>人类已经有软件会做的事，AI 先学会使用软件。</strong>
+        <span>GPT-6 Astra 让整个软件世界，从“需要单独接入的系统”变成了可以直接调用的工具箱。</span>
+      </div>
+      <div class="gui-closing-points">
+        <div class="gui-closing-point reveal"><b>Computer Use</b><p>AI 从回答问题走向观察界面、理解反馈，并在真实软件中完成操作。</p></div>
+        <div class="gui-closing-point reveal"><b>一层 AI 兼容层</b><p>GUI 给几十年软件工业积累补上一层 AI 兼容层，不必等待每个工具重做接口。</p></div>
+        <div class="gui-closing-point reveal"><b>软件世界变成工具箱</b><p>工业软件、旧 ERP、建筑工具，都能进入 AI 的工具箱。</p></div>
+      </div>
+      <div class="gui-closing-final reveal"><b>Closing：</b>高成本、延时与缓慢会被能力进步逐步解决；真正重要的是，软件世界已经开始向 AI 开放。</div>
+    </div>
+  </div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">11</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 12 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-12" data-slide-number="12" aria-label="第 12 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">海报 · 修改 2</span><h2 class="reveal">第二轮修改：把细节说准确</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">可抄提示词</div><div class="tl-t">保持当前画面不变，只把左侧标题改为「今晚，去云端喝一杯」。标题完整、清晰，不增加其他字。</div></div><div class="tl-row"><div class="tl-d">核对</div><div class="tl-t">是否漏字、错字？主体、比例、颜色有没有变化？</div></div><div class="tl-row"><div class="tl-d">保存</div><div class="tl-t">满意版本命名 poster-final；若改坏了，回到上一版重试。</div></div></div></div></div>
+
+<!-- ============ 4 行业观察开场：落到工作流 ============ -->
+<!-- ============ 2 开场案例上 ============ -->
+<section class="slide-wrapper" aria-label="Slide 12 of 41">
+<section class="slide slide--content" data-page-node-id="25mmMFtTPFzCfhrPECakQc" data-slide-id="s1-slide-12" data-slide-number="12" aria-label="第 12 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+  <div class="slide-content" data-page-node-id="60KHM9FF3K0UVesMAkWIQF">
+    <span class="mt-overline reveal" data-page-node-id="PPlsYPZlnu7qKrOlWW0Y5w">开场 · 就发生在两周前</span>
+    <h2 class="reveal" data-page-node-id="bMwNnfBkyUKDpthe32F9S2">一只「牛」来过，整个 AI 圈猜了一周</h2>
+    <div class="accent-bar reveal" data-page-node-id="nmBi8HAJSeH8521BtAmR1N"></div>
+    <div class="slide-body" data-page-node-id="i0Ni1bTHWoBHZCB5RL7ExC">
+      <div class="tl reveal" data-page-node-id="LsEVtB3tNXgNzqdLjlM2YG">
+        <div class="tl-row" data-page-node-id="tqsA45iZdfaKblImZ0WWPo"><div class="tl-d" data-page-node-id="3OQMaXMX6OFRtvSEH2vsji">8 月 20 日</div><div class="tl-t" data-page-node-id="HXSBKhaVozZEsnJ1HcrLGO">一个叫 <b data-page-node-id="4bBFyKZMp3HADCD42Tpl77">OX Alpha</b> 的匿名模型突然出现在 OpenRouter 和 OpenCode，100 万上下文、多模态、<b data-page-node-id="GJESRK0dfpFqMWCjDwsEkX">完全免费</b>，没有任何其他信息。</div></div>
+        <div class="tl-row" data-page-node-id="f1il0PED3UTO6OspK9ZZqy"><div class="tl-d" data-page-node-id="j8Y5sscgYyKjQeH1594SOc">几天内</div><div class="tl-t" data-page-node-id="qxJEOClqaYB6XgBO8yPIDb">它直接冲上两个平台<b data-page-node-id="3z9kO5sMQZcuaguID3pUDM">调用量第一</b>。社区给它起了中文名——Ox 是牛，所以叫<b data-page-node-id="9boCGSVXhIT0d0uvyAWI0g">「牛来」</b>。</div></div>
+        <div class="tl-row" data-page-node-id="VmGSMPBY01kHomCLIr8vuB"><div class="tl-d" data-page-node-id="fW3JnbTcXY7H3CDopNEgzo">全网竞猜</div><div class="tl-t" data-page-node-id="HBgEbLeBwqe5o2CqiDevoI">有人猜小米 MiMo，有人猜智谱，有人猜 Grok，连 Gemini 都来凑热闹。硬核用户干脆扒分词，实锤是智谱。</div></div>
+        <div class="tl-row" data-page-node-id="lEiWN1r6km9hnZRY6zpfyr"><div class="tl-d" data-page-node-id="Engpl1VOc0VJ4acoxsL678">8 月 26 日</div><div class="tl-t" data-page-node-id="AHJiqSG8AM9qCFWHVM1FEa">谜底揭开：<b data-page-node-id="wkfOLq2l9DaLrY155kQpyZ">OX Alpha 就是智谱 GLM-5.3-Flash</b>。</div></div>
+      </div>
+    </div>
+  </div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">12</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 13 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-13" data-slide-number="13" aria-label="第 13 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">海报 · 对照</span><h2 class="reveal">两张图放在一起，选你的最终版</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">先看主体</div><div class="tl-t">观众第一眼看到的是你想让他看到的吗？</div></div><div class="tl-row"><div class="tl-d">再看文字</div><div class="tl-t">缩小画面后，还能读清标题吗？</div></div><div class="tl-row"><div class="tl-d">最后看变化</div><div class="tl-t">说出“我改了什么，因此更适合什么”。</div></div></div><div class="callout reveal"><p>保留原版与最终版，稍后放映时一起展示。</p></div></div></div>
+
+<!-- ============ 3 开场案例下 ============ -->
+<section class="slide-wrapper" aria-label="Slide 13 of 41">
+<section class="slide slide--content" data-page-node-id="pcxvzw0xOTDdfe5Sl886x0" data-slide-id="s1-slide-13" data-slide-number="13" aria-label="第 13 页，共 41 页" data-source-slide="82" data-source-layout="Full Width Image" data-source-family="numbers-stat" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+  <div class="slide-content" data-page-node-id="lIUJR4CjMlIf1GCjooDRPf">
+    <span class="mt-overline reveal" data-page-node-id="9FgxpTkwSeLMJGfciznZCq">开场 · 揭晓之后的数字</span>
+    <h2 class="reveal" data-page-node-id="FNr5GyJh3TRFKqEITPwPuA">比身份更震撼的，是价格</h2>
+    <div class="accent-bar reveal" data-page-node-id="i1SFABsnT2AAxDbd1jEoc9"></div>
+    <div class="slide-body" data-page-node-id="zHhyt3cskUG0QtZ5mAC2uu">
+      <div class="kpis reveal" data-page-node-id="rzwwnaECwZU3BSggCZbmwc">
+        <div class="mt-kpi-card" data-page-node-id="sGPC4WH8RJr35BUs0J1ZXm"><div class="mt-kpi-value" data-page-node-id="VZxzpT9PjmBX8biTM4ca00">100 万</div><div class="mt-kpi-label" data-page-node-id="BqTRkHZz8BXZtTKvnqBPWN">原生上下文</div></div>
+        <div class="mt-kpi-card" data-page-node-id="diFcPMw9GAZ6ukHsMHfu0r"><div class="mt-kpi-value" data-page-node-id="y8DTXZJJ7YqPylRO3kPV1m">57</div><div class="mt-kpi-label" data-page-node-id="T94I1RDykbTOkWFM6z85HB">AA 智能指数</div><div class="mt-kpi-desc" data-page-node-id="4Ra7AiUPfZSq2DQbkqcxez">与 Claude Opus 4.8 持平</div></div>
+        <div class="mt-kpi-card" data-page-node-id="85rBfyxpCW82fonfB1FrJc"><div class="mt-kpi-value" data-page-node-id="TxvDpxR26VsDQjKdyVCFhX">MIT</div><div class="mt-kpi-label" data-page-node-id="NovifUiQCGqsMcSigRUWbg">权重开源</div><div class="mt-kpi-desc" data-page-node-id="gr4s964z25ly4s2aRrCXvq">可自己部署</div></div>
+        <div class="mt-kpi-card is-hot" data-page-node-id="koVRJZJbguDAjzboCL1kA8"><div class="mt-kpi-value" data-page-node-id="hbvUIPLWUirXpH5EXDJeLL">0.8</div><div class="mt-kpi-label" data-page-node-id="qiByMbltkRpm72WqbvhKwH">元 / 百万输入</div><div class="mt-kpi-desc" data-page-node-id="Znb9R1dzMP4KIpFqCjuAvM">五折到 9/9</div></div>
+      </div>
+      <div class="tl reveal" data-page-node-id="sjsfyAmUzR5PdfBwv9OIaG">
+        <div class="tl-row" data-page-node-id="2IRAJbZnob3ECBaeqUm0Js"><div class="tl-d" data-page-node-id="Xa6QKezQwDsfnIY9hnZIF5">多模态</div><div class="tl-t" data-page-node-id="M9Gk9FpJQnarzhBubFN19G">文本 + <b data-page-node-id="LCHk3az8KwMxtXBKGIpHI8">图像 + 视频</b> 都能吃进去，30 万亿 token 多模态预训练</div></div>
+        <div class="tl-row" data-page-node-id="74MUtTlHnNaIlh1P28rZvu"><div class="tl-d" data-page-node-id="AOpj4PbTuuupPWJewdlPY1">便宜多少</div><div class="tl-t" data-page-node-id="j9tdaRJT8YlSSAhGCVzBJJ">约为自家旗舰的 <b data-page-node-id="vnB90k9HoxfZekvFh7ySCZ">1/10</b>，为 Claude Opus 4.8 的 <b data-page-node-id="Xn3RoH8MZ2pMaxINYCFff0">1/40</b></div></div>
+        <div class="tl-row" data-page-node-id="2POj4VsPNXoMc5IO2vNDHV"><div class="tl-d" data-page-node-id="E8k2E9ayAeo8CQqzn0K5ty">更关键</div><div class="tl-t" data-page-node-id="3zd6U6iBpy9DC9xPPfPPBr">匿名那一周的全部流量，是<b data-page-node-id="l0WHz6sZa9NaqIBYK4UVCK"> 10 万张国产卡</b>扛下来的</div></div>
+      </div>
+      <div class="callout reveal" data-page-node-id="EpVvYGHA5A0kBuHiYAZHUR">
+        <p data-page-node-id="A8gO0FBctLiwNAyGu0JgZ4">一个「能力追平旗舰、价格只有四十分之一」的模型，就这样 quietly 上线了。
+        <em data-page-node-id="r8m1LKLAq5VTWVR7pMW8qA">这就是你今天需要坐在这里的理由。</em></p>
+      </div>
+    </div>
+  </div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">13</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 14 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-14" data-slide-number="14" aria-label="第 14 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">海报 · 保存</span><h2 class="reveal">海报完成：把世界留给下一步</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">文件</div><div class="tl-t">保存最终图片、原始提示词和两轮修改指令。</div></div><div class="tl-row"><div class="tl-d">下一步</div><div class="tl-t">选定同一画面作为视频参考；不要重新换一个主题。</div></div><div class="tl-row"><div class="tl-d">如果尚未成功</div><div class="tl-t">保存失败结果和问题；可用明确标注的讲师备用样例继续练镜头。</div></div></div><div class="callout reveal"><p>备用样例不能算作自己的海报成品。</p></div></div></div>
+
+<!-- ============ 4 三个信号 ============ -->
+<section class="slide-wrapper" aria-label="Slide 14 of 41">
+<section class="slide slide--content" data-page-node-id="B6nZGHnmNJMhcUF1mlTNEz" data-slide-id="s1-slide-14" data-slide-number="14" aria-label="第 14 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+  <div class="slide-content" data-page-node-id="ncDRqiBx6fPJkDqoJxrXKR">
+    <span class="mt-overline reveal" data-page-node-id="WbBxuiMg6GzViU28eS3CjL">这一周，给了三个信号</span>
+    <h2 class="reveal" data-page-node-id="nDiSsrbT7tTy7IMDT71lge">不用追新，但你得有张地图</h2>
+    <div class="accent-bar reveal" data-page-node-id="yKDdFOiKEb9CkrEqjX8JJA"></div>
+    <div class="slide-body" data-page-node-id="u38NxpoQUVa6vbjLTiLWud">
+      <div class="sig reveal" data-page-node-id="ByMB5lkDpSni2UXMcBaJL5"><span class="mt-badge" data-page-node-id="JoKOoHqLtE0RR5deiUezg7">1</span><div class="sig-tx" data-page-node-id="hrONL2Dxlub9nB6pWnv3Bd"><b data-page-node-id="1CDHe06nAsMyUCKHg7temd">迭代以「周」计，不是以「年」计</b><span data-page-node-id="cqYBw7uxA9GzoLwScjAATc">8/14 发 GLM-5.3，8/26 发 GLM-5.3-Flash。你今天记住的型号，三个月后可能就不是答案了。所以要学「怎么选」，不是「选哪个」。</span></div></div>
+      <div class="sig reveal" data-page-node-id="grTS7dZROUbFFn0eFkne2p"><span class="mt-badge" data-page-node-id="mPxAfAuWdGDFlVvvUDukiA">2</span><div class="sig-tx" data-page-node-id="0qnGB45l0ZYCUr68pSpOgU"><b data-page-node-id="NgwEf3UDNZ7mszoIQY1RGb">能力在往上走，价格在往下塌</b><span data-page-node-id="VaJiOOEMAnXYweH1TQbh00">同样智能，一年前要几百块，现在几块钱。这意味着「用不起」已经不再是理由——真正的门槛变成了「不知道该用哪个」。</span></div></div>
+      <div class="sig reveal" data-page-node-id="ql9CrTycQCIZVZFbnwC9kf"><span class="mt-badge" data-page-node-id="NMvfpuX4coQbqNPQ6SOZqi">3</span><div class="sig-tx" data-page-node-id="E2QppBZ4T8YrgkM4eJR6ug"><b data-page-node-id="kCCnott7KjG46PYI1GjVf1">模型是原料，不是答案</b><span data-page-node-id="KmY3BKXqZV1PVGuQpee61p">那位博主的原话：模型本身只是一种原料，运营架构才是真正的竞争优势。你公司的护城河，是把 AI 接进你的业务，而不是用了哪个模型。</span></div></div>
+      <div class="note-line reveal" data-page-node-id="mMY5O3GNRQtrzbzAoFWC9z">型号清单不在这页 —— 见<b data-page-node-id="YrUEtaxHf3egvbQI9BwYeN">《大模型一页通》</b>。今天只要记住三个词：<b data-page-node-id="XVBV378p3r77iM2uD5ayey">Chat · Copilot · Agent</b>。</div>
+    </div>
+  </div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">14</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 15 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-15" data-slide-number="15" aria-label="第 15 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">视频 · 35 分钟</span><h2 class="reveal">短视频：让一件小事发生</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">主体动作</div><div class="tl-t">咖啡热气缓缓上升，窗内有人端起杯子。</div></div><div class="tl-row"><div class="tl-d">镜头动作</div><div class="tl-t">镜头从云海缓慢推近咖啡馆。</div></div><div class="tl-row"><div class="tl-d">声音</div><div class="tl-t">轻微风声、杯碟声；需要音乐时选与情绪一致的声音。</div></div></div><div class="callout reveal"><p>10–15 秒只讲一个小变化，更容易做完整。</p></div></div></div>
+
+<!-- ============ 5 三阶段 ============ -->
+<section class="slide-wrapper" aria-label="Slide 15 of 41">
+<section class="slide slide--content" data-page-node-id="YjhcexfVMibmHn0A68hGtc" data-slide-id="s1-slide-15" data-slide-number="15" aria-label="第 15 页，共 41 页" data-source-slide="68" data-source-layout="3 Col Header and Content" data-source-family="three-column" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+  <div class="slide-content" data-page-node-id="xrQdUFDHtXGr3aLRMDZ2ts">
+    <span class="mt-overline reveal" data-page-node-id="d0uuGT7IMmJWHHCcTHCGYc">认知地基 · 只需要记住三个词</span>
+    <h2 class="reveal" data-page-node-id="77SrHUPe7oewVCJcATsxke">Chat → Copilot → Agent</h2>
+    <div class="accent-bar reveal" data-page-node-id="nnKXjA6VqDpPKNoiXDdVUR"></div>
+    <div class="slide-body" data-page-node-id="7cPTkbjnZbU03jlVCTA1tg">
+      <div class="cols3" data-page-node-id="WsTcj8GoN7WtZ1SIpQcf9u">
+        <div class="card reveal" data-page-node-id="EfdQJ1HM3rgXboL5dt28xP">
+          <div class="card-step" data-page-node-id="LBl3CQn9BG8hakXOo0UqrH">阶段 1</div>
+          <h3 data-page-node-id="cH6cWD1VG1ze4xhpHo5U13">Chat</h3>
+          <div class="role" data-page-node-id="fYoiRqmpZ8i1hxIppLVhAR">你问它答</div>
+          <p data-page-node-id="aPDUMCirV0NE9boNm1VNDO">你问「帮我写一封邮件」，它写一封。人是主导，AI 是应答机。大多数人今天停在这里。</p>
+        </div>
+        <div class="card reveal" data-page-node-id="lMgXxgaxmfGphEVzxkG5ab">
+          <div class="card-step" data-page-node-id="TGb2cpelGaXNHiWFfrIYvM">阶段 2</div>
+          <h3 data-page-node-id="V7ByCRIFnUqxErdtsHaadu">Copilot</h3>
+          <div class="role" data-page-node-id="wU16C9t0HIA31mfZELTaAF">你干它帮</div>
+          <p data-page-node-id="tXgSuc6bA6lHYPg4Wcd7Y2">你正在 Outlook 看邮件，让它帮你总结风险；你在 Word 写方案，它帮你扩写。人机协作，它当副驾。<b data-page-node-id="5L8ybs6JqvD6CDWTQh1Gc4">今天会先把这个练熟。</b></p>
+        </div>
+        <div class="card is-hi reveal" data-page-node-id="NGezv8tPOQtkGHZeG737X8">
+          <div class="card-step" data-page-node-id="RPhDW4XVC9KA0EBSOJouGA">阶段 3</div>
+          <h3 data-page-node-id="rNztiCFcjX1WLVHFItOnlw">Agent</h3>
+          <div class="role" data-page-node-id="m6Oj73ELIsxYDZ92MBb3rZ">它干你看</div>
+          <p data-page-node-id="I8xIYsPaViSCKwCFETSKmo">你给一个目标，它自己找资料、使用工具、执行步骤；需要我决定时再回来问我。人从操作员变成监督者。<b data-page-node-id="stage3InlineAnchor">Muse 就是这个概念的例子。</b></p>
+        </div>
+      </div>
+      <div class="muse-film reveal" role="group" aria-label="Muse Personal Agent 概念片" data-page-node-id="NE2wXPT2D0goRe8OGKr1kF">
+        <div class="muse-film__play" aria-hidden="true" data-page-node-id="xQBlVyG8N5Wfw0uSKir2mt">▶</div>
+        <div data-page-node-id="WfqSvaKuTK6bhn1VN9p2an">
+          <div class="muse-film__eyebrow" data-page-node-id="awkdSMs8Xnz7zL4REJ5H35">2026 Personal Agent 示例：Muse</div>
+          <h3 data-page-node-id="GHFHodJwujSwgb3gGQqWvk">播放 45 秒 Muse 概念片</h3>
+          <p data-page-node-id="gUfDw2DHDIJxUwNhg6AGE9">Personal Agent 不是新聊天框，而是从懂我到替我跑流程。Chat 是「回答我」，Copilot 是「帮着我做」，Personal Agent 开始变成「替我完成」。</p>
+        </div>
+        <div class="muse-film__cue" data-page-node-id="BfeU3rhPtEwqmHYBsy2uLu">
+          <b data-page-node-id="QYbx5NnErVwRGEeEQwZDba">看三件事：长期记忆、工具执行、确认权</b>
+          Muse 的价值不是又多一个 App，而是把 Agent 从回答器推进到执行系统。主线不是 Prompt 越写越长，而是 <b style="display:inline;font-size:inherit;margin:0;color:var(--mt-electric-blue);">Prompt → Assistance → Delegation</b>。S6 再真正动手搭一个小型 Agent。
+        </div>
+        <figure class="muse-film__video-wrap" data-page-node-id="gXv2G67P7Tzj6u8k9x8bpm">
+          <video class="muse-film__video" controls preload="metadata" playsinline data-source-asset="Meta Newsroom: Introducing-Muse_Sizzle-Video.mp4" aria-label="Meta Muse official concept video" data-page-node-id="kmYbDk3JafFGGxyufxb4gc">
+            <source src="https://about.fb.com/wp-content/uploads/2026/09/Introducing-Muse_Sizzle-Video.mp4" type="video/mp4" data-page-node-id="oOgoNMSaYkQj4pBzgQyQ42">
+            你的浏览器无法播放此视频。请打开 Meta Newsroom 来源页观看。
+          </video>
+          <a class="muse-film__source" href="https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/" target="_blank" rel="noopener" data-page-node-id="KDMSAFHXEbvbGr9ByEfSq0">Source: Meta Newsroom · Introducing Muse</a>
+        </figure>
+      </div>
+    </div>
+  </div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">15</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 16 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-16" data-slide-number="16" aria-label="第 16 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">分镜 · 练习示例</span><h2 class="reveal">把十几秒拆成三个镜头时刻</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">开头 0–4 秒</div><div class="tl-t">看到云海中的咖啡馆，建立场景。</div></div><div class="tl-row"><div class="tl-d">中间 4–9 秒</div><div class="tl-t">镜头缓慢推近窗边，热气上升。</div></div><div class="tl-row"><div class="tl-d">结尾 9–15 秒</div><div class="tl-t">停在温暖窗光上，给观众一秒看清画面。</div></div></div><div class="callout reveal"><p>若工具单次时长不足，生成短片段，再剪成 10–15 秒。</p></div></div></div>
+
+<!-- ============ 6 阶段 3 单独解释：Personal Agent ============ -->
+<section class="slide-wrapper" aria-label="Slide 16 of 41">
+<section class="slide slide--content" data-page-node-id="stage3PersonalAgentConcept" data-slide-id="s1-slide-16" data-slide-number="16" aria-label="第 16 页，共 41 页" data-source-slide="74" data-source-layout="Blank" data-source-family="multi-column-adaptive" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+  <div class="slide-content" data-page-node-id="stage3PersonalAgentContent">
+    <span class="mt-overline reveal" data-page-node-id="stage3PersonalAgentOverline">阶段 3 单独讲：Personal Agent</span>
+    <h2 class="reveal" data-page-node-id="stage3PersonalAgentTitle">不是更会聊天，而是更会接住目标</h2>
+    <div class="accent-bar reveal" data-page-node-id="stage3PersonalAgentAccent"></div>
+    <div class="slide-body" data-page-node-id="stage3PersonalAgentBody">
+      <div class="cols4" data-page-node-id="stage3PersonalAgentGrid">
+        <div class="card reveal" data-page-node-id="stage3MemoryCard">
+          <div class="card-step" data-page-node-id="stage3MemoryStep">1</div>
+          <h3 data-page-node-id="stage3MemoryTitle">长期记忆</h3>
+          <div class="role" data-page-node-id="stage3MemoryRole">它知道你是谁</div>
+          <p data-page-node-id="stage3MemoryCopy">不是每次重新介绍背景，而是逐步沉淀偏好、目标、关系和限制。Muse 的例子是：记得你只提过一次的信息。</p>
+        </div>
+        <div class="card reveal" data-page-node-id="stage3ToolCard">
+          <div class="card-step" data-page-node-id="stage3ToolStep">2</div>
+          <h3 data-page-node-id="stage3ToolTitle">工具与浏览器</h3>
+          <div class="role" data-page-node-id="stage3ToolRole">它能进入流程</div>
+          <p data-page-node-id="stage3ToolCopy">不只给建议，而是打开网页、读材料、填表、连接应用，把原来需要人手点的步骤串起来。</p>
+        </div>
+        <div class="card reveal" data-page-node-id="stage3RunCard">
+          <div class="card-step" data-page-node-id="stage3RunStep">3</div>
+          <h3 data-page-node-id="stage3RunTitle">持续执行</h3>
+          <div class="role" data-page-node-id="stage3RunRole">它不会只回一句话</div>
+          <p data-page-node-id="stage3RunCopy">目标给出去后，它能拆计划、继续推进、状态变化时回来找你，而不是一次问答结束就停。</p>
+        </div>
+        <div class="card is-hi reveal" data-page-node-id="stage3ControlCard">
+          <div class="card-step" data-page-node-id="stage3ControlStep">4</div>
+          <h3 data-page-node-id="stage3ControlTitle">确认权与审计</h3>
+          <div class="role" data-page-node-id="stage3ControlRole">人仍然拍板</div>
+          <p data-page-node-id="stage3ControlCopy">发送邮件、付款、外部提交这类动作必须让人确认；过程要能回看，出错时知道它做过什么。</p>
+        </div>
+      </div>
+      <div class="callout reveal" data-page-node-id="stage3PersonalAgentCallout">
+        <p data-page-node-id="stage3PersonalAgentCalloutText">Muse 的价值不在于又多一个 App，而在于把 Agent 从回答器推进到执行系统。
+        <em data-page-node-id="stage3PersonalAgentCalloutSub">今天先理解概念；S6 再动手搭一个小型 Agent。记住一句话：目标可以交给 AI，但边界和确认权必须留在人这里。</em></p>
+      </div>
+    </div>
+  </div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">16</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 17 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-17" data-slide-number="17" aria-label="第 17 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">视频提示词 · 练习示例</span><h2 class="reveal">可直接抄用：让海报动起来</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">画面与运动</div><div class="tl-t">以这张海报为参考，保持咖啡馆外观和色彩。生成 10–15 秒横版视频：镜头从云海缓慢推近，咖啡热气自然上升，最后停在暖光窗边。</div></div><div class="tl-row"><div class="tl-d">声音与稳定</div><div class="tl-t">加入轻微风声和杯碟声。不要新增角色、招牌或字幕，保持建筑结构稳定。</div></div></div><div class="callout reveal"><p>能力和时长按实际入口选择；不支持原生音频时后期配音。</p></div></div></div>
+
+<!-- ============ 6 两条线（提一下） ============ -->
+<section class="slide-wrapper" aria-label="Slide 17 of 41">
+<section class="slide slide--content" data-page-node-id="LPAfh5YITgN5iKtr6ExCll" data-slide-id="s1-slide-17" data-slide-number="17" aria-label="第 17 页，共 41 页" data-source-slide="66" data-source-layout="2 Col Header and Content" data-source-family="two-column" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+  <div class="slide-content" data-page-node-id="WD0gDJHTwV619eCDqw8DUT">
+    <span class="mt-overline reveal" data-page-node-id="OXfPEIupnh532QTIz2TopA">分清楚两条线 · 今天只走第一条</span>
+    <h2 class="reveal" data-page-node-id="A1FTqV16IwS4oFStLl0TrL">公司里三个，外面有一大片</h2>
+    <div class="accent-bar reveal" data-page-node-id="1G0ZniToKetBmR46au12Ec"></div>
+    <div class="slide-body" data-page-node-id="Jft6d3M3IPjiIDmmqHShXN">
+      <div class="cols2" data-page-node-id="5CNdfRJUT2Tly0cnttxal0">
+        <div class="line-box is-internal reveal" data-page-node-id="2UlhXtgRjeECO2QItu0RSs">
+          <h3 data-page-node-id="MP8R7unE7czpGHT6S2WfPn">公司内部线 · 今天走这条</h3>
+          <div class="line-rule" data-page-node-id="CIlQFE7Gej7Ku7DrIB6yFq">✔ 可以放心喂公司数据</div>
+          <ul data-page-node-id="pd67QOwPMfwWgUb46CdMmK">
+            <li data-page-node-id="gmsBw8KuY8aWH0oh7a6IRU"><b data-page-node-id="PR9MvcHsg6ZJMphl8lC9jr">Copilot</b> — 住在 Word / Excel / PowerPoint / Outlook / Teams 里</li>
+            <li data-page-node-id="nE1hT0hg8OKpMJL0wg8QPg"><b data-page-node-id="NmsC4vGgQvsSd4HGFGPRqW">HRmony</b> — 人事、制度、流程类问答</li>
+            <li data-page-node-id="n0kGs6qdTfgLckOrFUDwbi"><b data-page-node-id="DJ2zr5UZWFbktKckPxRs3j">MedtronicGPT</b> — 通用问答、写作、资料整理</li>
+          </ul>
+        </div>
+        <div class="line-box is-external reveal" data-page-node-id="fAVIihWEJacgS9O6nkg9zD">
+          <h3 data-page-node-id="kq7LUEYvBIEP3FMJOQZ4hj">公司外部线 · S2 现场做</h3>
+          <div class="line-rule" data-page-node-id="YX5jEL3INrEwzspVkWxNnW">⚠ 只碰脱敏或公开内容</div>
+          <ul data-page-node-id="klnzOEBycHTLsSFFDbZswn">
+            <li data-page-node-id="nd5KNWA0dArpf6503iQiex"><b data-page-node-id="hEehzLdA3VeJgAj2kelH1z">出图</b> — 海报、配图、概念片主视觉</li>
+            <li data-page-node-id="hCU1B0Jsn9CvFVfvaS3D7m"><b data-page-node-id="qgueTs8RuNfFBmNyYGG4gV">出视频</b> — 分镜短片、动态样片</li>
+            <li data-page-node-id="V23GIq5wjYaUZMxzqvgnTE"><b data-page-node-id="sMHtXiHYKA7hMq1gcUyEXs">出 3D</b> — 概念物、场景元素</li>
+          </ul>
+        </div>
+      </div>
+      <div class="note-line reveal" data-page-node-id="PRqKjKTkhQxI4ICFq2yTGq">外面那一大片不是不重要 —— 是<b data-page-node-id="J01QGKA44EoZ2IDUKdnA0g">本节不练</b>。下一节 S2 整节课都在那边做。<b data-page-node-id="edd1FcPliry2BnjJRndpCd">本节先把公司内部已批准入口用熟。</b></div>
+    </div>
+  </div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">17</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 18 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-18" data-slide-number="18" aria-label="第 18 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">视频 · 生成</span><h2 class="reveal">第一版：先看完整，再找问题</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">提交</div><div class="tl-t">上传最终海报，输入镜头提示词，选择可用时长和画幅。</div></div><div class="tl-row"><div class="tl-d">等待时</div><div class="tl-t">读一遍分镜，想好最希望观众看到的那个瞬间。</div></div><div class="tl-row"><div class="tl-d">回看</div><div class="tl-t">完整播放一次，再分别观察主体、运动、声音。保存 video-v1。</div></div></div><div class="callout reveal"><p>排队未完成就记录状态，切换备用样例练修改。</p></div></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ============ 25 下课前 + 这两周 ============ -->
+<!-- 合并：Version 2 的多模态演示、海报和视频实操；保留原版内容与播放器。 -->
+<section class="slide-wrapper" aria-label="Slide 18 of 41">
+<section class="slide slide--content" data-slide-id="s1-v2-03" data-slide-number="18" aria-label="第 18 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+<div class="slide-content "><span class="mt-overline reveal">惊喜开场</span><h2 class="reveal">先猜一猜：它能做到哪一步？</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">理解</div><div class="tl-t">几张图片和一段文字，能否找出共同风格？</div></div><div class="tl-row"><div class="tl-d">修改</div><div class="tl-t">只改天气和标题，主体会不会一起变？</div></div><div class="tl-row"><div class="tl-d">运动</div><div class="tl-t">静止画面怎样变成有节奏、有声音的小片段？</div></div></div><div class="callout reveal"><p>每个演示先猜结果，再看实际输出。</p></div></div></div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">18</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 19 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-19" data-slide-number="19" aria-label="第 19 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">视频 · 修改 1</span><h2 class="reveal">第一轮修改：控制动作与速度</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">可抄提示词</div><div class="tl-t">保持参考图和角色不变。镜头移动速度减半，只做缓慢推近；云层轻微移动，不要旋转镜头。</div></div><div class="tl-row"><div class="tl-d">核对</div><div class="tl-t">有没有突然跳镜？建筑边缘是否变形？主角是否保持一致？</div></div><div class="tl-row"><div class="tl-d">保存</div><div class="tl-t">保存 video-v2，和第一版比较最明显的一处变化。</div></div></div></div></div>
+
+<section class="slide-wrapper" aria-label="Slide 19 of 41">
+<section class="slide slide--content" data-slide-id="s1-v2-04" data-slide-number="19" aria-label="第 19 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+<div class="slide-content "><span class="mt-overline reveal">Kimi K3 · 多模态理解</span><h2 class="reveal">惊喜一：把素材读成一个创意</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">输入</div><div class="tl-t">三张自己有权使用的咖啡馆参考图＋一句创作想法。</div></div><div class="tl-row"><div class="tl-d">现场提问</div><div class="tl-t">找出共同的色彩、光线和空间特点；再提出三个海报方向。</div></div><div class="tl-row"><div class="tl-d">一起核对</div><div class="tl-t">指出回答对应哪张图；没有依据的细节，请它重新说明。</div></div></div><div class="callout reveal"><p>演示脚本：功能依据官方介绍，课堂效果以实际输出为准。</p></div></div></div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">19</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 20 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-20" data-slide-number="20" aria-label="第 20 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">视频 · 修改 2</span><h2 class="reveal">第二轮修改：让结尾有落点</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">可抄提示词</div><div class="tl-t">保留当前镜头路线。最后两秒停在暖光窗边，减少背景声，不增加新物体，让画面自然结束。</div></div><div class="tl-row"><div class="tl-d">核对</div><div class="tl-t">结尾是否来得太突然？声音是否抢过画面？</div></div><div class="tl-row"><div class="tl-d">保存</div><div class="tl-t">选择 video-final；修改失败时保留较好版本并说明理由。</div></div></div></div></div>
+
+<section class="slide-wrapper" aria-label="Slide 20 of 41">
+<section class="slide slide--content" data-slide-id="s1-v2-05" data-slide-number="20" aria-label="第 20 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+<div class="slide-content "><span class="mt-overline reveal">Nano Banana 2 · 图像编辑</span><h2 class="reveal">惊喜二：一句话改变画面</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">第一轮</div><div class="tl-t">保留咖啡馆构图，把白天改成雨夜，保留暖色窗光。</div></div><div class="tl-row"><div class="tl-d">第二轮</div><div class="tl-t">只将标题改为「云端咖啡馆」，保持其他部分不变。</div></div><div class="tl-row"><div class="tl-d">一起找茬</div><div class="tl-t">文字准确吗？杯子、窗框、招牌有没有偷偷变化？</div></div></div><div class="callout reveal"><p>变化越具体，越容易看清模型有没有照做。</p></div></div></div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">20</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 21 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-21" data-slide-number="21" aria-label="第 21 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">视频 · 简单剪辑</span><h2 class="reveal">把生成片段整理成一支短片</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">裁剪</div><div class="tl-t">保留最好的一段，组成 10–15 秒；删除跳变和空白等待。</div></div><div class="tl-row"><div class="tl-d">声音</div><div class="tl-t">检查音量；工具没有音轨时可加入有权使用的声音，也可以保留静音版本。</div></div><div class="tl-row"><div class="tl-d">导出</div><div class="tl-t">导出后重新播放，确认画面比例、时长与声音。</div></div></div><div class="callout reveal"><p>生成工具内完成或用已准备的剪辑工具，不占用时间讲复杂剪辑。</p></div></div></div>
+
+<section class="slide-wrapper" aria-label="Slide 21 of 41">
+<section class="slide slide--content" data-slide-id="s1-v2-06" data-slide-number="21" aria-label="第 21 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+<div class="slide-content "><span class="mt-overline reveal">可灵 3.0 · 音画短视频</span><h2 class="reveal">惊喜三：让画面开始讲故事</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">起点</div><div class="tl-t">使用同一张海报作为参考图。</div></div><div class="tl-row"><div class="tl-d">变化</div><div class="tl-t">镜头缓慢推近，咖啡热气上升，窗外雨点滑落。</div></div><div class="tl-row"><div class="tl-d">一起观察</div><div class="tl-t">主体是否稳定？镜头是否连贯？声音是否与画面匹配？</div></div></div><div class="callout reveal"><p>播放已跑通的演示；现场生成的排队时间不固定。</p></div></div></div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">21</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 22 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-22" data-slide-number="22" aria-label="第 22 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">视频 · 收尾</span><h2 class="reveal">保存好，比再生成一次更重要</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">作品包</div><div class="tl-t">海报原版与最终版、视频原版与最终版、提示词。</div></div><div class="tl-row"><div class="tl-d">命名</div><div class="tl-t">用“主题＋版本”区分，不覆盖唯一的好版本。</div></div><div class="tl-row"><div class="tl-d">状态</div><div class="tl-t">未生成完成就标记处理中；演示样例单独标注来源。</div></div></div><div class="callout reveal"><p>即使效果不理想，也能展示一处有依据的修改。</p></div></div></div>
+
+<section class="slide-wrapper" aria-label="Slide 22 of 41">
+<section class="slide slide--content" data-slide-id="s1-v2-07" data-slide-number="22" aria-label="第 22 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+<div class="slide-content "><span class="mt-overline reveal">开始创作</span><h2 class="reveal">选一个你愿意分享的脑洞</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">共同示例</div><div class="tl-t">云端咖啡馆：一间漂浮在云海中的温暖小店。</div></div><div class="tl-row"><div class="tl-d">也可以选</div><div class="tl-t">宠物的新产品广告 / 梦想旅行目的地 / 个人音乐节。</div></div><div class="tl-row"><div class="tl-d">现在说出来</div><div class="tl-t">我想让谁看到什么，并感到什么？用一句话写下。</div></div></div><div class="callout reveal"><p>同一个主题贯穿海报和视频。后续文字均为练习示例。</p></div></div></div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">22</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 23 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-23" data-slide-number="23" aria-label="第 23 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">展示 · 10 分钟</span><h2 class="reveal">作品放映：用一分钟介绍你的世界</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">20 秒</div><div class="tl-t">播放短片或展示海报：你做的是什么？</div></div><div class="tl-row"><div class="tl-d">20 秒</div><div class="tl-t">对照修改前后：你改了哪里，为什么？</div></div><div class="tl-row"><div class="tl-d">20 秒</div><div class="tl-t">说一个意外，以及下次还想试什么。</div></div></div><div class="callout reveal"><p>同伴反馈：一个最喜欢的细节＋一个具体建议。</p></div></div></div>
+
+<section class="slide-wrapper" aria-label="Slide 23 of 41">
+<section class="slide slide--content" data-slide-id="s1-v2-08" data-slide-number="23" aria-label="第 23 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+<div class="slide-content "><span class="mt-overline reveal">海报 · 30 分钟</span><h2 class="reveal">一张好海报，先决定四件事</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">主体</div><div class="tl-t">主角是谁？示例：云海里的一间小咖啡馆。</div></div><div class="tl-row"><div class="tl-d">场景</div><div class="tl-t">在哪里、什么时间？示例：日落、暖光、安静。</div></div><div class="tl-row"><div class="tl-d">风格</div><div class="tl-t">照片感、手绘或黏土？第一版只选一种。</div></div><div class="tl-row"><div class="tl-d">文字</div><div class="tl-t">短标题是什么？放在哪里？示例：云端咖啡馆。</div></div></div></div></div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">23</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 24 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-24" data-slide-number="24" aria-label="第 24 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">课后再玩一次</span><h2 class="reveal">今天带走的，不只是两份文件</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">海报</div><div class="tl-t">主题明确、文字可读，有原版与两轮修改记录。</div></div><div class="tl-row"><div class="tl-d">短视频</div><div class="tl-t">能播放、长度 10–15 秒，有清楚的镜头变化。</div></div><div class="tl-row"><div class="tl-d">下一次</div><div class="tl-t">换一个主题，复用今天的提示词；带着新作品进入实时视觉魔术。</div></div></div><div class="callout reveal"><p>未完成项如实记录：生成排队、账号限制或需要补改。</p></div></div></div>
+
+<section class="slide-wrapper" aria-label="Slide 24 of 41">
+<section class="slide slide--content" data-slide-id="s1-v2-09" data-slide-number="24" aria-label="第 24 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+<div class="slide-content "><span class="mt-overline reveal">提示词 · 练习示例</span><h2 class="reveal">可直接抄用：第一张海报</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">复制并修改</div><div class="tl-t">生成一张 16:9 横版海报：日落时，一间小咖啡馆漂浮在云海中。主体位于画面右侧，窗内透出暖光，电影摄影风格，色彩柔和。</div></div><div class="tl-row"><div class="tl-d">写清文字</div><div class="tl-t">左侧留出清晰标题区，准确写出中文「云端咖啡馆」，不要添加其他文字。</div></div><div class="tl-row"><div class="tl-d">马上动手</div><div class="tl-t">只替换主题、主体和标题，先生成第一版。</div></div></div><div class="callout reveal"><p>这是提示词示例，并非已经生成的海报。</p></div></div></div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">24</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
-<section class="slide-wrapper" aria-label="Slide 25 of 25">
-<section class="slide slide--content" data-slide-id="s1-v2-25" data-slide-number="25" aria-label="第 25 页，共 25 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
-<div class="slide-content "><span class="mt-overline reveal">资料 · 课前刷新</span><h2 class="reveal">模型与演示来源</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">Kimi K3</div><div class="tl-t"><a href="https://www.kimi.com/news/kimi-k3">Kimi 官方模型介绍</a></div></div><div class="tl-row"><div class="tl-d">Nano Banana 2</div><div class="tl-t"><a href="https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/">Google 官方模型介绍</a></div></div><div class="tl-row"><div class="tl-d">可灵 3.0</div><div class="tl-t"><a href="https://www.prnewswire.com/news-releases/kling-ai-launches-3-0-model-ushering-in-an-era-where-everyone-can-be-a-director-302679944.html">可灵官方发布稿（PR Newswire）</a></div></div></div><div class="callout reveal"><p>功能资料不等于课堂实测。课前刷新入口、套餐、时长与备用演示。</p></div></div></div>
+
+<section class="slide-wrapper" aria-label="Slide 25 of 41">
+<section class="slide slide--content" data-slide-id="s1-v2-10" data-slide-number="25" aria-label="第 25 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+<div class="slide-content "><span class="mt-overline reveal">海报 · 第一版</span><h2 class="reveal">生成的时候，给作品取个名字</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">保存</div><div class="tl-t">保存原始提示词和第一版图片，命名 poster-v1。</div></div><div class="tl-row"><div class="tl-d">挑选</div><div class="tl-t">从可用结果中选一张；讲清楚你选它的一个原因。</div></div><div class="tl-row"><div class="tl-d">观察</div><div class="tl-t">主体是否突出？文字是否正确？整体氛围是否吻合？</div></div></div><div class="callout reveal"><p>不要只说“还不错”，找一个具体优点和一个具体问题。</p></div></div></div>
   <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
     <span class="mt-footer__page">25</span>
-    <span class="mt-footer__text">AIGC 赋能 · S1 AI 惊喜开场 · Version 2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
   </footer>
 </section>
 </section>
+
+<section class="slide-wrapper" aria-label="Slide 26 of 41">
+<section class="slide slide--content" data-slide-id="s1-v2-11" data-slide-number="26" aria-label="第 26 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+<div class="slide-content "><span class="mt-overline reveal">海报 · 修改 1</span><h2 class="reveal">第一轮修改：只改变氛围</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">可抄提示词</div><div class="tl-t">以这张图为基础，保持主体位置、构图和标题不变。将日落改成蓝色雨夜，保留咖啡馆内温暖的灯光。</div></div><div class="tl-row"><div class="tl-d">核对</div><div class="tl-t">只改了天气与光线吗？标题是否还正确？</div></div><div class="tl-row"><div class="tl-d">保存</div><div class="tl-t">保留修改前后两张图，第二版命名 poster-v2。</div></div></div></div></div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">26</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
+</section>
+
+<section class="slide-wrapper" aria-label="Slide 27 of 41">
+<section class="slide slide--content" data-slide-id="s1-v2-12" data-slide-number="27" aria-label="第 27 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+<div class="slide-content "><span class="mt-overline reveal">海报 · 修改 2</span><h2 class="reveal">第二轮修改：把细节说准确</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">可抄提示词</div><div class="tl-t">保持当前画面不变，只把左侧标题改为「今晚，去云端喝一杯」。标题完整、清晰，不增加其他字。</div></div><div class="tl-row"><div class="tl-d">核对</div><div class="tl-t">是否漏字、错字？主体、比例、颜色有没有变化？</div></div><div class="tl-row"><div class="tl-d">保存</div><div class="tl-t">满意版本命名 poster-final；若改坏了，回到上一版重试。</div></div></div></div></div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">27</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
+</section>
+
+<section class="slide-wrapper" aria-label="Slide 28 of 41">
+<section class="slide slide--content" data-slide-id="s1-v2-13" data-slide-number="28" aria-label="第 28 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+<div class="slide-content "><span class="mt-overline reveal">海报 · 对照</span><h2 class="reveal">两张图放在一起，选你的最终版</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">先看主体</div><div class="tl-t">观众第一眼看到的是你想让他看到的吗？</div></div><div class="tl-row"><div class="tl-d">再看文字</div><div class="tl-t">缩小画面后，还能读清标题吗？</div></div><div class="tl-row"><div class="tl-d">最后看变化</div><div class="tl-t">说出“我改了什么，因此更适合什么”。</div></div></div><div class="callout reveal"><p>保留原版与最终版，稍后放映时一起展示。</p></div></div></div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">28</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
+</section>
+
+<section class="slide-wrapper" aria-label="Slide 29 of 41">
+<section class="slide slide--content" data-slide-id="s1-v2-14" data-slide-number="29" aria-label="第 29 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+<div class="slide-content "><span class="mt-overline reveal">海报 · 保存</span><h2 class="reveal">海报完成：把世界留给下一步</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">文件</div><div class="tl-t">保存最终图片、原始提示词和两轮修改指令。</div></div><div class="tl-row"><div class="tl-d">下一步</div><div class="tl-t">选定同一画面作为视频参考；不要重新换一个主题。</div></div><div class="tl-row"><div class="tl-d">如果尚未成功</div><div class="tl-t">保存失败结果和问题；可用明确标注的讲师备用样例继续练镜头。</div></div></div><div class="callout reveal"><p>备用样例不能算作自己的海报成品。</p></div></div></div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">29</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
+</section>
+
+<section class="slide-wrapper" aria-label="Slide 30 of 41">
+<section class="slide slide--content" data-slide-id="s1-v2-15" data-slide-number="30" aria-label="第 30 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+<div class="slide-content "><span class="mt-overline reveal">视频 · 35 分钟</span><h2 class="reveal">短视频：让一件小事发生</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">主体动作</div><div class="tl-t">咖啡热气缓缓上升，窗内有人端起杯子。</div></div><div class="tl-row"><div class="tl-d">镜头动作</div><div class="tl-t">镜头从云海缓慢推近咖啡馆。</div></div><div class="tl-row"><div class="tl-d">声音</div><div class="tl-t">轻微风声、杯碟声；需要音乐时选与情绪一致的声音。</div></div></div><div class="callout reveal"><p>10–15 秒只讲一个小变化，更容易做完整。</p></div></div></div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">30</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
+</section>
+
+<section class="slide-wrapper" aria-label="Slide 31 of 41">
+<section class="slide slide--content" data-slide-id="s1-v2-16" data-slide-number="31" aria-label="第 31 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+<div class="slide-content "><span class="mt-overline reveal">分镜 · 练习示例</span><h2 class="reveal">把十几秒拆成三个镜头时刻</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">开头 0–4 秒</div><div class="tl-t">看到云海中的咖啡馆，建立场景。</div></div><div class="tl-row"><div class="tl-d">中间 4–9 秒</div><div class="tl-t">镜头缓慢推近窗边，热气上升。</div></div><div class="tl-row"><div class="tl-d">结尾 9–15 秒</div><div class="tl-t">停在温暖窗光上，给观众一秒看清画面。</div></div></div><div class="callout reveal"><p>若工具单次时长不足，生成短片段，再剪成 10–15 秒。</p></div></div></div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">31</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
+</section>
+
+<section class="slide-wrapper" aria-label="Slide 32 of 41">
+<section class="slide slide--content" data-slide-id="s1-v2-17" data-slide-number="32" aria-label="第 32 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+<div class="slide-content "><span class="mt-overline reveal">视频提示词 · 练习示例</span><h2 class="reveal">可直接抄用：让海报动起来</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">画面与运动</div><div class="tl-t">以这张海报为参考，保持咖啡馆外观和色彩。生成 10–15 秒横版视频：镜头从云海缓慢推近，咖啡热气自然上升，最后停在暖光窗边。</div></div><div class="tl-row"><div class="tl-d">声音与稳定</div><div class="tl-t">加入轻微风声和杯碟声。不要新增角色、招牌或字幕，保持建筑结构稳定。</div></div></div><div class="callout reveal"><p>能力和时长按实际入口选择；不支持原生音频时后期配音。</p></div></div></div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">32</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
+</section>
+
+<section class="slide-wrapper" aria-label="Slide 33 of 41">
+<section class="slide slide--content" data-slide-id="s1-v2-18" data-slide-number="33" aria-label="第 33 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+<div class="slide-content "><span class="mt-overline reveal">视频 · 生成</span><h2 class="reveal">第一版：先看完整，再找问题</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">提交</div><div class="tl-t">上传最终海报，输入镜头提示词，选择可用时长和画幅。</div></div><div class="tl-row"><div class="tl-d">等待时</div><div class="tl-t">读一遍分镜，想好最希望观众看到的那个瞬间。</div></div><div class="tl-row"><div class="tl-d">回看</div><div class="tl-t">完整播放一次，再分别观察主体、运动、声音。保存 video-v1。</div></div></div><div class="callout reveal"><p>排队未完成就记录状态，切换备用样例练修改。</p></div></div></div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">33</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
+</section>
+
+<section class="slide-wrapper" aria-label="Slide 34 of 41">
+<section class="slide slide--content" data-slide-id="s1-v2-19" data-slide-number="34" aria-label="第 34 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+<div class="slide-content "><span class="mt-overline reveal">视频 · 修改 1</span><h2 class="reveal">第一轮修改：控制动作与速度</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">可抄提示词</div><div class="tl-t">保持参考图和角色不变。镜头移动速度减半，只做缓慢推近；云层轻微移动，不要旋转镜头。</div></div><div class="tl-row"><div class="tl-d">核对</div><div class="tl-t">有没有突然跳镜？建筑边缘是否变形？主角是否保持一致？</div></div><div class="tl-row"><div class="tl-d">保存</div><div class="tl-t">保存 video-v2，和第一版比较最明显的一处变化。</div></div></div></div></div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">34</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
+</section>
+
+<section class="slide-wrapper" aria-label="Slide 35 of 41">
+<section class="slide slide--content" data-slide-id="s1-v2-20" data-slide-number="35" aria-label="第 35 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+<div class="slide-content "><span class="mt-overline reveal">视频 · 修改 2</span><h2 class="reveal">第二轮修改：让结尾有落点</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">可抄提示词</div><div class="tl-t">保留当前镜头路线。最后两秒停在暖光窗边，减少背景声，不增加新物体，让画面自然结束。</div></div><div class="tl-row"><div class="tl-d">核对</div><div class="tl-t">结尾是否来得太突然？声音是否抢过画面？</div></div><div class="tl-row"><div class="tl-d">保存</div><div class="tl-t">选择 video-final；修改失败时保留较好版本并说明理由。</div></div></div></div></div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">35</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
+</section>
+
+<section class="slide-wrapper" aria-label="Slide 36 of 41">
+<section class="slide slide--content" data-slide-id="s1-v2-21" data-slide-number="36" aria-label="第 36 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+<div class="slide-content "><span class="mt-overline reveal">视频 · 简单剪辑</span><h2 class="reveal">把生成片段整理成一支短片</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">裁剪</div><div class="tl-t">保留最好的一段，组成 10–15 秒；删除跳变和空白等待。</div></div><div class="tl-row"><div class="tl-d">声音</div><div class="tl-t">检查音量；工具没有音轨时可加入有权使用的声音，也可以保留静音版本。</div></div><div class="tl-row"><div class="tl-d">导出</div><div class="tl-t">导出后重新播放，确认画面比例、时长与声音。</div></div></div><div class="callout reveal"><p>生成工具内完成或用已准备的剪辑工具，不占用时间讲复杂剪辑。</p></div></div></div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">36</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
+</section>
+
+<section class="slide-wrapper" aria-label="Slide 37 of 41">
+<section class="slide slide--content" data-slide-id="s1-v2-22" data-slide-number="37" aria-label="第 37 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+<div class="slide-content "><span class="mt-overline reveal">视频 · 收尾</span><h2 class="reveal">保存好，比再生成一次更重要</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">作品包</div><div class="tl-t">海报原版与最终版、视频原版与最终版、提示词。</div></div><div class="tl-row"><div class="tl-d">命名</div><div class="tl-t">用“主题＋版本”区分，不覆盖唯一的好版本。</div></div><div class="tl-row"><div class="tl-d">状态</div><div class="tl-t">未生成完成就标记处理中；演示样例单独标注来源。</div></div></div><div class="callout reveal"><p>即使效果不理想，也能展示一处有依据的修改。</p></div></div></div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">37</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
+</section>
+
+<section class="slide-wrapper" aria-label="Slide 38 of 41">
+<section class="slide slide--content" data-slide-id="s1-v2-23" data-slide-number="38" aria-label="第 38 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+<div class="slide-content "><span class="mt-overline reveal">展示 · 10 分钟</span><h2 class="reveal">作品放映：用一分钟介绍你的世界</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">20 秒</div><div class="tl-t">播放短片或展示海报：你做的是什么？</div></div><div class="tl-row"><div class="tl-d">20 秒</div><div class="tl-t">对照修改前后：你改了哪里，为什么？</div></div><div class="tl-row"><div class="tl-d">20 秒</div><div class="tl-t">说一个意外，以及下次还想试什么。</div></div></div><div class="callout reveal"><p>同伴反馈：一个最喜欢的细节＋一个具体建议。</p></div></div></div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">38</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
+</section>
+
+<section class="slide-wrapper" aria-label="Slide 39 of 41">
+<section class="slide slide--content" data-slide-id="s1-v2-24" data-slide-number="39" aria-label="第 39 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+<div class="slide-content "><span class="mt-overline reveal">课后再玩一次</span><h2 class="reveal">今天带走的，不只是两份文件</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">海报</div><div class="tl-t">主题明确、文字可读，有原版与两轮修改记录。</div></div><div class="tl-row"><div class="tl-d">短视频</div><div class="tl-t">能播放、长度 10–15 秒，有清楚的镜头变化。</div></div><div class="tl-row"><div class="tl-d">下一次</div><div class="tl-t">换一个主题，复用今天的提示词；带着新作品进入实时视觉魔术。</div></div></div><div class="callout reveal"><p>未完成项如实记录：生成排队、账号限制或需要补改。</p></div></div></div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">39</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
+</section>
+
+<section class="slide-wrapper" aria-label="Slide 40 of 41">
+<section class="slide slide--content" data-slide-id="s1-v2-25" data-slide-number="40" aria-label="第 40 页，共 41 页" data-source-slide="64" data-source-layout="Title Only" data-source-family="title-content" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+<div class="slide-content "><span class="mt-overline reveal">资料 · 课前刷新</span><h2 class="reveal">模型与演示来源</h2><div class="accent-bar reveal"></div><div class="slide-body"><div class="tl reveal"><div class="tl-row"><div class="tl-d">Kimi K3</div><div class="tl-t"><a href="https://www.kimi.com/news/kimi-k3">Kimi 官方模型介绍</a></div></div><div class="tl-row"><div class="tl-d">Nano Banana 2</div><div class="tl-t"><a href="https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/">Google 官方模型介绍</a></div></div><div class="tl-row"><div class="tl-d">可灵 3.0</div><div class="tl-t"><a href="https://www.prnewswire.com/news-releases/kling-ai-launches-3-0-model-ushering-in-an-era-where-everyone-can-be-a-director-302679944.html">可灵官方发布稿（PR Newswire）</a></div></div></div><div class="callout reveal"><p>功能资料不等于课堂实测。课前刷新入口、套餐、时长与备用演示。</p></div></div></div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">40</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
+</section>
+
+<section class="slide-wrapper" aria-label="Slide 41 of 41">
+<section class="slide slide--content" data-page-node-id="OuNYJaMtQSDU24FP3d8BET" data-slide-id="s1-slide-41" data-slide-number="41" aria-label="第 41 页，共 41 页" data-source-slide="66" data-source-layout="2 Col Header and Content" data-source-family="two-column" data-adherence="adaptive" style="--source-slide-background:#FFFFFF">
+  <div class="slide-content" data-page-node-id="x2jkKK10ceeUOrvrsdf9mP">
+    <span class="mt-overline reveal" data-page-node-id="WerrTSt1cjC0jmfozbfvry">下课前 5 分钟 + 这两周</span>
+    <h2 class="reveal" data-page-node-id="W7W5nwUGa2m937oCKxu7PC">怎么算今天没白来</h2>
+    <div class="accent-bar reveal" data-page-node-id="kOK8EMFj5FvcLhD29WFfR5"></div>
+    <div class="slide-body" data-page-node-id="LooC2AOKSPGra20uN7UeOm">
+      <div class="cols2" data-page-node-id="p2ATH61CFF0RUc0VwpEq1b">
+        <div class="ck is-a reveal" data-page-node-id="c4qFhhSahk9a6180MbBPAG">
+          <h3 data-page-node-id="v8Dl0cvc5SxAMwzFTClCrF">下课前 · 独立复现</h3>
+          <p data-page-node-id="erNXVc17T96ReAavTOQjf5">关掉笔记和提示词模板，从今天三个任务里任选一个场景，<b data-page-node-id="7NOrdfeQRmI46MplgNqK9j">独立写一条提示词并跑通</b>。我在旁边看着，不提示。</p>
+          <div class="ck-big" data-page-node-id="vlr6Pgu0BE48zN5g02fzRt">通过标准：不看模板，能独立把一份真实材料变成「能拍板 / 能派活 / 能发出去」的东西。</div>
+          <p style="margin-top:12px;" data-page-node-id="l9OisO0pbIFkSNiMpbgFlw">做不出来当场补，不拖到下下周。</p>
+        </div>
+        <div class="ck is-b reveal" data-page-node-id="OgRZOMFqA0zoKKKyC4uonn">
+          <h3 data-page-node-id="7vCvoQi5NPj0Dx0t1DZFCS">这两周 · 微练习</h3>
+          <p data-page-node-id="jaCcpFptGEEbc7xKa8j6AG">用 Copilot 处理 <b data-page-node-id="lDC64rS7x1aSOUIa5D6td3">3 次真实工作</b>（邮件汇总 / 会议纪要 / 文档起草任选），在群里交「场景 + 提示词 + 结果截图」。</p>
+          <div class="ck-big" data-page-node-id="kEz9mXQHAKo8iza84ut05v">3 次，就这一件事。</div>
+          <p style="margin-top:12px;" data-page-node-id="gWlbObeoq34mlRp1CEEkGl">下节课开场 8 分钟先看这个成果，没交的当场问卡在哪。</p>
+        </div>
+      </div>
+      <div class="callout reveal" data-page-node-id="U6AkAsQAsrFARrr4Ejh04L">
+        <p data-page-node-id="WCeSmMVQUpU7DX5QxZ3rkq">带走：《提示词四件套卡片》+《三个任务的提示词模板》
+        <em data-page-node-id="dGoyKgzKWXkYF0nDiozWSl">发的是空白模板 —— 课上当场填 1 条，课后 7 天内在群里交完整版。</em></p>
+      </div>
+    </div>
+  </div>
+  <footer class="mt-footer template-footer" aria-label="Presentation footer" data-template-locked="true" data-template-role="footer">
+    <span class="mt-footer__page">41</span>
+    <span class="mt-footer__text">AIGC 赋能 · S1 公司内部线入门&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Sept 2026&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Internal use only</span>
+  </footer>
+</section>
+</section>
+
 <div class="keyboard-hint" data-page-node-id="hgactZphNeHEY5qBi6BcCz">↑ ↓ 或空格翻页 · 按 P 打印 / 存 PDF</div>
 </div>
 </main>
@@ -798,7 +1487,30 @@ class SlidePresentation {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => new SlidePresentation());
+document.addEventListener('DOMContentLoaded', () => {
+    new SlidePresentation();
+
+    const preview = document.createElement('div');
+    preview.className = 'visual-image-preview';
+    preview.setAttribute('aria-hidden', 'true');
+    const previewImage = document.createElement('img');
+    preview.appendChild(previewImage);
+    document.body.appendChild(preview);
+
+    document.querySelectorAll('.visual-judgment-card img').forEach(image => {
+        const card = image.closest('.visual-judgment-card');
+        const showPreview = () => {
+            previewImage.src = image.currentSrc || image.src;
+            previewImage.alt = image.alt;
+            preview.classList.add('is-visible');
+        };
+        const hidePreview = () => preview.classList.remove('is-visible');
+        image.addEventListener('mouseenter', showPreview);
+        image.addEventListener('mouseleave', hidePreview);
+        card.addEventListener('focusin', showPreview);
+        card.addEventListener('focusout', hidePreview);
+    });
+});
 </script>
 </body>
 </html>
