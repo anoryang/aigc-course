@@ -239,6 +239,7 @@ body>.nav+.wrap>.head p{font-size:17px;max-width:680px}
 .nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:60px}
 .nav .brand{font-size:16px;font-weight:600;color:var(--mt-white);text-decoration:none;letter-spacing:.02em}
 .nav-links{display:flex;gap:4px}
+.lab-dropdown{position:relative}.lab-toggle{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.82);font-family:inherit;font-size:13.5px;font-weight:500;line-height:1.65;padding:7px 14px;border-radius:999px}.lab-toggle::-webkit-details-marker{display:none}.lab-toggle.active{background:var(--mt-electric-blue);color:#FFFFFF}.lab-toggle:hover,.lab-dropdown[open]>.lab-toggle{background:rgba(255,255,255,.12);color:#FFFFFF}.lab-toggle.active:hover,.lab-dropdown[open]>.lab-toggle.active{background:var(--mt-electric-blue)}.lab-toggle:focus-visible{outline:2px solid #FFFFFF;outline-offset:3px}.lab-chevron{display:block;width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg)}.lab-dropdown[open] .lab-chevron{transform:translateY(2px) rotate(225deg)}.lab-menu{position:absolute;right:0;top:calc(100% + 12px);width:240px;max-width:calc(100vw - 32px);background:#FFFFFF;border:1px solid rgba(0,0,0,.1);border-radius:8px;padding:8px;box-shadow:0 1px 8px rgba(0,0,0,.12),0 3px 4px rgba(0,0,0,.14),0 3px 3px rgba(0,0,0,.2);z-index:50}.nav-links .lab-menu a{display:flex;align-items:center;min-height:48px;padding:12px 16px;white-space:nowrap;border-radius:4px;color:#140F4B;font-size:15px;font-weight:400;line-height:24px}.nav-links .lab-menu a:hover{background:#F5F5F5;color:#1010EB}.nav-links .lab-menu a.active{background:#F5F5F5;color:#1010EB;font-weight:600}.nav-links .lab-menu a.active::after{content:"";margin-left:auto;width:6px;height:6px;background:currentColor;border-radius:50%}.nav-links .lab-menu a:focus-visible{outline:2px solid #1010EB;outline-offset:-2px}.nav-links{align-items:center}
 .nav-links a{color:rgba(255,255,255,.82);text-decoration:none;font-size:13.5px;font-weight:500;padding:7px 14px;border-radius:var(--mt-radius-pill);transition:.15s}
 .nav-links a:hover{color:var(--mt-white);background:rgba(255,255,255,.12)}
 .nav-links a.active{color:var(--mt-white);background:var(--mt-electric-blue)}
@@ -304,11 +305,11 @@ body>.nav+.wrap>.model-entry{max-width:1032px;margin:18px auto 22px}
 
 </head>
 <body>
-<nav class="nav" aria-label="课程网站导航"><div class="nav-inner"><a class="brand" href="index.html">Medtronic · AIGC</a><div class="nav-links"><a href="index.html">首页</a><a href="mulu.html">课程目录</a><a href="yiyetong.html" class="active">模型速览</a><a href="kejian.html">课件</a></div></div></nav>
+<nav class="nav" aria-label="课程网站导航"><div class="nav-inner"><a class="brand" href="index.html">Medtronic · AIGC</a><div class="nav-links"><a href="index.html">首页</a><a href="mulu.html">课程目录</a><a href="yiyetong.html" class="active">模型速览</a><a href="kejian.html">课件</a><details class="lab-dropdown"><summary class="lab-toggle">Lab <span class="lab-chevron" aria-hidden="true"></span></summary><div class="lab-menu"><a href="image-lab.html">Image Lab</a><a href="video-lab.html">Video Lab</a></div></details></div></div></nav>
 <div class="wrap">
 
   <header class="head">
-    <span class="mt-overline">AIGC 赋能 · 速查资料</span>
+
     <h1>大模型一页通</h1>
     <div class="accent-bar"></div>
     <p><strong>竖着看任务，横着看厂商。</strong>圆点是截至 2026-09-15 的编辑选型提示；厂商归属不代表部署地域、数据驻留或合规结论。</p>
